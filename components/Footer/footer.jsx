@@ -43,14 +43,15 @@ export const Footer = () => {
         <section className={styles.Mail}>
           <div className={styles.Form}>
             <h4>Newsletter</h4>
-            <form className={styles.InputMail}>
+            <form>
               <input
+                className={styles.InputMail}
                 type="email"
                 placeholder="type your email here ..."
                 value={""}
                 onChange={""}
               />
-              <input type="submit" value="Send" />
+              <input className={styles.btn} type="submit" value="Send" />
             </form>
             <p className={styles.mailPrivacy}>
               By clicking on "Send" you express your consent to receive the
