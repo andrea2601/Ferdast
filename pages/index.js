@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer/footer";
+import { LargeCard } from "../components/LargeCard/largeCard";
+
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -17,6 +19,9 @@ export default function Home() {
           referrerpolicy="no-referrer"
         />
       </Head>
+      <main>
+        <LargeCard />
+      </main>
 
       <Footer />
     </div>
