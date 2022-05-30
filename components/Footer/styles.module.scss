@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+
+.Footer {
+  background-color: #231f20;
+  color: rgb(241, 241, 241);
+  border-top-right-radius: 150px;
+  font-family: "Montserrat", sans-serif;
+  .Container {
+    display: grid;
+    gap: 20px;
+
+    grid-template-areas:
+      "mail"
+      "contact"
+      "about"
+      "info";
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    h4 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .Mail {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      .mailPrivacy {
+        font-size: 10px;
+      }
+      grid-area: mail;
+
+      .Social {
+        .LogoSocial {
+          display: flex;
+          flex-direction: row;
+          gap: 25px;
+        }
+      }
+    }
+    .Contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      grid-area: contact;
+    }
+    .About {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      grid-area: about;
+    }
+    .Info {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      grid-area: info;
+    }
+  }
+
+  p {
+    cursor: pointer;
+    margin: 7px 0;
+  }
+  p:hover {
+    text-decoration: underline;
+  }
+}
