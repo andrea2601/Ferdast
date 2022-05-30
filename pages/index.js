@@ -1,11 +1,8 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer/footer";
-<<<<<<< HEAD
-
-
-=======
 import { Hero } from "../components/Hero/hero";
->>>>>>> 76299385cb35218e491ca24b80b5b0e378ee7241
+import { LargeCard } from "../components/LargeCard/largeCard";
+
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -23,12 +20,9 @@ export default function Home() {
           referrerpolicy="no-referrer"
         />
       </Head>
-<<<<<<< HEAD
-    
 
-=======
-      <Hero/>
->>>>>>> 76299385cb35218e491ca24b80b5b0e378ee7241
+      <Hero />
+      <LargeCard />
       <Footer />
     </div>
   );
