@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer/footer";
 <<<<<<< HEAD
-import { LargeCard } from "../components/LargeCard/largeCard";
+
 
 =======
 import { Hero } from "../components/Hero/hero";
@@ -24,9 +24,7 @@ export default function Home() {
         />
       </Head>
 <<<<<<< HEAD
-      <main>
-        <LargeCard />
-      </main>
+    
 
 =======
       <Hero/>
