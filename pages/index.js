@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer/footer";
 import { Hero } from "../components/Hero/hero";
-import { LargeCard } from "../components/LargeCard/largeCard";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 import { CardList } from "../components/CardList/cardList";
