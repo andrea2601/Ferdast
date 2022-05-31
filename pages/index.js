@@ -1,6 +1,11 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer/footer";
 import { Hero } from "../components/Hero/hero";
+
+
+import { LargeCard } from "../components/LargeCard/largeCard";
+
+
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -20,6 +25,7 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <LargeCard />
       <Footer />
     </div>
   );
