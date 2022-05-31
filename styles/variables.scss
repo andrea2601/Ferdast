@@ -1,8 +1,22 @@
 $primary_color: #1e2538;
-$secondary_color: #b9d4ff;
+$secondary_color: #ffffff;
 $third_color: #0298c9;
+$btn_color: #e7374c;
+$btn_color_hvr: #ec5f70;
 
-/* buttom */
+.btn {
+  background: $btn_color;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: $secondary_color;
+  cursor: pointer;
+}
+.btn:hover {
+  background: $btn_color_hvr;
+}
+
+/* button */
 .arrowBtn{
     background-color: #ffc922;
     padding: 9px 8px ;
@@ -12,4 +26,3 @@ $third_color: #0298c9;
     transition: all 0.3s ease-in-out;
     border-radius: 24px;
 }
-
