@@ -110,12 +110,82 @@
   }
 }
 
-// @media (min-width: "600px") {
-//   .Footer {
-//     .Container {
-//       grid-template-areas:
-//         "mail contact"
-//         "about info";
-//     }
-//   }
-// }
+@media (min-width: "600px") {
+  .Footer {
+    .Container {
+      column-gap: 40px;
+      grid-template-areas:
+        "mail contact"
+        "about info";
+    }
+  }
+}
+@media (min-width: "800px") {
+  .Footer {
+    .Container {
+      column-gap: 40px;
+      grid-template-areas: "mail contact about info";
+      h4 {
+        cursor: default;
+      }
+      .Hide {
+        height: 100%;
+        a {
+          opacity: 1;
+        }
+        p {
+          opacity: 1;
+          margin: 12px 0;
+        }
+      }
+      .Show {
+        a {
+          opacity: 1;
+        }
+        p {
+          opacity: 1;
+          margin: 12px 0;
+        }
+      }
+    }
+  }
+}
+@media (min-width: "1000px") {
+  .Footer {
+    .Container {
+      column-gap: 60px;
+    }
+  }
+}
+@media (min-width: "1250px") {
+  .Footer {
+    .Container {
+      column-gap: 90px;
+    }
+  }
+}
+@media (min-width: "1400px") {
+  .Footer {
+    .Container {
+      column-gap: 120px;
+      .Hide {
+        p {
+          margin: 17px 0;
+        }
+      }
+      .Show {
+        p {
+          opacity: 1;
+          margin: 17px 0;
+        }
+      }
+    }
+  }
+}
+@media (min-width: "1600px") {
+  .Footer {
+    .Container {
+      column-gap: 150px;
+    }
+  }
+}

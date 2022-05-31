@@ -47,7 +47,7 @@ export const Footer = () => {
               <input
                 className={styles.InputMail}
                 type="email"
-                placeholder="type your email here ..."
+                placeholder="email@domain.com"
                 value={""}
                 onChange={""}
               />
