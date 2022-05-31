@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Image from "next/dist/client/image";
-import ClubSicilia from "../Images/ClubSicilia.jpeg";
+import ClubSicilia from "../../Images/ClubSicilia.jpeg";
 
 export const SmallCard = () => {
   return (

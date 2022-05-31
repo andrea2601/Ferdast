@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer/footer";
 import { Hero } from "../components/Hero/hero";
-import { LargeCard } from "../components/LargeCard/largeCard";
-import { MediumCard } from "../components/MediumCard/mediumCard";
-import { SmallCard } from "../components/SmallCard/smallCard";
+import { LargeCard } from "../components/Cards/LargeCard/largeCard";
+import { MediumCard } from "../components/Cards/MediumCard/mediumCard";
+import { SmallCard } from "../components/Cards/SmallCard/smallCard";
 
 import styles from "../styles/Home.module.css";
 
