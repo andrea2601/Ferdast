@@ -51,7 +51,7 @@ export const Footer = () => {
                 value={""}
                 onChange={""}
               />
-              <input className={styles.btn} type="submit" value="Send" />
+              <input className={styles.Send} type="submit" value="Send" />
             </form>
             <p className={styles.mailPrivacy}>
               By clicking on "Send" you express your consent to receive the
