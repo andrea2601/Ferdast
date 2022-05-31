@@ -1,21 +1,19 @@
-.cardLargeContainer{
-    box-shadow:1.5px 1.5px 6px 5px rgba(235,241,250,0.8);
+.cardLargeContainer {
+  box-shadow: 1.5px 1.5px 6px 5px rgba(235, 241, 250, 0.8);
+  border-radius: 15px;
+  display: flex;
+
+  .imgContainer {
     border-radius: 15px;
-    display: flex;
-    
-    
-
-    .imgContainer{
-        border-radius: 15px;
-        padding: 1rem;
-        .img{
-            object-fit: cover;
-            filter: brightness(0.8);
-            border-radius: 8px;   
-        }
+    padding: 1rem;
+    .img {
+      object-fit: cover;
+      filter: brightness(0.8);
+      border-radius: 8px;
     }
+  }
 
-    .descriptionContainer{
-        padding: 1rem;
-    }
+  .descriptionContainer {
+    padding: 1rem;
+  }
 }
