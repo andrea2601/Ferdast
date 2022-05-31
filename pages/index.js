@@ -1,11 +1,9 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer/footer";
 import { Hero } from "../components/Hero/hero";
-import { LargeCard } from "../components/Cards/LargeCard/largeCard";
-import { MediumCard } from "../components/Cards/MediumCard/mediumCard";
-import { SmallCard } from "../components/Cards/SmallCard/smallCard";
 
 import styles from "../styles/Home.module.css";
+import { CardList } from "../components/CardList/cardList";
 
 export default function Home() {
   return (
@@ -25,13 +23,11 @@ export default function Home() {
 
       <Hero />
       <main>
-        <MediumCard />
-        <MediumCard />
-        <MediumCard />
-        <MediumCard />
-        <SmallCard />
+        <CardList />
+        <CardList />
+        <CardList />
+        <CardList />
       </main>
-      <LargeCard />
 
       <Footer />
     </div>

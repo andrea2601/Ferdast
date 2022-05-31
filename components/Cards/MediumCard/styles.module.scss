@@ -1,19 +1,22 @@
-.mediumCardContainer{
-    
+.mediumCardContainer{ 
     position: relative;
+    color: white; 
     border-radius: 15px;
-
-    .img{
-        object-fit: cover;
-        border-radius: 15px;
-        background-color: aqua;
     
+    
+    .imgContainer{
+        
+        .img{
+            filter: brightness(0.8);
+            border-radius: 15px;
+            position: absolute;
+        }
     }
 
     .description{
         position: absolute;
-        bottom:0;
-        padding: 2.5rem;
+        bottom: 0px;;
+        padding: 1.5rem;
     }
 
 

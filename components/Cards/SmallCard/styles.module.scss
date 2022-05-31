@@ -5,6 +5,7 @@
     
     .imgContainer{
         width: 100%;
+        filter: brightness(0.8);
         img{
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
@@ -34,15 +35,7 @@
                 font-size: 25px;
             }
 
-            .arrowBtn{
-                background-color: #ffc922;
-                padding: 9px 8px ;
-                width: 60px;
-                height: 42px;
-                text-align: center;
-                transition: all 0.3s ease-in-out;
-                border-radius: 24px;
-            }
+           
         }
     }
 }

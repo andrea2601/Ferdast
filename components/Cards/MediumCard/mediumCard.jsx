@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import Image from "next/dist/client/image";
 import ClubSicilia from "../../Images/ClubSicilia.jpeg";
 
-export const MediumCard = () => {
+export const MediumCard = ({ item }) => {
   return (
     <div className={styles.mediumCardContainer}>
       <div className={styles.imgContainer}>
@@ -15,7 +15,7 @@ export const MediumCard = () => {
       </div>
 
       <div className={`${styles.description}`}>
-        <h2>kjbju</h2>
+        <h2>{item}</h2>
         <p>esplora le meraviglie</p>
         <button className={styles.btn}>scopri viaggi</button>
       </div>

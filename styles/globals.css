@@ -18,7 +18,7 @@ a {
 
 main{
     width: 100%;
-    padding:15rem;
+    padding:4rem 15rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap:20px;
