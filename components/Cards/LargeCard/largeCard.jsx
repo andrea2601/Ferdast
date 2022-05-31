@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Image from "next/dist/client/image";
-import prova4 from "../Images/prova4.jpeg";
+import prova4 from "../../Images/prova4.jpeg";
 
 export const LargeCard = () => {
   return (
