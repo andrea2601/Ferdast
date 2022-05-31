@@ -1,12 +1,15 @@
-import { DefaultLayout } from "../components/DefaultLayout/defaultlayout";
-import "../styles/globals.css";
 
+import { DefaultLayout } from "../components/DefaultLayout/defaultlayout";
+import '../styles/globals.css'
+import Provider from "../Context/Provider";
 function MyApp({ Component, pageProps }) {
-  return (
+  return(
+  <Provider> 
     <DefaultLayout>
-      <Component {...pageProps} />
+    <Component {...pageProps} /> 
     </DefaultLayout>
-  );
+  </Provider>)
+
 }
 
 export default MyApp;

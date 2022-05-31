@@ -1,0 +1,41 @@
+.smallCardContainer{
+    width: 350px;
+    border-radius: 15px;
+    box-shadow:1.5px 1.5px 6px 5px rgba(235,241,250,0.8);
+    
+    .imgContainer{
+        width: 100%;
+        filter: brightness(0.8);
+        img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    }
+    .descriptionContainer{
+        padding: 1rem;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2{
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        .buttonContainer{
+            display: flex;
+            width: 100%;
+            padding-top:0.5rem;
+            justify-content: space-between;
+
+            .price{
+                font-weight: 400;
+                font-size: 25px;
+            }
+
+           
+        }
+    }
+}
