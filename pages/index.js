@@ -3,6 +3,7 @@ import { Footer } from "../components/Footer/footer";
 import { Hero } from "../components/Hero/hero";
 import { LargeCard } from "../components/LargeCard/largeCard";
 import { MediumCard } from "../components/MediumCard/mediumCard";
+import { SmallCard } from "../components/SmallCard/smallCard";
 
 import styles from "../styles/Home.module.css";
 
@@ -28,7 +29,9 @@ export default function Home() {
         <MediumCard />
         <MediumCard />
         <MediumCard />
+        <SmallCard />
       </main>
+      <LargeCard />
 
       <Footer />
     </div>

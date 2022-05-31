@@ -6,7 +6,12 @@ export const MediumCard = () => {
   return (
     <div className={styles.mediumCardContainer}>
       <div className={styles.imgContainer}>
-        <Image className={styles.img} src={ClubSicilia} alt="ciao" />
+        <Image
+          className={styles.img}
+          src={ClubSicilia}
+          alt="ciao"
+          height={500}
+        />
       </div>
 
       <div className={`${styles.description}`}>
