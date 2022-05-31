@@ -20,10 +20,10 @@ export const useVacationContext = () => useContext(VacationContext);
 export default ({children}) => {
     const [state, dispatch] = useReducer(vacationReducer, defaultState)
 
-    const fetchAll = async () => {
+    const fetchAll = async (par) => {
         dispatch({type: FETCH_ALL_VACATION_REQUEST})
         try {
-            const {data: vacation} = await axios.get(`https://sandbox.musement.com/api/v3/activities/82f6f46c-3923-4510-b5ba-b50aad624eb1`)
+            const {data: vacation} = await axios.get(`https://sandbox.musement.com/api/v3${par}`)
             dispatch({type: FETCH_ALL_VACATION_SUCCESS, payload: vacation})
         } catch (e) {
             dispatch({type: FETCH_ALL_VACATION_ERROR, payload: e})
