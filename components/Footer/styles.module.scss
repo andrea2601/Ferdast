@@ -44,19 +44,19 @@
     .Contact {
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
       grid-area: contact;
     }
     .About {
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
       grid-area: about;
     }
     .Info {
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
       grid-area: info;
     }
   }
