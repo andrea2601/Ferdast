@@ -1,0 +1,23 @@
+.mediumCardContainer{ 
+    position: relative;
+    color: white; 
+    border-radius: 15px;
+    
+    
+    .imgContainer{
+        
+        .img{
+            filter: brightness(0.8);
+            border-radius: 15px;
+            position: absolute;
+        }
+    }
+
+    .description{
+        position: absolute;
+        bottom: 0px;;
+        padding: 1.5rem;
+    }
+
+
+}

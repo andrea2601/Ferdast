@@ -1,14 +1,16 @@
 .cardLargeContainer{
     box-shadow:1.5px 1.5px 6px 5px rgba(235,241,250,0.8);
-    width: 80%;
+    border-radius: 15px;
     display: flex;
+    
     
 
     .imgContainer{
-        border-radius: 8px;
+        border-radius: 15px;
         padding: 1rem;
         .img{
             object-fit: cover;
+            filter: brightness(0.8);
             border-radius: 8px;   
         }
     }
