@@ -1,9 +1,7 @@
-
 import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "./[id].module.scss";
-import CardListLarge from '../../components/CardListLarge/cardListLarge';
-
+import { CardListLarge } from "../../components/CardListLarge/cardListLarge";
 
 const DynamicCountry = () => {
   const router = useRouter();
@@ -11,7 +9,7 @@ const DynamicCountry = () => {
 
   return (
     <div className={styles.DynamicCountry}>
-      <CardListLarge country={country}/>
+      <CardListLarge country={country} />
     </div>
   );
 };

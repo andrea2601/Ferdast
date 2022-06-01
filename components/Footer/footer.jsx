@@ -1,5 +1,10 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 export const Footer = () => {
   const [clickedContact, setClickedContact] = useState(false);
@@ -70,21 +75,21 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-instagram fa-2x"></i>
+                <AiFillInstagram />
               </a>
               <a
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-linkedin fa-2x"></i>
+                <AiFillLinkedin />
               </a>
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-facebook fa-2x"></i>
+                <AiFillFacebook />
               </a>
             </div>
           </div>
