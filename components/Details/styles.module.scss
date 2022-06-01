@@ -10,11 +10,12 @@
   .OnlyFor {
     background-color: rgb(210, 248, 255);
     border-radius: 20px;
-    margin: 0 15px;
+    width: 70%;
+    margin: 0 auto;
     padding: 0 18px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     svg {
       width: 50px;
@@ -95,5 +96,49 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: "400px") {
+  .DetailsContainer {
+    padding: 0 20px;
+  }
+}
+@media (min-width: "600px") {
+  .DetailsContainer {
+    padding: 0 40px;
+    .OnlyFor {
+      svg {
+        width: 30px;
+        height: auto;
+      }
+    }
+  }
+}
+@media (min-width: "800px") {
+  .DetailsContainer {
+    padding: 0;
+    width: 80%;
+    margin: 0 auto 40px auto;
+  }
+}
+@media (min-width: "1200px") {
+  .DetailsContainer {
+    width: 70%;
+  }
+}
+@media (min-width: "1400px") {
+  .DetailsContainer {
+    width: 60%;
+  }
+}
+@media (min-width: "1600px") {
+  .DetailsContainer {
+    width: 50%;
+  }
+}
+@media (min-width: "1800px") {
+  .DetailsContainer {
+    width: 45%;
   }
 }
