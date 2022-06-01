@@ -1,9 +1,9 @@
-import { MediumCard } from "../Cards/MediumCard/mediumCard";
+
 import { useEffect } from "react";
 import { useVacationContext } from "../../Context/Provider"
 import { LargeCard } from "../Cards/LargeCard/largeCard";
 
-export const CardList = ({country}) => {
+export const CardListLarge = ({country}) => {
   const {
     fetchAll,
     state: { vacation },
@@ -13,16 +13,12 @@ export const CardList = ({country}) => {
   useEffect(() => {
     fetchAll(par);
   }, []);
-  useEffect(() => {
-    console.log(vacation);
-  }, [vacation]);
 
   return (
     <>
       {
-        vacation && vacation.filter(item => item.country.iso_code === country).map(city => <LargeCard item={city.name} />)
+        vacation && vacation.filter(item => item.country.name.toLowerCase() === country.toLowerCase()).map(city => <LargeCard city={city} />)
       }
-
     </>
   );
 };
