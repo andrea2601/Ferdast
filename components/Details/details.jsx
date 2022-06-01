@@ -8,7 +8,9 @@ import {
 import { MdOutlineFreeBreakfast } from "react-icons/md";
 import { BiBuildings } from "react-icons/bi";
 import { RiRefund2Fill } from "react-icons/ri";
-import { TbCarOff, TbPlaneOff, TbHeadphones } from "react-icons/tb";
+import { GiPartyPopper, GiAncientColumns } from "react-icons/gi";
+import { TbCarOff, TbPlaneOff, TbHeadphones, TbBeach } from "react-icons/tb";
+import { BsFillBinocularsFill } from "react-icons/bs";
 import { useState } from "react";
 
 export const Details = () => {
@@ -34,7 +36,7 @@ export const Details = () => {
     <div className={styles.DetailsContainer}>
       <div className={styles.OnlyFor}>
         <AiOutlineInfoCircle />
-        <p>Our trip are an exclusive for people over the age of 55 years</p>
+        <p>Our trip are exclusive for people over the age of 55 years</p>
       </div>
       <div className={styles.Included}>
         {/* INCLUDED ITEMS */}
@@ -47,21 +49,22 @@ export const Details = () => {
           <div className={clickIncluded ? styles.Elements : styles.Hide}>
             <div className={styles.SingleEl}>
               <BiBuildings />
-              <p>7 notti in camera doppia, tripla o quadrupla</p>
+              <p>7 nights in a double room, triple or a family room</p>
             </div>
             <div className={styles.SingleEl}>
               <RiRefund2Fill />
-              <p>Rimborso al 100% a causa di restrizioni Covid</p>
+              <p>Refund of 100% of entire amount</p>
             </div>
             <div className={styles.SingleEl}>
               <MdOutlineFreeBreakfast />
-              <p>Prima colazione</p>
+              <p>Breakfast</p>
             </div>
             <div className={styles.SingleEl}>
               <TbHeadphones />
-              <p>Assistenza Ferdast</p>
+              <p>Ferdast's Assistance</p>
             </div>
           </div>
+          <div className={styles.border}></div>
         </div>
 
         {/* EXCLUDED ITEMS */}
@@ -73,17 +76,50 @@ export const Details = () => {
           <div className={clickExcluded ? styles.Elements : styles.Hide}>
             <div className={styles.SingleEl}>
               <TbPlaneOff />
-              <p>Il volo (richiedi un extra nel carrello)</p>
+              <p>Flight (you can select it in the extra options in the cart)</p>
             </div>
             <div className={styles.SingleEl}>
               <AiOutlineDollar />
-              <p>Eventuale tassa di soggiorno</p>
+              <p>Local taxes</p>
             </div>
             <div className={styles.SingleEl}>
               <TbCarOff />
-              <p>Auto o noleggio</p>
+              <p>Car or leasing</p>
             </div>
           </div>
+          <div className={styles.border}></div>
+        </div>
+
+        {/* WAITING FOR YOU */}
+        <div>
+          <h3>Waiting for you</h3>
+          <div className={styles.WaitingElements}>
+            <div className={styles.BoxWait}>
+              <div className={styles.SingleIcon}>
+                <TbBeach />
+              </div>
+              <p>Relax</p>
+            </div>
+            <div className={styles.BoxWait}>
+              <div className={styles.SingleIcon}>
+                <GiPartyPopper />
+              </div>
+              <p>Party</p>
+            </div>
+            <div className={styles.BoxWait}>
+              <div className={styles.SingleIcon}>
+                <BsFillBinocularsFill />
+              </div>
+              <p>Adventure</p>
+            </div>
+            <div className={styles.BoxWait}>
+              <div className={styles.SingleIcon}>
+                <GiAncientColumns />
+              </div>
+              <p>Culture</p>
+            </div>
+          </div>
+          <div className={styles.border}></div>
         </div>
       </div>
     </div>

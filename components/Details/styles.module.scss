@@ -1,14 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 @import "../../styles/variables.scss";
 
 .DetailsContainer {
-  color: $primary-color;
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 40px;
 
   .OnlyFor {
-    background-color: rgb(127, 236, 255);
+    background-color: rgb(210, 248, 255);
     border-radius: 20px;
     margin: 0 15px;
     padding: 0 18px;
@@ -16,18 +16,50 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    svg {
+      width: 50px;
+      height: auto;
+    }
     p {
       padding: 10px 15px;
       text-align: center;
     }
   }
   .Included {
-    border: 1px red solid;
     width: 100%;
     padding: 0 15px;
+    color: $primary-color;
     overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+
+    .border {
+      border-bottom: 2px rgb(206, 206, 206) solid;
+    }
+
+    .WaitingElements {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .BoxWait {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .SingleIcon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: $primary-color;
+          svg {
+            background-color: white;
+            width: 60px;
+            height: auto;
+          }
+        }
+      }
+    }
 
     .Hide {
+      overflow: hidden;
       height: 0;
       .SingleEl {
         opacity: 0;
@@ -40,7 +72,6 @@
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
-      overflow: hidden;
     }
     .Elements {
       height: 270px;
@@ -55,6 +86,10 @@
         justify-content: flex-start;
         transition: all 0.3s ease-in-out;
         gap: 10px;
+        svg {
+          width: 25px;
+          height: auto;
+        }
         p {
           margin: 3px 0;
         }
