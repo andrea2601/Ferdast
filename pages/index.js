@@ -5,7 +5,6 @@ import styles from "../styles/Home.module.css";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
-import { Details } from "../components/Details/details";
 
 export default function Home() {
   const {
@@ -30,7 +29,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CardList />
-      <Details />
     </div>
   );
 }
