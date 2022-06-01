@@ -20,10 +20,14 @@ export const LargeCard = ({ city }) => {
         <h2 className={styles.h2Title}>{name}</h2>
 
         <p className={styles.paragraph}>{formatMinText(descript)}</p>
+        <div className={styles.Map}>
+        <iframe width="325" height="280" frameBorder="0" src={`https://www.bing.com/maps/embed?h=280&w=325&cp=${city.latitude}~${city.longitude}&lvl=7.749020487297179&typ=d&sty=r&src=SHELL&FORM=MBEDV8`} scrolling="no"></iframe>
+        </div>
         <div className={styles.btnContainer}>
           <button className={styles.btn}>More of {name}</button>
         </div>
       </div>
+        
       {console.log("city:", city)}
     </div>
   );
