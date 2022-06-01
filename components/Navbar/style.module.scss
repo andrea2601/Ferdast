@@ -1,3 +1,4 @@
+@import "../../styles/variables.scss";
 .Navbar{
 .NavbarElements{
         width: 100%;
@@ -32,7 +33,7 @@
                   .bar1, .bar2, .bar3 {
                     width: 35px;
                     height: 5px;
-                    background-color: #333;
+                    background-color: $primary_color;
                     margin: 6px 0;
                     transition: 0.4s;
                   }

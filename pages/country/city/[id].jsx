@@ -11,9 +11,8 @@ console.log("city: ",id);
   return (
     <div className={styles.DynamicCountry}>
     <h1>
-      {id}
+      {/* {id} */}
     </h1>
-    <Cart/>
       {/* <CardListLarge country={id}/> */}
     </div>
   );

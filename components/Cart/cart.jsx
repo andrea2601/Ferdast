@@ -6,13 +6,14 @@ export const Cart = () => {
   const {
     state: { totalPrice, cart },
   } = useVacationContext();
-  const [number, setNumber]= useState(1);
-
+  const [number, setNumber] = useState(1);
+  // const [class, setClass] = useState();
   return (
-    <div className={`${styles.CartBG}`}>
-
+    <div className={styles.CartContainer}>
+      <div className={`${styles.CartBG}`}>
+      </div>
       <div className={styles.Cart}>
-
+        <h1 className={styles.close}>x</h1>
         <h1 className={styles.title}>Carrello</h1>
 
         <div className={styles.left}>
@@ -21,9 +22,9 @@ export const Cart = () => {
             <h2>Seleziona il numero di viaggiatori</h2>
             <div className={styles.selectNumber}>
               <h3>Per quante persone vuoi prenotare?</h3>
-              <button className={styles.btn} onClick={()=>{setNumber(number-1)}}>-</button>
+              <button className={styles.btn} onClick={() => { setNumber(number - 1) }}>-</button>
               <h2 className={styles.number}>{number}</h2>
-              <button className={styles.btn} onClick={()=>{setNumber(number+1)}}>+</button>
+              <button className={styles.btn} onClick={() => { setNumber(number + 1) }}>+</button>
             </div>
           </div>
 
@@ -49,7 +50,7 @@ export const Cart = () => {
             <h2 className={styles.travelersH2}>Viaggiatori</h2>
             <h2 className={styles.number}>{number}</h2>
             <h1 className={styles.total}>Totale</h1>
-            <h1 className={styles.totalValue}>{totalPrice*number}€</h1>
+            <h1 className={styles.totalValue}>{totalPrice * number}€</h1>
             <button className={styles.btn}>Continua</button>
           </div>
 

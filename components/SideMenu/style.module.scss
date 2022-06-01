@@ -1,17 +1,18 @@
-
+@import "../../styles/variables.scss";
 .sideMenu{
     position: absolute;
+    padding-left: 20px;
     left: 0px;
-    background-color:#0298c9;
+    background-color:white;
     display: flex;
     flex-direction: column;
     width: 350px;
-    color: #b9d4ff;
+    color: $primary_color;
     transition: all 0.5s;
     border-radius: 0px 0px 20px 0px;
     
     h2{
-        color: #1e2538;;
+        color: $primary_color;;
         margin: 0px;
         margin-left: 5px;
         font-size: 40px;
@@ -19,7 +20,7 @@
         transition: opacity 1.5s;
     }
     h3{
-        color: #1e2538;;
+        color: $primary_color;;
         margin: 0px;
         margin-left: 5px;
         margin-right: 10px;
@@ -33,12 +34,11 @@
         margin-left: 0px;
         list-style: none;
         font-size: 40px;
-        color: #1e2538;;
+        color: $primary_color;;
 
         .ListButtons{
             text-decoration: none;
             font-size: 40px;
-            color: #818181;
             display: block;
             border: none;
             background: none;
@@ -49,11 +49,12 @@
             margin: 0px;
             opacity: 100%;
             transition: opacity 1.5s;
-            color: #1e2538;}
+            color: $primary_color;
+        }
         
         .ListButtons:hover{
             background-color: #f7f7f7;
-            color: #b9d4ff;
+            color: #646d87;
             transition: 0.4s;
             cursor: pointer;}
     }
@@ -85,17 +86,15 @@
         transition: all 1s;
         .buttonDropdown{
                 text-align: left;
-                border: 0.5px solid; 
                 width: 180px;
-                background-color: #b9d4ff;
                 font-size: medium;
         }
         button:hover{
             text-align: left;
             width: 180px;
-            background-color: #1e2538;
-            color: #0298c9;
+            color: #646d87;
             font-size: medium;
+            cursor: pointer;
         }
        
       }

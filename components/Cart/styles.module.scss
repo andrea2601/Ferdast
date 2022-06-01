@@ -1,12 +1,15 @@
 @import "../../styles/variables.scss";
 
-.CartBG {
-    background: #00000062;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+.CartContainer {
+
+    .CartBG {
+        background: #00000062;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
 
     .Cart {
         background: white;
@@ -22,6 +25,13 @@
         transform: translate(-50%, -50%);
         border-radius: 20px;
         padding: 20px;
+
+        .close {
+            cursor: pointer;
+            position: fixed;
+            top: -10px;
+            left: 30px;
+        }
 
         .title {
             width: 100%;
@@ -141,8 +151,66 @@
     }
 }
 
-.CartHide{
+.CartHide {
     width: 0px;
     height: 0px;
     opacity: 0;
 }
+
+@media screen and (max-width: 900px) {
+    .CartContainer {
+        .CartBG {
+            display: none;
+        }
+
+        .Cart {
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            width: 100vw;
+            height: 100vh;
+            min-height: 1040px;
+            border-radius: 0;
+            padding: 10px;
+            align-content: flex-start;
+
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                width: 100%;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 439px) {
+    .CartContainer {
+        .Cart {
+            min-height: 1100px;
+        }
+    }}
+
+    @media screen and (max-width: 360px) {
+        .CartContainer {
+            .Cart {
+                min-height: 1300px;
+                .left {
+                    .travelers {
+                        .selectNumber {
+                            .btn {
+                                width: 32%;
+                            }
+
+                            .number {
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

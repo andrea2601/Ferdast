@@ -1,15 +1,16 @@
 $primary_color: #1e2538;
 $secondary_color: #ffffff;
 $third_color: #0298c9;
-$btn_color: #e7374c;
-$btn_color_hvr: #ec5f70;
+$btn_color: #ffdc1b;
+$btn_color_hvr: #ffe96f;
 
 .btn {
   background: $btn_color;
   padding: 10px;
   border-radius: 5px;
   border: none;
-  color: $secondary_color;
+  color: $primary_color;
+  font-weight: 600;
   cursor: pointer;
   z-index: 2;
 }
