@@ -7,13 +7,14 @@ export const CardList = () => {
 
   const espDescript = "Esplora las meravillas de España";
   const fraDescript = "Explorez les merveilles de la France";
-  const englDescript = "Explore the wonders of England";
+  const englDescript = "Explore the wonders of Romania";
   return (
     <div className={styles.cardContiner}>
       <MediumCard name={"Italia"} description={itDescript} img={itImg} />
       <MediumCard name={"Spagna"} description={espDescript} />
-      <MediumCard name={"France"} description={fraDescript} />
-      <MediumCard name={"England"} description={englDescript} />
+      <MediumCard name={"Francia"} description={fraDescript} />
+      <MediumCard name={"Romania"} description={englDescript} />
     </div>
+
   );
 };
