@@ -76,7 +76,9 @@
     }
     .Elements {
       height: 270px;
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       transition: all 0.3s ease-in-out;
 
       .SingleEl {
@@ -125,6 +127,15 @@
 @media (min-width: "1200px") {
   .DetailsContainer {
     width: 70%;
+    .Included {
+      .Elements {
+        .SingleEl {
+          svg {
+            width: 30px;
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: "1400px") {
