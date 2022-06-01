@@ -4,7 +4,7 @@
         margin: 0px;
         display: flex;
         justify-content: flex-start;
-        height: 37.8182px;
+        height: 60px;
         ul{
             margin: 0px;
             padding: 0px;
@@ -13,13 +13,15 @@
             list-style: none;
             
                 .logo{
+                    position: absolute;
+                    right: 20px;
                     width: 200px;
                     cursor: pointer;
                 }
                 .burgerMenu{
-                    position: absolute;
-                    right: 20px;
-                    top:10px;
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
 
                 .container {
                     display: inline-block;

@@ -1,3 +1,4 @@
+import styles from "./styles.module.scss";
 import { MediumCard } from "../Cards/MediumCard/mediumCard";
 
 export const CardList = () => {
@@ -8,11 +9,12 @@ export const CardList = () => {
   const fraDescript = "Explorez les merveilles de la France";
   const englDescript = "Explore the wonders of Romania";
   return (
-    <>
+    <div className={styles.cardContiner}>
       <MediumCard name={"Italia"} description={itDescript} img={itImg} />
       <MediumCard name={"Spagna"} description={espDescript} />
       <MediumCard name={"Francia"} description={fraDescript} />
       <MediumCard name={"Romania"} description={englDescript} />
-    </>
+    </div>
+
   );
 };

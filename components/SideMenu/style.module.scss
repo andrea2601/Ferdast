@@ -1,15 +1,14 @@
 
 .sideMenu{
-    margin-top: 21px;
     position: absolute;
-    right: 0px;
-    background-color:#0298c9; ;
+    left: 0px;
+    background-color:#0298c9;
     display: flex;
     flex-direction: column;
     width: 350px;
     color: #b9d4ff;
-    transition: all 2s;
-    border-radius: 0px 0px 0px 20px;
+    transition: all 0.5s;
+    border-radius: 0px 0px 20px 0px;
     
     h2{
         color: #1e2538;;
@@ -17,7 +16,7 @@
         margin-left: 5px;
         font-size: 40px;
         opacity: 100%;
-        transition: opacity 2.5s;
+        transition: opacity 1.5s;
     }
     h3{
         color: #1e2538;;
@@ -49,7 +48,7 @@
             outline: none;
             margin: 0px;
             opacity: 100%;
-            transition: opacity 2.5s;
+            transition: opacity 1.5s;
             color: #1e2538;}
         
         .ListButtons:hover{
@@ -104,16 +103,15 @@
 }
 //HIDING MENU
 .hideMenu{
-    margin-top: 21px;
-    transform: translate(852px);
+    transform: translate(-852px);
     position: absolute;
-    right: 0px;
+    left: 0px;
     background-color: #b9d4ff;
     display: flex;
     flex-direction: column;
     width: 850px;
     color: #f7f7f7;
-    transition: all 2s;
+    transition: all 1s;
     z-index: 10;
     border-radius: 0px 0px 20px 20px;
     opacity: 0%;
@@ -151,7 +149,7 @@
             outline: none;
             margin: 0px;
             opacity: 100%;
-            transition: opacity 2.5s;
+            transition: opacity 1.5s;
             color: #1e2538
         }
 
