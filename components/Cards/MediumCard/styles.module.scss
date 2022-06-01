@@ -2,13 +2,14 @@
     color: white; 
     border-radius: 15px;
     background-image: url("../../Images/prova4.jpeg");
-    max-width: 600px;
+    width: 100%;
     min-width: 300px;
     height: 300px;
     min-height: 200px;
     background-repeat:no-repeat;
     // background-size: cover;
     object-fit: cover;
+    justify-self: center;
     
    
 
