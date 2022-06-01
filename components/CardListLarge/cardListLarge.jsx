@@ -17,7 +17,7 @@ export const CardListLarge = ({country}) => {
   return (
     <>
       {
-        vacation && vacation.filter(item => item.country.name.toLowerCase() === country.toLowerCase()).map(city => <LargeCard city={city} />)
+        vacation && vacation.filter(item => item.country.name.toLowerCase() === country?.toLowerCase()).map(city => <LargeCard city={city} key={city.id}/>)
       }
     </>
   );

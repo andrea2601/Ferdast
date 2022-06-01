@@ -10,7 +10,9 @@ import axios from "axios";
 const defaultState = {
     loading: false,
     error: null,
-    vacation: []
+    vacation: [],
+    totalPrice: 2,
+    cart:["Palermo", "milano"]
 }
 
 const VacationContext = createContext(defaultState);
