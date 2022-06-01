@@ -1,9 +1,9 @@
-
+import styles from "./styles.module.scss";
 import { useEffect } from "react";
-import { useVacationContext } from "../../Context/Provider"
+import { useVacationContext } from "../../Context/Provider";
 import { LargeCard } from "../Cards/LargeCard/largeCard";
 
-export const CardListLarge = ({country}) => {
+export const CardListLarge = ({ country }) => {
   const {
     fetchAll,
     state: { vacation },
@@ -15,10 +15,15 @@ export const CardListLarge = ({country}) => {
   }, []);
 
   return (
-    <>
-      {
-        vacation && vacation.filter(item => item.country.name.toLowerCase() === country?.toLowerCase()).map(city => <LargeCard city={city} key={city.id}/>)
-      }
-    </>
+
+    <div className={styles.cardLargeContiner}>
+      {vacation &&
+        vacation
+          .filter(
+            (item) => item.country.name.toLowerCase() === country?.toLowerCase()
+          )
+          .map((city) => <LargeCard key={city.id} city={city} />)}
+    </div>
+
   );
 };
