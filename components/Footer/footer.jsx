@@ -12,8 +12,6 @@ export const Footer = () => {
               <input
                 type="email"
                 placeholder="type your email here ..."
-                value={""}
-                onChange={""}
               />
               <input type="submit" value="Send" />
             </form>
@@ -25,15 +23,7 @@ export const Footer = () => {
           <div className={styles.Social}>
             <h4>Follow us!</h4>
             <div className={styles.LogoSocial}>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram fa-2x"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin fa-2x"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook fa-2x"></i>
-              </a>
+             
             </div>
           </div>
         </section>
