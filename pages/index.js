@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Hero } from "../components/Hero/hero";
-import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
@@ -33,7 +32,7 @@ export default function Home() {
           referrerpolicy="no-referrer"
         /> */}
       </Head>
-      <Navbar />
+  
       <Hero />
       <CardList />
     </div>
