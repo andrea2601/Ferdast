@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+@import "../../styles/variables.scss";
+
+.DetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+
+  .OnlyFor {
+    background-color: rgb(210, 248, 255);
+    border-radius: 20px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    svg {
+      width: 50px;
+      height: auto;
+    }
+    p {
+      padding: 10px 15px;
+      text-align: center;
+    }
+  }
+  .Included {
+    width: 100%;
+    padding: 0 15px;
+    color: $primary-color;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+
+    .border {
+      border-bottom: 2px rgb(206, 206, 206) solid;
+    }
+
+    .WaitingElements {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .BoxWait {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .SingleIcon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: $primary-color;
+          svg {
+            background-color: white;
+            width: 60px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .Hide {
+      overflow: hidden;
+      height: 0;
+      .SingleEl {
+        opacity: 0;
+      }
+      transition: all 0.3s ease-in-out;
+    }
+    .TopElements {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .Elements {
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      transition: all 0.3s ease-in-out;
+
+      .SingleEl {
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        transition: all 0.3s ease-in-out;
+        gap: 10px;
+        svg {
+          width: 25px;
+          height: auto;
+        }
+        p {
+          margin: 3px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: "400px") {
+  .DetailsContainer {
+    padding: 0 20px;
+  }
+}
+@media (min-width: "600px") {
+  .DetailsContainer {
+    padding: 0 40px;
+    .OnlyFor {
+      svg {
+        width: 30px;
+        height: auto;
+      }
+    }
+  }
+}
+@media (min-width: "800px") {
+  .DetailsContainer {
+    padding: 0;
+    width: 80%;
+    margin: 0 auto 40px auto;
+  }
+}
+@media (min-width: "1200px") {
+  .DetailsContainer {
+    width: 70%;
+    .Included {
+      .Elements {
+        .SingleEl {
+          svg {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: "1400px") {
+  .DetailsContainer {
+    width: 60%;
+  }
+}
+@media (min-width: "1600px") {
+  .DetailsContainer {
+    width: 50%;
+  }
+}
+@media (min-width: "1800px") {
+  .DetailsContainer {
+    width: 45%;
+  }
+}

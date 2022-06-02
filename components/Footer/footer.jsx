@@ -1,5 +1,10 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 export const Footer = () => {
   const [clickedContact, setClickedContact] = useState(false);
@@ -65,7 +70,27 @@ export const Footer = () => {
                 clickedSocial ? styles.Show : styles.Hide
               }`}
             >
-              
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillFacebook />
+              </a>
             </div>
           </div>
         </section>
