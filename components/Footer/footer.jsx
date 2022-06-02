@@ -65,27 +65,7 @@ export const Footer = () => {
                 clickedSocial ? styles.Show : styles.Hide
               }`}
             >
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-instagram fa-2x"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-linkedin fa-2x"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-facebook fa-2x"></i>
-              </a>
+              
             </div>
           </div>
         </section>
