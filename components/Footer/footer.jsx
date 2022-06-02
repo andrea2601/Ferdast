@@ -16,7 +16,7 @@ export const Footer = () => {
               <input type="submit" value="Send" />
             </form>
             <p className={styles.mailPrivacy}>
-              By clicking on "Send" you express your consent to receive the
+              By clicking on Send you express your consent to receive the
               ferdast newsletter. Read the privacy policy of Ferdast.
             </p>
           </div>
@@ -37,7 +37,7 @@ export const Footer = () => {
 
         {/* ABOUT SECTION*/}
         <section className={styles.About}>
-          <h4>Ferdast's world</h4>
+          <h4>Ferdast s world</h4>
           <p>About us</p>
           <p>Community</p>
           <p>Partner</p>
@@ -46,7 +46,7 @@ export const Footer = () => {
         {/* PRIVACY SECTION */}
         <section className={styles.Info}>
           <h4>Privacy</h4>
-          <p>Terms & conditions</p>
+          <p>Terms e conditions</p>
           <p>Cookie policy</p>
           <p>Insurance</p>
         </section>
