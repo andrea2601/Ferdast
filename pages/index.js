@@ -15,9 +15,7 @@ export default function Home() {
   useEffect(() => {
     fetchAll();
   }, []);
-  useEffect(() => {
-    console.log(vacation);
-  }, [vacation]);
+  useEffect(() => {}, [vacation]);
 
   return (
     <div className={styles.container}>
