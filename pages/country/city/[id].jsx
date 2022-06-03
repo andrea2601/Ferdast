@@ -23,20 +23,20 @@ const DynamicCity = () => {
   }, []);
 
   const findState = (list, id) => {
-    const filtered = list.filter(
+    const filtered = list?.filter(
       (element) => element.name.toLowerCase() == id.toLowerCase()
     );
     return filtered;
   };
 
   useEffect(() => {
-    if (city.length === 0) {
+    if (city?.length === 0) {
       setCity(findState(italia, id));
-    } else if (city.length === 0) {
+    } else if (city?.length === 0) {
       setCity(findState(spagna, id));
-    } else if (city.length === 0) {
+    } else if (city?.length === 0) {
       setCity(findState(francia, id));
-    } else if (city.length === 0) {
+    } else if (city?.length === 0) {
       setCity(findState(romania, id));
     }
   }, [vacation]);
@@ -48,7 +48,7 @@ const DynamicCity = () => {
         <GalleryCityPage id={id} />
       </section>
       <section>
-        {city.length !== 0 && <Price cityInfo={city} />}
+        {city?.length !== 0 && <Price cityInfo={city} />}
         <Details />
       </section>
     </div>

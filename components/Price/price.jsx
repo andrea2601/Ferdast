@@ -8,12 +8,13 @@ export const Price = ({ cityInfo }) => {
   const [expand, setExpand] = useState(false);
   const router = useRouter();
   const { id } = router.query;
-  const {
-    fetchCity,
-    state: { city },
-  } = useVacationContext();
 
-  console.log(cityInfo);
+  // const {
+  //   fetchCity,
+  //   state: { city },
+  // } = useVacationContext();
+
+  // // console.log(cityInfo);
 
   const toggleExpand = () => {
     if (expand) {
@@ -23,10 +24,10 @@ export const Price = ({ cityInfo }) => {
     }
   };
 
-  useEffect(() => {
-    fetchCity("/");
-    console.log(city);
-  }, []);
+  // useEffect(() => {
+  //   fetchCity("/");
+  //   // console.log(city);
+  // }, []);
 
   return (
     <>
@@ -38,7 +39,7 @@ export const Price = ({ cityInfo }) => {
       </div>
       <div className={expand ? styles.PriceContainer : styles.Hide}>
         <div className={styles.H2Contain}>
-          <h2>{cityInfo[0].name}</h2>
+          <h2>{id}</h2>
         </div>
         <p>
           From <span>{/*PRICE*/} 330$</span>
