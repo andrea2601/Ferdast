@@ -1,22 +1,43 @@
 @import "../../../styles/variables.scss";
 
+.italia{
+    background-image: url("../../Images/roma.jpeg");
+    object-position: center;
+    background-size: 100% 100%;
+    
+}
+.francia{
+    background-image: url("../../Images/francia.jpeg");
+    object-position: center;
+    background-size: 100% 100%;
+}
+.romania{
+    background-image: url("../../Images/romania.jpeg");
+    object-position: center;
+    background-size: 100% 100%;
+}
+.spagna{
+    background-image: url("../../Images/spagna.jpeg");
+    object-position: center;
+    background-size: 100% 100%;
+}
+
 .mediumCardContainer{  
     color: white; 
     border-radius: 15px;
-    background-image: url("../../Images/prova4.jpeg");
+    
     width: 100%;
     min-width: 300px;
     height: 300px;
     min-height: 200px;
     background-repeat:no-repeat;
-    // background-size: cover;
-    object-fit: cover;
+    
     justify-self: center;
     
    
 
     .description{
-       
+        border-radius: 15px;
        padding: 1rem;
        height: 100%;
        width: 100%;
