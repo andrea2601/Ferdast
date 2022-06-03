@@ -15,6 +15,7 @@ export default function Home() {
   useEffect(() => {
     fetchAll();
   }, []);
+
   useEffect(() => {
     console.log(vacation);
   }, [vacation]);

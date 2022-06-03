@@ -63,6 +63,9 @@
   flex-direction: column;
   transition: right 1.5s ease-in-out;
 
+  span {
+    font-weight: bold;
+  }
   .H2Contain {
     border-bottom: 1px white solid;
     h2 {
