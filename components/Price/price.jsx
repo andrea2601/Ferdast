@@ -1,10 +1,19 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import styles from "./styles.module.scss";
 import { useVacationContext } from "../../Context/Provider";
 
-export const Price = () => {
+export const Price = ({ cityInfo }) => {
   const [expand, setExpand] = useState(false);
+  const router = useRouter();
+  const { id } = router.query;
+  const {
+    fetchCity,
+    state: { city },
+  } = useVacationContext();
+
+  console.log(cityInfo);
 
   const toggleExpand = () => {
     if (expand) {
@@ -13,6 +22,11 @@ export const Price = () => {
       return setExpand(true);
     }
   };
+
+  useEffect(() => {
+    fetchCity("/");
+    console.log(city);
+  }, []);
 
   return (
     <>
@@ -23,7 +37,9 @@ export const Price = () => {
         {expand ? <HiChevronDoubleRight /> : <HiChevronDoubleLeft />}
       </div>
       <div className={expand ? styles.PriceContainer : styles.Hide}>
-        <div className={styles.H2Contain}>{/* <h2>{id}</h2> */}</div>
+        <div className={styles.H2Contain}>
+          <h2>{cityInfo[0].name}</h2>
+        </div>
         <p>
           From <span>{/*PRICE*/} 330$</span>
         </p>

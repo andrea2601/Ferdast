@@ -8,15 +8,19 @@ import { useVacationContext } from "../Context/Provider";
 export default function Home() {
   const {
     fetchAll,
-    state: { vacation },
+    state: { vacation, italia, spagna, francia, romania },
   } = useVacationContext();
 
   useEffect(() => {
-    fetchAll();
+    fetchAll("/cities");
   }, []);
 
   useEffect(() => {
     console.log("vacation", vacation);
+    console.log("ita:", italia);
+    console.log("spa:", spagna);
+    console.log("fra:", francia);
+    console.log("rom:", romania);
   }, [vacation]);
 
   return (
