@@ -1,51 +1,101 @@
 .wrapperSquare{
     width: 100%;
-    height: 600px;
+   
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap:20px;
 
-    .leftSquare{
-        background-color: antiquewhite;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
         border-radius: 15px;
+        
+    }
+
+    .leftSquare{
+       
+        border-radius: 15px;
+        // min-width: 200px;
+        // min-height: 100px;
     }
     .rightSquare{
         width: 100%;
         height: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        
+        display: flex;
+        flex-direction: column;
         gap:20px ;
         
        
         .topWrapperSquare{
             width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            height: 50%;
+            display: flex;
+            
             gap:20px ;
             
-            
-
-            .smLeftSquare{
-                background-color: bisque;
+            .smLeftSquare{  
                 width: 100%;
                 height: 100%;
                 border-radius: 15px;
             }
             .smRigtSquare{
-                background-color: thistle;
                 width: 100%;
                 height: 100%;
                 border-radius: 15px;
             }
         }
         .buttomRigSquare{
-            background-color: blueviolet;
+            
             width: 100%;
-            height: 100%;
+            height: 50%;
             border-radius: 15px;
             
         }
     }
 
 }
+
+
+
+
+
+@media (min-width: "400px") {
+    .wrapperSquare {
+      padding: 0 20px;
+    }
+  }
+  @media (min-width: "600px") {
+    .wrapperSquare {
+      padding: 0 40px;
+      
+    }
+  }
+  @media (min-width: "800px") {
+    .wrapperSquare {
+      padding: 0;
+      width: 80%;
+    }
+  }
+  @media (min-width: "1200px") {
+    .wrapperSquare {
+      width: 70%;
+      
+    }
+  }
+  @media (min-width: "1400px") {
+    .wrapperSquare {
+      width: 60%;
+    }
+  }
+  @media (min-width: "1600px") {
+    .wrapperSquare {
+      width: 50%;
+    }
+  }
+  @media (min-width: "1800px") {
+    .wrapperSquare {
+      width: 45%;
+    }
+  }

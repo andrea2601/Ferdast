@@ -10,7 +10,7 @@ export const LargeCard = ({ city }) => {
     city.content ||
     "In Sicilia l’abbiocco in spiaggia ha il gusto di cannoli e arancin* e!";
   const formatMinText = (descript) =>
-    descript.split("").slice(0, 600).join("") + "...";
+    descript.split("").slice(0, 500).join("") + "...";
   return (
     <div className={styles.cardLargeContainer}>
       <div className={styles.imgContainer}>
@@ -18,18 +18,15 @@ export const LargeCard = ({ city }) => {
       </div>
 
       <div className={styles.descriptionContainer}>
-        <h2 className={styles.h2Title}>{name}</h2>
+        <div>
+          <h2 className={styles.h2Title}>{name}</h2>
 
-
-       <p className={styles.paragraph}>{formatMinText(descript)}</p>
+          <p className={styles.paragraph}>{formatMinText(descript)}</p>
+        </div>
 
         <Link href={`/country/city/${name}`}>
           <a className={styles.btn}>More of {name}</a>
         </Link>
-
-        
-      
-
       </div>
       {console.log("city:", city)}
     </div>
