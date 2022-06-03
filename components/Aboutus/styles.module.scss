@@ -1,0 +1,120 @@
+@import "../../styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn {
+    padding: 8px 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    svg {
+      width: 15px;
+      height: auto;
+    }
+  }
+}
+.AboutContainer {
+  margin: 25px 0;
+  color: $primary-color;
+  .aboutInfo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px;
+
+    .Profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border-radius: 20px;
+
+      -webkit-box-shadow: 5px 5px 15px 5px #000000;
+      box-shadow: 5px 5px 15px 5px #000000;
+      h2 {
+        font-size: 18px;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb,
+          0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
+          0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+          0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15),
+          2px 2px 2px rgba(206, 89, 55, 0);
+      }
+      span {
+        border-radius: 120px;
+      }
+      .logo {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+        svg {
+          width: 30px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+@media (min-width: "450px") {
+  .back {
+    .btn {
+      font-size: larger;
+    }
+  }
+  .AboutContainer {
+    .aboutInfo {
+      .Profile {
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: "650px") {
+  .AboutContainer {
+    .aboutInfo {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      .Profile {
+        .logo {
+          svg {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: "800px") {
+  .AboutContainer {
+    .aboutInfo {
+      .Profile {
+        h2 {
+          font-size: 24px;
+        }
+        .logo {
+          svg {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: "1300px") {
+  .AboutContainer {
+    .aboutInfo {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+  }
+}
