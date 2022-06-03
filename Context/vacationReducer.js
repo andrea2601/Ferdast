@@ -19,7 +19,11 @@ export default (state = {}, action) => {
             return {
                 ...state,
                 loading: false,
-                vacation: action.payload
+                vacation: action.payload,
+                italia: action.payload.filter(item => item.country.name.toLowerCase() === "italia"),
+                spagna: action.payload.filter(item => item.country.name.toLowerCase() === "spagna"),
+                francia: action.payload.filter(item => item.country.name.toLowerCase() === "francia"),
+                romania: action.payload.filter(item => item.country.name.toLowerCase() === "romania"),
             };
 
         case FETCH_ALL_VACATION_ERROR:

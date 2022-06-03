@@ -17,6 +17,10 @@ const defaultState = {
   totalPrice: 2,
   cart: ["Palermo", "milano"],
   city: [],
+  italia: [],
+  spagna: [],
+  francia: [],
+  romania: []
 };
 
 const VacationContext = createContext(defaultState);
