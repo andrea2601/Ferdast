@@ -4,6 +4,9 @@ import {
   FETCH_ALL_VACATION_ERROR,
   FETCH_ALL_VACATION_REQUEST,
   FETCH_ALL_VACATION_SUCCESS,
+  FETCH_ALL_CITY_ERROR,
+  FETCH_ALL_CITY_REQUEST,
+  FETCH_ALL_CITY_SUCCESS,
 } from "./constants";
 import axios from "axios";
 
@@ -13,7 +16,7 @@ const defaultState = {
   vacation: [],
   totalPrice: 2,
   cart: ["Palermo", "milano"],
-  citys: [],
+  city: [],
 };
 
 const VacationContext = createContext(defaultState);
@@ -35,7 +38,19 @@ export default ({ children }) => {
     }
   };
 
-  const value = { state, fetchAll };
+  const fetchCity = async (par) => {
+    dispatch({ type: FETCH_ALL_CITY_REQUEST });
+    try {
+      const { data: city } = await axios.get(
+        `https://sandbox.musement.com/api/v3$/activities${par}`
+      );
+      dispatch({ type: FETCH_ALL_CITY_SUCCESS, payload: city });
+    } catch (e) {
+      dispatch({ type: FETCH_ALL_CITY_ERROR, payload: e });
+    }
+  };
+
+  const value = { state, fetchAll, fetchCity };
 
   return (
     <VacationContext.Provider value={value}>
