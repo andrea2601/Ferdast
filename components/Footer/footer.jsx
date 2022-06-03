@@ -48,16 +48,14 @@ export const Footer = () => {
         <section className={styles.Mail}>
           <div className={styles.Form}>
             <h4>Newsletter</h4>
-            <form>
+            <div>
               <input
                 className={styles.InputMail}
                 type="email"
                 placeholder="email@domain.com"
-                value={""}
-                onChange={""}
               />
               <input className={styles.Send} type="submit" value="Send" />
-            </form>
+            </div>
             <p className={styles.mailPrivacy}>
               By clicking on Send you express your consent to receive the
               ferdast newsletter. Read the privacy policy of Ferdast.
