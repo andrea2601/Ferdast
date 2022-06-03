@@ -1,23 +1,9 @@
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import styles from "./styles.module.scss";
 import { useVacationContext } from "../../Context/Provider";
 
 export const Price = () => {
-  // const router = useRouter();
-  const {
-    fetchCity,
-    state: { city },
-  } = useVacationContext();
-
-  useEffect(() => {
-    fetchCity;
-  }, []);
-
-  useEffect(() => {
-    console.log("price", city);
-  }, [city]);
   const [expand, setExpand] = useState(false);
 
   const toggleExpand = () => {
