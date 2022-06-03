@@ -2,10 +2,12 @@
 @import "../../styles/variables.scss";
 
 .DetailsContainer {
+  
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 40px;
+ 
 
   .OnlyFor {
     background-color: rgb(210, 248, 255);
@@ -28,7 +30,7 @@
   }
   .Included {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 0px;
     color: $primary-color;
     overflow: hidden;
     font-family: "Montserrat", sans-serif;

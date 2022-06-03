@@ -2,6 +2,7 @@
 
 .cardLargeContainer {
   width: 100%;
+  min-height: 450px;
   box-shadow: 1.5px 1.5px 6px 5px rgba(235, 241, 250, 0.8);
   border-radius: 15px;
   display: flex;
@@ -28,8 +29,19 @@
     flex-direction: column;
     justify-content: space-between;
 
+    h2{
+      margin:0;
+      font-weight: 600;
+      font-size: 45px;
+  }
+  p{
+   font-weight: 600;
+   font-size: 18px;
+  }
+
     .btnContainer{
       width: 100%;
+      
     }
 
   }
@@ -58,11 +70,14 @@
 
     .imgContainer{
       width: 100%;
+      height: 50%;
       padding:1rem 1rem 0 1rem;
     }
     .descriptionContainer {
       padding-bottom: 1rem;
       width: 100%;
+
+      // p{display: none;}
     }
   }
 }
