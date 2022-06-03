@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 import CZImg from "./profileImg/CZimg.jpg";
 import CTImg from "./profileImg/CTimg.jpg";
+import ALImg from "./profileImg/ALimg.jpg";
 
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -21,12 +22,11 @@ export const AboutUs = () => {
       <div className={styles.aboutInfo}>
         <div className={styles.Profile}>
           <Image
-            src={CZImg}
+            src={ALImg}
             alt="andrea photo"
             width={"300px"}
             height={"300px"}
           />
-          {/* <img  alt="andrea photo" /> */}
           <h2>Andrea Lo Giudice</h2>
           <div className={styles.logo}>
             <a
