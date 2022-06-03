@@ -1,216 +1,211 @@
 @import "../../styles/variables.scss";
-.sideMenu{
-    position: absolute;
-    padding-left: 20px;
-    left: 0px;
-    background-color:white;
+.sideMenu {
+  position: absolute;
+  padding-left: 20px;
+  left: 0px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  color: $primary_color;
+  transition: all 0.5s;
+  border-radius: 0px 0px 20px 0px;
+
+  h2 {
+    color: $primary_color;
+    margin: 0px;
+    margin-left: 5px;
+    font-size: 40px;
+    opacity: 100%;
+    transition: opacity 1.5s;
+  }
+  h3 {
+    color: $primary_color;
+    margin: 0px;
+    margin-left: 5px;
+    margin-right: 10px;
+    opacity: 100%;
+    transition: opacity 2.5s;
+  }
+  ul {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    padding-left: 0px;
+    margin-left: 0px;
+    list-style: none;
+    font-size: 40px;
     color: $primary_color;
-    transition: all 0.5s;
-    border-radius: 0px 0px 20px 0px;
-    
-    h2{
-        color: $primary_color;;
-        margin: 0px;
-        margin-left: 5px;
-        font-size: 40px;
-        opacity: 100%;
-        transition: opacity 1.5s;
-    }
-    h3{
-        color: $primary_color;;
-        margin: 0px;
-        margin-left: 5px;
-        margin-right: 10px;
-        opacity: 100%;
-        transition: opacity 2.5s;
-    }
-    ul{
-        display: flex;
-        flex-direction: column;
-        padding-left: 0px;
-        margin-left: 0px;
-        list-style: none;
-        font-size: 40px;
-        color: $primary_color;;
 
-        .ListButtons{
-            text-decoration: none;
-            font-size: 40px;
-            display: block;
-            border: none;
-            background: none;
-            width:100%;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
-            margin: 0px;
-            opacity: 100%;
-            transition: opacity 1.5s;
-            color: $primary_color;
-        }
-        
-        .ListButtons:hover{
-            background-color: #f7f7f7;
-            color: #646d87;
-            transition: 0.4s;
-            cursor: pointer;}
+    .ListButtons {
+      text-decoration: none;
+      font-size: 40px;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+      margin: 0px;
+      opacity: 100%;
+      transition: opacity 1.5s;
+      color: $primary_color;
     }
-    .dropdownContainer {
-        display: none;
-        background-color: #b9d4ff;
-        padding-left: 8px;
-        transition: all 1s;
-        .buttonNotDropdown{
-            display: none;
-            text-align: left;
-            border: 0.5px solid; 
-            width: 180px;
-            background-color: #b9d4ff;
-            font-size: medium;
-        }
-        button:hover{
-            display: none;
-            text-align: left;
-            width: 180px;
-            background-color: #1e2538;
-            color: #0298c9;
-            font-size: medium;
-        }
-      }
-    .dropdownContainerActive{
-        display: flex;
-        flex-direction: column;
-        transition: all 1s;
-        .buttonDropdown{
-                text-align: left;
-                width: 180px;
-                font-size: medium;
-        }
-        button:hover{
-            text-align: left;
-            width: 180px;
-            color: #646d87;
-            font-size: medium;
-            cursor: pointer;
-        }
-       
-      }
-    
+
+    .ListButtons:hover {
+      background-color: #f7f7f7;
+      color: #646d87;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+  }
+  .dropdownContainer {
+    display: none;
+    background-color: #b9d4ff;
+    padding-left: 8px;
+    transition: all 1s;
+    .buttonNotDropdown {
+      display: none;
+      text-align: left;
+      border: 0.5px solid;
+      width: 180px;
+      background-color: #b9d4ff;
+      font-size: medium;
+    }
+    button:hover {
+      display: none;
+      text-align: left;
+      width: 180px;
+      background-color: #1e2538;
+      color: #0298c9;
+      font-size: medium;
+    }
+  }
+  .dropdownContainerActive {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s;
+    .buttonDropdown {
+      text-align: left;
+      width: 180px;
+      font-size: medium;
+    }
+    button:hover {
+      text-align: left;
+      width: 180px;
+      color: #646d87;
+      font-size: medium;
+      cursor: pointer;
+    }
+  }
 }
 //HIDING MENU
-.hideMenu{
-    transform: translate(-852px);
-    position: absolute;
-    left: 0px;
-    background-color: #b9d4ff;
-    display: flex;
-    flex-direction: column;
-    width: 850px;
-    color: #f7f7f7;
-    transition: all 1s;
-    z-index: 10;
-    border-radius: 0px 0px 20px 20px;
+.hideMenu {
+  transform: translate(-852px);
+  position: absolute;
+  left: 0px;
+  background-color: #b9d4ff;
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+  color: #f7f7f7;
+  transition: all 1s;
+  z-index: 10;
+  border-radius: 0px 0px 20px 20px;
+  opacity: 0%;
+  h2 {
+    margin: 0px;
+    margin-left: 5px;
+    font-size: 40px;
     opacity: 0%;
-    h2{
-        margin: 0px;
-        margin-left: 5px;
-        font-size: 40px;
-        opacity: 0%;
-        transition: opacity 1s;
-    }
-    h3{
-        margin: 0px;
-        margin-left: 5px;
-        margin-right: 10px;
-        opacity: 0%;
-        transition: opacity 1s;
-    }
-    ul{
-        padding-left: 0px;
-        margin-left: 0px;
-        list-style: none;
-        font-size: 40px;
-        
+    transition: opacity 1s;
+  }
+  h3 {
+    margin: 0px;
+    margin-left: 5px;
+    margin-right: 10px;
+    opacity: 0%;
+    transition: opacity 1s;
+  }
+  ul {
+    padding-left: 0px;
+    margin-left: 0px;
+    list-style: none;
+    font-size: 40px;
 
-        .ListButtons{
-            text-decoration: none;
-            font-size: 40px;
-            color: #818181;
-            display: block;
-            border: none;
-            background: none;
-            width:100%;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
-            margin: 0px;
-            opacity: 100%;
-            transition: opacity 1.5s;
-            color: #1e2538
-        }
-
-        .ListButtons:hover{
-            background-color: #f7f7f7;
-            color: #b9d4ff;
-            transition: 0.4s;
-            cursor: pointer;
-        }
-        .dropdownContainer {
-            display: none;
-            background-color: #b9d4ff;
-            padding-left: 8px;
-            transition: all 1s;
-
-            
-            .buttonNotDropdown{
-                display: none;
-                text-align: left;
-                border: 0.5px solid; 
-                width: 180px;
-                background-color: #b9d4ff;
-                font-size: medium;
-            }
-            button:hover{
-                
-                text-align: left;
-                width: 180px;
-                background-color: #1e2538;
-                color: #0298c9;
-                font-size: medium;
-            }
-          }
-        .dropdownContainerActive{
-            display: none;
-            flex-direction: column;
-            transition: all 1s;
-            
-            .buttonDropdown{
-                display: none;
-                text-align: left;
-                border: 0.5px solid; 
-                width: 180px;
-                background-color: #b9d4ff;
-                font-size: medium;
-            }
-            .buttonNotDropdown{
-                display: none;
-                text-align: left;
-                border: 0.5px solid; 
-                width: 180px;
-                background-color: #b9d4ff;
-                font-size: medium;
-            }
-            button:hover{
-                text-align: left;
-                width: 180px;
-                background-color: #1e2538;
-                color: #0298c9;
-                font-size: medium;
-            }
-           
-          }
-        }
+    .ListButtons {
+      text-decoration: none;
+      font-size: 40px;
+      color: #818181;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+      margin: 0px;
+      opacity: 100%;
+      transition: opacity 1.5s;
+      color: #1e2538;
     }
+
+    .ListButtons:hover {
+      background-color: #f7f7f7;
+      color: #b9d4ff;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+    .dropdownContainer {
+      display: none;
+      background-color: #b9d4ff;
+      padding-left: 8px;
+      transition: all 1s;
+
+      .buttonNotDropdown {
+        display: none;
+        text-align: left;
+        border: 0.5px solid;
+        width: 180px;
+        background-color: #b9d4ff;
+        font-size: medium;
+      }
+      button:hover {
+        text-align: left;
+        width: 180px;
+        background-color: #1e2538;
+        color: #0298c9;
+        font-size: medium;
+      }
+    }
+    .dropdownContainerActive {
+      display: none;
+      flex-direction: column;
+      transition: all 1s;
+
+      .buttonDropdown {
+        display: none;
+        text-align: left;
+        border: 0.5px solid;
+        width: 180px;
+        background-color: #b9d4ff;
+        font-size: medium;
+      }
+      .buttonNotDropdown {
+        display: none;
+        text-align: left;
+        border: 0.5px solid;
+        width: 180px;
+        background-color: #b9d4ff;
+        font-size: medium;
+      }
+      button:hover {
+        text-align: left;
+        width: 180px;
+        background-color: #1e2538;
+        color: #0298c9;
+        font-size: medium;
+      }
+    }
+  }
+}
