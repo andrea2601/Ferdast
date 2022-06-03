@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+@import "../../styles/variables.scss";
+
+.Side {
+  position: fixed;
+  bottom: 450px;
+  right: 15px;
+  animation: infinite;
+  animation-name: price;
+  animation-duration: 1.3s;
+  &.Stop {
+    animation: none;
+  }
+  svg {
+    color: white;
+    background-color: $primary-color;
+    border-radius: 10px;
+    padding: 5px;
+    width: 45px;
+    height: auto;
+  }
+}
+.Hide {
+  position: fixed;
+  right: -320px;
+  bottom: 540px;
+  width: 300px;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background-color: $primary-color;
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  .H2Contain {
+    border-bottom: 1px white solid;
+    h2 {
+      margin: 8px 0;
+    }
+  }
+  .btn {
+    font-family: "Montserrat", sans-serif;
+  }
+  transition: right 1.5s ease-in-out;
+}
+.PriceContainer {
+  animation-duration: 0.7s;
+  animation: infinite;
+  animation-name: price;
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  right: 3px;
+  bottom: 540px;
+  background-color: $primary-color;
+  color: white;
+  width: 300px;
+  height: auto;
+  padding: 10px 20px 20px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: right 1.5s ease-in-out;
+
+  .H2Contain {
+    border-bottom: 1px white solid;
+    h2 {
+      margin: 8px 0;
+    }
+  }
+  .btn {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@keyframes price {
+  0% {
+    right: 10px;
+  }
+  50% {
+    right: 23px;
+  }
+  100% {
+    right: 20px;
+  }
+}
