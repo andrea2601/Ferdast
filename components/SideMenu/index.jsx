@@ -16,7 +16,7 @@ export default function SideMenu(props) {
             <h2>Ciao!</h2>
             <h3>Di cosa hai bisogno?</h3>
         <ul>
-            <button className={style.ListButtons} onClick={() =>setActiveDropdown(!isActiveDropdown)}>Ferdast's world <i className="fa fa-caret-down"></i></button>
+            <button className={style.ListButtons} onClick={() =>setActiveDropdown(!isActiveDropdown)}>Ferdast s world <i className="fa fa-caret-down"></i></button>
             <div className={isActiveDropdown? style.dropdownContainer: style.dropdownContainerActive}>
                 <button className={isActive? style.buttonDropdown:style.buttonNotDropdown}>Sicilia</button>
                 <button className={isActive? style.buttonDropdown:style.buttonNotDropdown} >Sardegna</button>

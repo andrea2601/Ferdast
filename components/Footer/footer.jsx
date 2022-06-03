@@ -1,5 +1,10 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 export const Footer = () => {
   const [clickedContact, setClickedContact] = useState(false);
@@ -54,7 +59,7 @@ export const Footer = () => {
               <input className={styles.Send} type="submit" value="Send" />
             </form>
             <p className={styles.mailPrivacy}>
-              By clicking on "Send" you express your consent to receive the
+              By clicking on Send you express your consent to receive the
               ferdast newsletter. Read the privacy policy of Ferdast.
             </p>
           </div>
@@ -70,21 +75,21 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-instagram fa-2x"></i>
+                <AiFillInstagram />
               </a>
               <a
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-linkedin fa-2x"></i>
+                <AiFillLinkedin />
               </a>
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-facebook fa-2x"></i>
+                <AiFillFacebook />
               </a>
             </div>
           </div>
@@ -101,7 +106,7 @@ export const Footer = () => {
 
         {/* ABOUT SECTION*/}
         <section className={styles.About}>
-          <h4 onClick={toggleVisibilityAbout}>Ferdast's world</h4>
+          <h4 onClick={toggleVisibilityAbout}>Ferdast s world</h4>
           <div className={clickedAbout ? styles.Show : styles.Hide}>
             <p>About us</p>
             <p>Community</p>
@@ -113,7 +118,7 @@ export const Footer = () => {
         <section className={styles.Info}>
           <h4 onClick={toggleVisibilityPrivacy}>Privacy</h4>
           <div className={clickedPrivacy ? styles.Show : styles.Hide}>
-            <p>Terms & conditions</p>
+            <p>Terms e conditions</p>
             <p>Cookie policy</p>
             <p>Insurance</p>
           </div>

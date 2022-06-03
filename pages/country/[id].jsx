@@ -1,10 +1,11 @@
-
 import { useRouter } from "next/router";
 import styles from "./[id].module.scss";
+
 import { CardListLarge } from '../../components/CardListLarge/cardListLarge';
 import { Hero } from "../../components/Hero/hero";
 import { useVacationContext } from "../../Context/Provider";
 import { useEffect, useState } from "react";
+
 
 const DynamicCountry = () => {
   const {
@@ -13,6 +14,7 @@ const DynamicCountry = () => {
 
   const router = useRouter();
   const { id } = router.query;
+
   // console.log("country: ", id);
 
   const title = `Benvenuto in`;
@@ -35,6 +37,7 @@ const DynamicCountry = () => {
       <h1>
         {id}
       </h1>
+
       <CardListLarge country={id} />
     </div>
   );
