@@ -49,7 +49,7 @@ const DynamicCity = () => {
         <Details />
       </section>
 
-      <Map lng={13} lat={83} />
+      {/* <Map lng={13} lat={83} /> */}
     </div>
   );
 };
