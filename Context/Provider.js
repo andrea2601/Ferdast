@@ -20,7 +20,11 @@ const defaultState = {
   italia: [],
   spagna: [],
   francia: [],
-  romania: []
+  romania: [],
+  italiaImg: "",
+  spagnaImg: "",
+  franciaImg: "",
+  romaniaImg: "",
 };
 
 const VacationContext = createContext(defaultState);
