@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 import {
   AiFillFacebook,
@@ -106,7 +107,9 @@ export const Footer = () => {
         <section className={styles.About}>
           <h4 onClick={toggleVisibilityAbout}>Ferdast s world</h4>
           <div className={clickedAbout ? styles.Show : styles.Hide}>
-            <p>About us</p>
+            <Link href={"/about"}>
+              <p>About us</p>
+            </Link>
             <p>Community</p>
             <p>Partner</p>
           </div>

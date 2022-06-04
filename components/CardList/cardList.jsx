@@ -3,8 +3,11 @@ import { MediumCard } from "../Cards/MediumCard/mediumCard";
 import { useVacationContext } from "../../Context/Provider";
 
 export const CardList = () => {
+
+
   const {
-    state: { italiaImg, spagnaImg, franciaImg, romaniaImg },
+    state: {italiaImg, spagnaImg, franciaImg, romaniaImg },
+
   } = useVacationContext();
 
   const itDescript = "Esplora le meraviglie d'italia";
@@ -15,6 +18,7 @@ export const CardList = () => {
   return (
     <div className={styles.cardContiner}>
       <MediumCard name={"Italia"} description={itDescript} img={italiaImg} />
+
       <MediumCard name={"Spagna"} description={espDescript} img={spagnaImg} />
       <MediumCard name={"Francia"} description={fraDescript} img={franciaImg} />
       <MediumCard
@@ -22,6 +26,7 @@ export const CardList = () => {
         description={englDescript}
         img={romaniaImg}
       />
+
     </div>
   );
 };

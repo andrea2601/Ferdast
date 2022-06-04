@@ -2,17 +2,15 @@
 @import "../../styles/variables.scss";
 
 .DetailsContainer {
-  
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 40px;
- 
 
   .OnlyFor {
     background-color: rgb(210, 248, 255);
     border-radius: 20px;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding: 0 18px;
     display: flex;
@@ -20,7 +18,7 @@
     justify-content: space-around;
     align-items: center;
     svg {
-      width: 50px;
+      width: 60px;
       height: auto;
     }
     p {
@@ -29,7 +27,8 @@
     }
   }
   .Included {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     padding: 0 0px;
     color: $primary-color;
     overflow: hidden;
@@ -54,7 +53,7 @@
           background-color: $primary-color;
           svg {
             background-color: white;
-            width: 60px;
+            width: 50px;
             height: auto;
           }
         }
@@ -117,6 +116,18 @@
         height: auto;
       }
     }
+    .Included {
+      .WaitingElements {
+        .BoxWait {
+          .SingleIcon {
+            svg {
+              width: 70px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: "800px") {
@@ -143,6 +154,18 @@
 @media (min-width: "1400px") {
   .DetailsContainer {
     width: 60%;
+    .Included {
+      .WaitingElements {
+        .BoxWait {
+          .SingleIcon {
+            svg {
+              width: 80px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: "1600px") {
