@@ -28,6 +28,7 @@ export const MediumCard = (props) => {
       <div className={`${styles.description}`}>
         <h2>{props.name}</h2>
         <p>{props.description}</p>
+        <img src={props.img} alt={props.name}/>
         <Link href={`/country/${props.name}`}>
           <a className={styles.btn}>scopri viaggi</a>
         </Link>

@@ -14,13 +14,17 @@ const defaultState = {
   loading: false,
   error: null,
   vacation: [],
-  totalPrice: 2,
-  cart: ["Palermo", "milano"],
+  totalPrice: 512,
+  cart: ["Palermo00000", "mijkfeffeqlano", "<RqfqfffefqewfqwOma", "Brasov", "San MArino"],
   city: [],
   italia: [],
   spagna: [],
   francia: [],
-  romania: []
+  romania: [],
+  italiaImg: "",
+  spagnaImg: "",
+  franciaImg: "",
+  romaniaImg: "",
 };
 
 const VacationContext = createContext(defaultState);
