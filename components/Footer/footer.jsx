@@ -53,8 +53,6 @@ export const Footer = () => {
                 className={styles.InputMail}
                 type="email"
                 placeholder="email@domain.com"
-                value={""}
-                onChange={""}
               />
               <input className={styles.Send} type="submit" value="Send" />
             </form>
@@ -127,3 +125,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

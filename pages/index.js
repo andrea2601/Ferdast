@@ -9,19 +9,20 @@ import { useVacationContext } from "../Context/Provider";
 export default function Home() {
   const {
     fetchAll,
-    state: { vacation, italia, spagna, francia, romania },
+    state: { vacation, italia, spagna, francia, romania, italiaImg },
   } = useVacationContext();
 
   useEffect(() => {
     fetchAll("/cities");
   }, []);
-  
+
   useEffect(() => {
-    console.log("vacation",vacation);
-    console.log("ita:",italia);
-    console.log("spa:",spagna);
-    console.log("fra:",francia);
-    console.log("rom:",romania);
+    console.log("vacation", vacation);
+    console.log("ita:", italia);
+    console.log("itaImg:", italiaImg);
+    console.log("spa:", spagna);
+    console.log("fra:", francia);
+    console.log("rom:", romania);
   }, [vacation]);
 
   return (
@@ -38,8 +39,7 @@ export default function Home() {
           referrerpolicy="no-referrer"
         /> */}
       </Head>
-      <Navbar />
-      <Hero />
+      <Hero/>
       <CardList />
     </div>
   );
