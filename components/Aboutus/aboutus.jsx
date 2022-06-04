@@ -2,23 +2,14 @@ import styles from "./styles.module.scss";
 import CZImg from "./profileImg/CZimg.jpg";
 import CTImg from "./profileImg/CTimg.jpg";
 import ALImg from "./profileImg/ALimg.jpg";
+import DBImg from "./profileImg/DBimg.jpg";
 
-import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { GiReturnArrow } from "react-icons/gi";
 import Image from "next/image";
 
 export const AboutUs = () => {
   return (
     <div className={styles.AboutContainer}>
-      <div className={styles.back}>
-        <Link href={"/"}>
-          <button className={styles.btn}>
-            <GiReturnArrow />
-            Back to home
-          </button>
-        </Link>
-      </div>
       <div className={styles.aboutInfo}>
         <div className={styles.Profile}>
           <Image
@@ -73,7 +64,7 @@ export const AboutUs = () => {
 
         <div className={styles.Profile}>
           <Image
-            src={CZImg}
+            src={DBImg}
             alt="dennis photo"
             width={"300px"}
             height={"300px"}

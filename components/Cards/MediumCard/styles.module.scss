@@ -46,11 +46,12 @@
     h2 {
       margin: 0;
       font-weight: 600;
-      font-size: 45px;
+      font-size: 35px;
     }
     p {
       font-weight: 600;
-      font-size: 18px;
+      margin: 10px 0;
+      font-size: 15px;
     }
 
     a {
@@ -62,5 +63,21 @@
 @media screen and (max-width: 680px) {
   .mediumCardContainer {
     height: 280px;
+  }
+}
+@media (min-width: 900px) {
+  .mediumCardContainer {
+    .description {
+      h2 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 18px;
+      }
+
+      a {
+        width: 131px;
+      }
+    }
   }
 }
