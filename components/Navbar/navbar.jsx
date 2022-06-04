@@ -49,7 +49,7 @@ export const Navbar = () => {
             </li>
 
             <li>
-              <Link href="/">
+              <Link href="/cart">
                 <div className={styles.SingleNav}>
                   <FiShoppingCart />
                   <p>Cart</p>
@@ -86,7 +86,7 @@ export const Navbar = () => {
           </li>
 
           <li>
-            <Link href="/">
+            <Link href="/cart">
               <FiShoppingCart />
             </Link>
           </li>
