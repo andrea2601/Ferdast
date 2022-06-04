@@ -65,7 +65,7 @@ export const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contact">
                 <div className={styles.SingleNav}>
                   <RiContactsLine />
                   <p>Contacts</p>
@@ -96,7 +96,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/contact">
               <RiContactsLine />
             </Link>
           </li>

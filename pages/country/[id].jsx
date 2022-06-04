@@ -25,7 +25,6 @@ const DynamicCountry = () => {
   return (
     <div className={styles.DynamicCountry}>
       <Hero title={title} subtitle={id} />
-      <h1>{id}</h1>
       <div className={styles.DynamicCountry}>
         <CardListLarge country={id} />
       </div>
