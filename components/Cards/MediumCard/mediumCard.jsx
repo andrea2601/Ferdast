@@ -12,23 +12,13 @@ export const MediumCard = (props) => {
   // }
   // const img = "styles.italia";
   return (
-    <div
-      className={`${styles.mediumCardContainer} ${
-        props.name === "Italia"
-          ? styles.italia
-          : null || props.name === "Francia"
-          ? styles.francia
-          : null || props.name === "Spagna"
-          ? styles.spagna
-          : null || props.name === "Romania"
-          ? styles.romania
-          : null
-      }`}
-    >
+    <div className={`${styles.mediumCardContainer} `}>
+      <div className={styles.imgContainer}>
+        <img src={props.img} alt={props.name} />
+      </div>
       <div className={`${styles.description}`}>
         <h2>{props.name}</h2>
         <p>{props.description}</p>
-        <img src={props.img} alt={props.name}/>
         <Link href={`/country/${props.name}`}>
           <a className={styles.btn}>scopri viaggi</a>
         </Link>
