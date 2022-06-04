@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Hero } from "../components/Hero/hero";
+
 import styles from "../styles/Home.module.css";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
@@ -19,8 +20,6 @@ export default function Home() {
     console.log("vacation", vacation);
     console.log("ita:", italia);
 
-    console.log("itaImg:", italiaImg);
-
     console.log("spa:", spagna);
     console.log("fra:", francia);
     console.log("rom:", romania);
@@ -34,7 +33,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero/>
+
+      <Hero />
+
 
       <CardList />
     </div>

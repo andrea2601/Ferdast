@@ -51,9 +51,17 @@ export default function SideMenu(props) {
               Puglia
             </button>
           </div>
+
+          <button className={style.ListButtons}>
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
+          </button>
+
           <Link href={"/about"}>
             <button className={style.ListButtons}>About us</button>
           </Link>
+
           <button className={style.ListButtons}>Privacy</button>
         </ul>
       </div>

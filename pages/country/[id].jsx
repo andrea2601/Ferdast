@@ -2,8 +2,9 @@ import { useRouter } from "next/router";
 import styles from "./[id].module.scss";
 
 
-import { CardListLarge } from "../../components/CardListLarge/cardListLarge";
-import { Hero } from "../../components/Hero/hero";
+import {CardListLarge} from '../../components/CardListLarge/cardListLarge';
+import  {Hero}  from "../../components/Hero/hero";
+
 import { useVacationContext } from "../../Context/Provider";
 import { useEffect, useState } from "react";
 
@@ -21,7 +22,6 @@ const DynamicCountry = () => {
   const { id } = router.query;
 
   const title = `Benvenuto in`;
-
 
   return (
     <div className={styles.DynamicCountry}>
