@@ -3,11 +3,11 @@
 .formContainer{
     padding: 3rem;
     width: 100%;
-    
+    color: rgb(30,37,56);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
     
     .formWrapper{
        width:80%;
@@ -16,16 +16,18 @@
        gap: 10px ;
 
        .nameWrapper{
-           margin: 2.5rem 0;
-        width: 100%;
-        display: flex;
-        justify-content:space-between;
-        flex-wrap: wrap;
-        gap: 10px;
+            margin: 2.5rem 0;
+            width: 100%;
+            display: flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            gap: 10px;
 
         input{
+            
             all: unset;
-            color: rgb(30,37,56);
+            padding: 0.5rem 0;
+          
             background-color: rgb(244, 244, 244);
             border-radius: 15px;
             height: 40px;
@@ -42,7 +44,7 @@
                 
                 background-color: rgb(244, 244, 244);
                 border-radius: 15px;
-                height: 40px;
+                height: 55px;
                 text-align: center;
                 width: 49%;
                 min-width: 200px;
@@ -57,10 +59,9 @@
             textarea{
                 width: 100%;
                 padding: 1rem;
-                font-size: 25px;
+                font-size: 20px;
                 background-color: rgb(244, 244, 244);
                 border-radius: 15px;
-                
                 color: rgb(30,37,56);
                 font-weight: 500;
                 outline: none;
