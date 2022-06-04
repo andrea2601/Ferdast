@@ -9,8 +9,7 @@ export const CardList = () => {
   } = useVacationContext();
 
   const itDescript = "Esplora le meraviglie d'italia";
-  const itImg = "";
-
+  const img = "italia";
   const espDescript = "Esplora las meravillas de España";
   const fraDescript = "Explorez les merveilles de la France";
   const englDescript = "Explore the wonders of Romania";
@@ -20,7 +19,7 @@ export const CardList = () => {
       <MediumCard name={"Spagna"} description={espDescript} img={spagnaImg}/>
       <MediumCard name={"Francia"} description={fraDescript} img={franciaImg}/>
       <MediumCard name={"Romania"} description={englDescript} img={romaniaImg}/>
-    </div>
 
+    </div>
   );
 };

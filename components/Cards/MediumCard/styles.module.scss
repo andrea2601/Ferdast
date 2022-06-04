@@ -1,55 +1,85 @@
 @import "../../../styles/variables.scss";
 
-.mediumCardContainer{  
-    color: white; 
-    border-radius: 15px;
-    
-    // ERRORE RELOAD
-    // background-image: url("../../Images/prova4.jpeg");
-    width: 100%;
-    min-width: 300px;
-    height: 300px;
-    min-height: 200px;
-    background-repeat:no-repeat;
-    // background-size: cover;
-    object-fit: cover;
-    justify-self: center;
-    
-   
-
-    .description{
-       
-       padding: 1rem;
-       height: 100%;
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-       justify-content: flex-end;
-       background-color: rgba(1, 1, 1, 0.304);
-       
-
-
-       h2{
-           margin:0;
-           font-weight: 600;
-           font-size: 45px;
-       }
-       p{
-        font-weight: 600;
-        font-size: 18px;
-       }
-
-       a{
-        width: 131px;
-       }
-    }
-
-
+.italia {
+  background-image: url("../../Images/roma.jpeg");
+  object-position: center;
+  background-size: cover;
+}
+.francia {
+  background-image: url("../../Images/francia.jpeg");
+  object-position: center;
+  background-size: cover;
+}
+.romania {
+  background-image: url("../../Images/romania.jpeg");
+  object-position: center;
+  background-size: cover;
+}
+.spagna {
+  background-image: url("../../Images/spagna.jpeg");
+  object-position: center;
+  background-size: cover;
 }
 
+.mediumCardContainer {
+  color: white;
+  border-radius: 15px;
 
-@media screen and (max-width: 680px) {
-    .mediumCardContainer{
-        height: 280px;
+  width: 100%;
+  min-width: 300px;
+  height: 300px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+
+  justify-self: center;
+
+  .description {
+    border-radius: 15px;
+
+    padding: 1rem;
+    height: 100%;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgba(1, 1, 1, 0.304);
+
+    h2 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 35px;
+    }
+    p {
+      font-weight: 600;
+      margin: 10px 0;
+      font-size: 15px;
+    }
+
+    a {
+      width: 131px;
     }
   }
+}
+
+@media screen and (max-width: 680px) {
+  .mediumCardContainer {
+    height: 280px;
+  }
+}
+@media (min-width: 900px) {
+  .mediumCardContainer {
+    .description {
+      h2 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 18px;
+      }
+
+      a {
+        width: 131px;
+      }
+    }
+  }
+}
