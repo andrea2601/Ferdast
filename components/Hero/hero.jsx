@@ -13,52 +13,35 @@ export const Hero = (prop) => {
   } = useVacationContext();
 
   const [img, setImg] = useState(heroImgMock);
-  const pop = () => {
+  const setImgFun = () => {
     if (subtitle !== "...e incontra nuovi amici") {
-      switch (subtitle) {
-        case "Italia": {
+      switch (subtitle.toLowerCase()) {
+        case "italia": {
           setImg(italiaImg ? italiaImg : heroImgMock);
           break
         }
-        case "Spagna": {
+        case "spagna": {
           setImg(spagnaImg ? spagnaImg : heroImgMock);
           break
         }
-        case "Francia": {
+        case "francia": {
           setImg(franciaImg ? franciaImg : heroImgMock);
           break
         }
-        case "Romania": {
+        case "romania": {
           setImg(romaniaImg ? romaniaImg : heroImgMock);
           break
         }
-        // case "Spagna": {
-        //   imgs = spagnaImg;
-        //   break
-        // }
-        // case "Francia": {
-        //   imgs = franciaImg;
-        //   break
-        // }
-        // case "Romania": {
-        //   imgs = romaniaImg;
-        //   break
-        // }
         default: {
           setImg(heroImgMock)
         }
       }
-      // const i = Math.floor(Math.random() * imgs.length);
-      // console.log("imgs....: ", imgs);
-      // console.log("sub....: ", subtitle);
-      // console.log("img[i]....: ", imgs[i]?.cover_image_url);
-      // imgs[i]?.cover_image_url ? setImg(imgs[i].cover_image_url): setImg(heroImgMock);
     } else { setImg(heroImg) }
   }
 
 
   useEffect(() => {
-    pop();
+    setImgFun();
   }, [subtitle, italiaImg, franciaImg, spagnaImg, romaniaImg])
 
 

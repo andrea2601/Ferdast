@@ -15,7 +15,7 @@ const defaultState = {
   error: null,
   vacation: [],
   totalPrice: 512,
-  cart: ["Palermo00000", "mijkfeffeqlano", "<RqfqfffefqewfqwOma", "Brasov", "San MArino"],
+  cart: ["Palermo", "Milano", "Londra", "Brasov", "Barcellona"],
   city: [],
   italia: [],
   spagna: [],
