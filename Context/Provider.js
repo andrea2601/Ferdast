@@ -15,7 +15,13 @@ const defaultState = {
   error: null,
   vacation: [],
   totalPrice: 512,
-  cart: ["Palermo00000", "mijkfeffeqlano", "<RqfqfffefqewfqwOma", "Brasov", "San MArino"],
+  cart: [
+    "Palermo00000",
+    "mijkfeffeqlano",
+    "<RqfqfffefqewfqwOma",
+    "Brasov",
+    "San MArino",
+  ],
   city: [],
   italia: [],
   spagna: [],
@@ -50,7 +56,7 @@ export default ({ children }) => {
     dispatch({ type: FETCH_ALL_CITY_REQUEST });
     try {
       const { data: city } = await axios.get(
-        `https://sandbox.musement.com/api/v3$/activities${par}`
+        `https://sandbox.musement.com/api/v3/activities${par}`
       );
       dispatch({ type: FETCH_ALL_CITY_SUCCESS, payload: city });
     } catch (e) {

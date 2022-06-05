@@ -16,14 +16,14 @@ export default function Home() {
     fetchAll("/cities");
   }, []);
 
-  useEffect(() => {
-    console.log("vacation", vacation);
-    console.log("ita:", italia);
+  // useEffect(() => {
+  //   console.log("vacation", vacation);
+  //   console.log("ita:", italia);
 
-    console.log("spa:", spagna);
-    console.log("fra:", francia);
-    console.log("rom:", romania);
-  }, [vacation]);
+  //   console.log("spa:", spagna);
+  //   console.log("fra:", francia);
+  //   console.log("rom:", romania);
+  // }, [vacation]);
 
   return (
     <div className={styles.container}>

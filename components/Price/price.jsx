@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import styles from "./styles.module.scss";
 
-export const Price = () => {
+export const Price = ({ id }) => {
   const [expand, setExpand] = useState(false);
 
   const toggleExpand = () => {
@@ -23,12 +23,12 @@ export const Price = () => {
       </div>
       <div className={expand ? styles.PriceContainer : styles.Hide}>
         <div className={styles.H2Contain}>
-          <h2>{/* {id} */} Roma</h2>
+          <h2>{id.length !== 0 ? id[0].name : "Loading"}</h2>
         </div>
         <p>
           From <span>{/*PRICE*/} 330$</span>
         </p>
-        <button className={styles.btn}>Find out availability</button>
+        <button className={styles.btn}>Find out activities</button>
       </div>
     </>
   );

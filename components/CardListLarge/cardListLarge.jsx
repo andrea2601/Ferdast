@@ -15,7 +15,6 @@ export const CardListLarge = ({ country }) => {
   }, []);
 
   return (
-
     <div className={styles.cardLargeContiner}>
       {vacation &&
         vacation
@@ -24,6 +23,5 @@ export const CardListLarge = ({ country }) => {
           )
           .map((city) => <LargeCard key={city.id} city={city} />)}
     </div>
-
   );
 };

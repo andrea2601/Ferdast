@@ -9,15 +9,11 @@ import { GalleryCityPage } from "../../../components/GalleryCityPage/galleriCity
 import { useVacationContext } from "../../../Context/Provider";
 import Map from "../../../components/Map/Map";
 import { useEffect, useState } from "react";
+import { Activities } from "../../../components/Activities/activities";
 
 const DynamicCity = () => {
-  // const {
-  //   state: { italiaImg, spagnaImg, franciaImg, romaniaImg },
-  // } = useVacationContext();
-
   const router = useRouter();
   const { id } = router.query;
-  console.log("city: ", id);
 
   const {
     fetchAll,
@@ -29,24 +25,32 @@ const DynamicCity = () => {
     fetchAll(par);
   }, []);
 
-  // const[city,setCity]=useState();
+  const [city, setCity] = useState();
 
   useEffect(() => {
-    // const city = vacation?.filter((element) => element?.name?.toLowerCase().includes(id?.toLowerCase()));
-    // setCity(city);
-    console.log("stocazo");
-  }, [id, vacation]);
+    const cityFilter = vacation?.filter((element) =>
+      element?.name?.toLowerCase().includes(id?.toLowerCase())
+    );
+    setCity(cityFilter);
+  }, [vacation]);
 
   return (
     <div className={styles.DynamicCountry}>
+      <h1>{id}</h1>
       <section className={styles.GalleryCityPageContainer}>
         <GalleryCityPage id={id} />
       </section>
       <section>
-        <h1>{id}</h1>
         {/* <CardListLarge country={id}/> */}
-        <Price />
+        {city !== undefined && city.length !== 0 ? <Price id={city} /> : ""}
         <Details />
+      </section>
+      <section>
+        {city !== undefined && city.length !== 0 ? (
+          <Activities render={city} />
+        ) : (
+          ""
+        )}
       </section>
 
       {/* <Map lng={13} lat={83} /> */}

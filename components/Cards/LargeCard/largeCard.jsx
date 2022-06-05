@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 export const LargeCard = ({ city }) => {
-  const [lat,setLat]=useState(city.latitude);
-  const [long,setlong]=useState(city.longitude);
+  const [lat, setLat] = useState(city.latitude);
+  const [long, setlong] = useState(city.longitude);
 
   const name = city.name || "Sicilia";
   const image = city.cover_image_url || { prova4 };
@@ -15,7 +15,6 @@ export const LargeCard = ({ city }) => {
     "In Sicilia l’abbiocco in spiaggia ha il gusto di cannoli e arancin* e!";
   const formatMinText = (descript) =>
     descript.split("").slice(0, 500).join("") + "...";
-
 
   return (
     <div className={styles.cardLargeContainer}>
@@ -33,9 +32,8 @@ export const LargeCard = ({ city }) => {
         <Link href={`/country/city/${name}`}>
           <a className={styles.btn}>More of {name}</a>
         </Link>
-        
       </div>
-      {console.log("city:", city)}
+      {/* {console.log("city:", city)} */}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { RiContactsLine } from "react-icons/ri";
 import { GrInfo } from "react-icons/gr";
 import { FiShoppingCart } from "react-icons/fi";
+import { GrLanguage } from "react-icons/gr";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -72,6 +73,12 @@ export const Navbar = () => {
                 </div>
               </Link>
             </li>
+            <li>
+              <div className={styles.SingleNav}>
+                <GrLanguage />
+                <p>Language</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -99,6 +106,9 @@ export const Navbar = () => {
             <Link href="/contact">
               <RiContactsLine />
             </Link>
+          </li>
+          <li>
+            <GrLanguage />
           </li>
         </ul>
       </div>

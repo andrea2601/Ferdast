@@ -4,6 +4,9 @@
 .AboutContainer {
   margin: 25px 0;
   color: $primary-color;
+  h2 {
+    text-align: center;
+  }
   .aboutInfo {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
