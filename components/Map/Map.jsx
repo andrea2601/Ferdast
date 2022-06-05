@@ -17,7 +17,7 @@ const Map = ({ lng, lat }) => {
       container: "mapContainer",
       style: "mapbox://styles/mapbox/streets-v11",
       center: [longitute, latitude],
-      zoom: 6,
+      zoom: 11,
       attributionControl: false,
     });
 
