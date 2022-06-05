@@ -48,7 +48,7 @@ const DynamicCity = () => {
         <Price />
         <Details />
       </section>
-      <section>
+      <section className={styles.mapContainer}>
         <Map lng={long} lat={lat} />
       </section>
     </div>

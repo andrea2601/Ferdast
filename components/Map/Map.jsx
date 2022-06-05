@@ -35,7 +35,7 @@ const Map = ({ lng, lat }) => {
   }, [lng]);
 
   return (
-    <div>
+    <>
       <Head>
         <link
           href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
@@ -44,7 +44,7 @@ const Map = ({ lng, lat }) => {
       </Head>
 
       <div id="mapContainer" className={styles.map}></div>
-    </div>
+    </>
   );
 };
 
