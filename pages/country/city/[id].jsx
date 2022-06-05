@@ -43,7 +43,7 @@ const DynamicCity = () => {
         <GalleryCityPage id={id} />
       </section>
       <section>
-        <h1>{id}</h1>
+        <h1 className={styles.cityName}>{id}</h1>
         {/* <CardListLarge country={id}/> */}
         <Price />
         <Details />
