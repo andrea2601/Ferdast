@@ -26,13 +26,18 @@ const DynamicCity = () => {
   }, []);
 
   const [city, setCity] = useState();
+  const [long, setLong] = useState();
+  const [lat, setLat] = useState();
 
   useEffect(() => {
-    const cityFilter = vacation?.filter((element) =>
+    const citys = vacation?.filter((element) =>
       element?.name?.toLowerCase().includes(id?.toLowerCase())
     );
-    setCity(cityFilter);
-  }, [vacation]);
+    setLong(citys[0]?.longitude);
+    setLat(citys[0]?.latitude);
+    setCity(citys);
+    console.log("long", long, "lat", lat, citys);
+  }, [id, vacation]);
 
   return (
     <div className={styles.DynamicCountry}>
@@ -41,7 +46,6 @@ const DynamicCity = () => {
         <GalleryCityPage id={id} />
       </section>
       <section>
-        {/* <CardListLarge country={id}/> */}
         {city !== undefined && city.length !== 0 ? <Price id={city} /> : ""}
         <Details />
       </section>
@@ -52,8 +56,9 @@ const DynamicCity = () => {
           ""
         )}
       </section>
-
-      {/* <Map lng={13} lat={83} /> */}
+      <section>
+        <Map lng={long} lat={lat} />
+      </section>
     </div>
   );
 };
