@@ -9,7 +9,7 @@ import { useVacationContext } from "../Context/Provider";
 export default function Home() {
   const {
     fetchAll,
-    state: { vacation, italia, spagna, francia, romania, italiaImg },
+    state: { vacation, italia, spagna, francia, romania },
   } = useVacationContext();
 
   useEffect(() => {
