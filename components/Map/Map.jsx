@@ -5,9 +5,8 @@ import Head from "next/head";
 import mapboxgl from "mapbox-gl";
 
 const Map = ({ lng, lat }) => {
-  // const [long, setLong] = useState()
-  // const[lati,setLati]=useState()
-
+  const longitute = lng || 0;
+  const latitude = lat || 0;
   // MapboxGL
   mapboxgl.accessToken =
     "pk.eyJ1IjoiZXhwbG9yaWVuY2UiLCJhIjoiY2tvMWpsbGk0MDk0NzJvcTl6dHV3bGw0YyJ9.dBUiDNEml9qrhEHuKnitfA";
@@ -17,7 +16,7 @@ const Map = ({ lng, lat }) => {
     const map = new mapboxgl.Map({
       container: "mapContainer",
       style: "mapbox://styles/mapbox/streets-v11",
-      center: [lng, lat],
+      center: [longitute, latitude],
       zoom: 6,
       attributionControl: false,
     });
@@ -26,7 +25,7 @@ const Map = ({ lng, lat }) => {
     const marker = new mapboxgl.Marker({
       color: "red",
     })
-      .setLngLat([lng, lat])
+      .setLngLat([longitute, latitude])
       // Set a Popup message into the marker
       // .setPopup(new mapboxgl.Popup().setHTML('<h1>Message_here</h1>'))
       .addTo(map);
