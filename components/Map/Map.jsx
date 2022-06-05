@@ -1,22 +1,26 @@
-import { useEffect } from "react";
+import styles from "./styles.module.scss";
+import { useEffect, useState } from "react";
+
+import Head from "next/head";
 import mapboxgl from "mapbox-gl";
 
 const Map = ({ lng, lat }) => {
+  // const [long, setLong] = useState()
+  // const[lati,setLati]=useState()
+
   // MapboxGL
   mapboxgl.accessToken =
     "pk.eyJ1IjoiZXhwbG9yaWVuY2UiLCJhIjoiY2tvMWpsbGk0MDk0NzJvcTl6dHV3bGw0YyJ9.dBUiDNEml9qrhEHuKnitfA";
 
   useEffect(() => {
-    const map = new mapboxgl.Map(
-      {
-        container: "mapContainer",
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [lng, lat],
-        zoom: 6,
-        attributionControl: false,
-      },
-      []
-    );
+    console.log("---->", "long", lng, "lat", lat);
+    const map = new mapboxgl.Map({
+      container: "mapContainer",
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [lng, lat],
+      zoom: 6,
+      attributionControl: false,
+    });
 
     // Marker map
     const marker = new mapboxgl.Marker({
@@ -29,9 +33,20 @@ const Map = ({ lng, lat }) => {
 
     // Map controls (zoom in / out)
     map.addControl(new mapboxgl.NavigationControl(), "top-right");
-  }, []);
+  }, [lng]);
 
-  return <div id="mapContainer"></div>;
+  return (
+    <div>
+      <Head>
+        <link
+          href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
+      </Head>
+
+      <div id="mapContainer" className={styles.map}></div>
+    </div>
+  );
 };
 
 export default Map;
