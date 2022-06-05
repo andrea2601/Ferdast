@@ -11,10 +11,6 @@ import Map from "../../../components/Map/Map";
 import { useEffect, useState } from "react";
 
 const DynamicCity = () => {
-  // const {
-  //   state: { italiaImg, spagnaImg, franciaImg, romaniaImg },
-  // } = useVacationContext();
-
   const router = useRouter();
   const { id } = router.query;
   console.log("city: ", id);
@@ -29,12 +25,16 @@ const DynamicCity = () => {
     fetchAll(par);
   }, []);
 
-  // const[city,setCity]=useState();
+  const [long, setLong] = useState();
+  const [lat, setLat] = useState();
 
   useEffect(() => {
-    // const city = vacation?.filter((element) => element?.name?.toLowerCase().includes(id?.toLowerCase()));
-    // setCity(city);
-    console.log("stocazo");
+    const citys = vacation?.filter((element) =>
+      element?.name?.toLowerCase().includes(id?.toLowerCase())
+    );
+    setLong(citys[0]?.longitude);
+    setLat(citys[0]?.latitude);
+    console.log("long", long, "lat", lat, citys);
   }, [id, vacation]);
 
   return (
@@ -49,7 +49,10 @@ const DynamicCity = () => {
         <Details />
       </section>
 
-      {/* <Map lng={13} lat={83} /> */}
+      <section className={styles.mapContainer}>
+        <Map lng={long} lat={lat} />
+      </section>
+
     </div>
   );
 };

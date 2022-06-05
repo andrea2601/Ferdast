@@ -1,34 +1,51 @@
-import { useEffect } from 'react'
-import mapboxgl from 'mapbox-gl'
+import styles from "./styles.module.scss";
+import { useEffect, useState } from "react";
+
+import Head from "next/head";
+import mapboxgl from "mapbox-gl";
 
 const Map = ({ lng, lat }) => {
+  const longitute = lng || 0;
+  const latitude = lat || 0;
   // MapboxGL
   mapboxgl.accessToken =
-    'pk.eyJ1IjoiZXhwbG9yaWVuY2UiLCJhIjoiY2tvMWpsbGk0MDk0NzJvcTl6dHV3bGw0YyJ9.dBUiDNEml9qrhEHuKnitfA'
+    "pk.eyJ1IjoiZXhwbG9yaWVuY2UiLCJhIjoiY2tvMWpsbGk0MDk0NzJvcTl6dHV3bGw0YyJ9.dBUiDNEml9qrhEHuKnitfA";
 
   useEffect(() => {
+    console.log("---->", "long", lng, "lat", lat);
     const map = new mapboxgl.Map({
-      container: 'mapContainer',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [lng, lat],
-      zoom: 6,
+      container: "mapContainer",
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [longitute, latitude],
+      zoom: 11,
       attributionControl: false,
-    },[])
+    });
 
     // Marker map
     const marker = new mapboxgl.Marker({
-      color: 'red',
+      color: "red",
     })
-      .setLngLat([lng, lat])
+      .setLngLat([longitute, latitude])
       // Set a Popup message into the marker
       // .setPopup(new mapboxgl.Popup().setHTML('<h1>Message_here</h1>'))
-      .addTo(map)
+      .addTo(map);
 
     // Map controls (zoom in / out)
-    map.addControl(new mapboxgl.NavigationControl(), 'top-right')
-  }, [])
+    map.addControl(new mapboxgl.NavigationControl(), "top-right");
+  }, [lng]);
 
-  return <div id="mapContainer"></div>
-}
+  return (
+    <>
+      <Head>
+        <link
+          href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
+      </Head>
 
-export default Map
+      <div id="mapContainer" className={styles.map}></div>
+    </>
+  );
+};
+
+export default Map;

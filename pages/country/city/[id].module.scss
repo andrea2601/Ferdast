@@ -4,7 +4,12 @@
     .GalleryCityPageContainer{
         display: flex;
         justify-content: center;
-        margin:2rem 0 2rem 0;
+        margin:2rem 0 ;
         // height: 400px;
+    }
+    .mapContainer{
+        margin:2rem 0 ;   
+        display: flex;
+        justify-content: center;
     }
 }
