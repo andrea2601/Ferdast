@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
+import { useEffect } from "react";
 import styles from "./styles.module.scss";
 
-export const Price = ({ id }) => {
+export const Price = ({ id, giveActivity }) => {
   const [expand, setExpand] = useState(false);
 
   const toggleExpand = () => {
@@ -12,7 +13,19 @@ export const Price = ({ id }) => {
       return setExpand(true);
     }
   };
-
+  const bestPrice = () => {
+    const best = 1000000;
+    if (giveActivity !== undefined && giveActivity.lenght !== 0) {
+      best = giveActivity.filter(
+        (el) => parseInt(el.retail_price.formatted_value.split("€")) < best
+      );
+      console.log(best);
+      return best;
+    } else {
+      console.log("false");
+    }
+  };
+  console.log(giveActivity);
   return (
     <>
       <div
@@ -26,7 +39,10 @@ export const Price = ({ id }) => {
           <h2>{id.length !== 0 ? id[0].name : "Loading"}</h2>
         </div>
         <p>
-          From <span>{/*PRICE*/} 330$</span>
+          From{" "}
+          <span>
+            {/*PRICE*/} {bestPrice}
+          </span>
         </p>
         <button className={styles.btn}>Find out activities</button>
       </div>

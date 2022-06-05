@@ -12,6 +12,10 @@ import { useEffect, useState } from "react";
 import { Activities } from "../../../components/Activities/activities";
 
 const DynamicCity = () => {
+  const [city, setCity] = useState();
+  const [long, setLong] = useState();
+  const [lat, setLat] = useState();
+  const [activity, setActivity] = useState();
   const router = useRouter();
   const { id } = router.query;
 
@@ -25,10 +29,6 @@ const DynamicCity = () => {
     fetchAll(par);
   }, []);
 
-  const [city, setCity] = useState();
-  const [long, setLong] = useState();
-  const [lat, setLat] = useState();
-
   useEffect(() => {
     const citys = vacation?.filter((element) =>
       element?.name?.toLowerCase().includes(id?.toLowerCase())
@@ -36,28 +36,32 @@ const DynamicCity = () => {
     setLong(citys[0]?.longitude);
     setLat(citys[0]?.latitude);
     setCity(citys);
-    console.log("long", long, "lat", lat, citys);
   }, [id, vacation]);
 
   return (
     <div className={styles.DynamicCountry}>
       <h1>{id}</h1>
+
+      <section>
+        <Map lng={long} lat={lat} />
+      </section>
       <section className={styles.GalleryCityPageContainer}>
         <GalleryCityPage id={id} />
       </section>
       <section>
-        {city !== undefined && city.length !== 0 ? <Price id={city} /> : ""}
+        {city !== undefined && city.length !== 0 ? (
+          <Price id={city} giveActivity={activity} />
+        ) : (
+          ""
+        )}
         <Details />
       </section>
       <section>
         {city !== undefined && city.length !== 0 ? (
-          <Activities render={city} />
+          <Activities render={city} getActivity={setActivity} />
         ) : (
           ""
         )}
-      </section>
-      <section>
-        <Map lng={long} lat={lat} />
       </section>
     </div>
   );

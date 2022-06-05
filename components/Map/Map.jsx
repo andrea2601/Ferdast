@@ -12,7 +12,6 @@ const Map = ({ lng, lat }) => {
     "pk.eyJ1IjoiZXhwbG9yaWVuY2UiLCJhIjoiY2tvMWpsbGk0MDk0NzJvcTl6dHV3bGw0YyJ9.dBUiDNEml9qrhEHuKnitfA";
 
   useEffect(() => {
-    console.log("---->", "long", lng, "lat", lat);
     const map = new mapboxgl.Map({
       container: "mapContainer",
       style: "mapbox://styles/mapbox/streets-v11",
