@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
-import { Carousel } from "../components/Carousel/carousel";
+import CarouselTwo from "../components/Carousel/CarouselTwo";
 
 export default function Home() {
   const {
@@ -31,11 +31,11 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <CarouselTwo />
 
       <CardList />
-      <section className="carouselContainer">
-        <Carousel />
-      </section>
+        {/* <Carousel /> */}
+        
     </div>
   );
 }
