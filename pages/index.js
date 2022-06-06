@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
+import { Carousel } from "../components/Carousel/carousel";
 
 export default function Home() {
   const {
@@ -15,15 +16,6 @@ export default function Home() {
   useEffect(() => {
     fetchAll("/cities");
   }, []);
-
-  useEffect(() => {
-    console.log("vacation", vacation);
-    console.log("ita:", italia);
-
-    console.log("spa:", spagna);
-    console.log("fra:", francia);
-    console.log("rom:", romania);
-  }, [vacation]);
 
   return (
     <div className={styles.container}>
@@ -41,6 +33,9 @@ export default function Home() {
       <Hero />
 
       <CardList />
+      <section className="carouselContainer">
+        <Carousel />
+      </section>
     </div>
   );
 }
