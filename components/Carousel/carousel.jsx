@@ -17,7 +17,6 @@ export const Carousel = () => {
   const [img4, setImg4] = useState(3);
   const [img5, setImg5] = useState(4);
   const [img6, setImg6] = useState(5);
-  console.log("img", img1);
 
   const increases = () => {
     console.log("ciao");
@@ -100,24 +99,28 @@ export const Carousel = () => {
       <div className={styles.btnContainer}>
         <button onClick={decrease}> - - - </button>
       </div>
-      <div className={styles.cards}>
-        <img src={items[img1]} alt="1" />
+
+      <div className={styles.cardsWrapper}>
+        <div className={styles.cards}>
+          <img src={items[img1]} alt="1" />
+        </div>
+        <div className={styles.cards}>
+          <img src={items[img2]} alt="2" />
+        </div>
+        <div className={styles.cards}>
+          <img src={items[img3]} alt="3" />
+        </div>
+        <div className={styles.cards}>
+          <img src={items[img4]} alt="4" />
+        </div>
+        <div className={styles.cards}>
+          <img src={items[img5]} alt="5" />
+        </div>
+        <div className={styles.cards}>
+          <img src={items[img6]} alt="6" />
+        </div>
       </div>
-      <div className={styles.cards}>
-        <img src={items[img2]} alt="2" />
-      </div>
-      <div className={styles.cards}>
-        <img src={items[img3]} alt="3" />
-      </div>
-      <div className={styles.cards}>
-        <img src={items[img4]} alt="4" />
-      </div>
-      <div className={styles.cards}>
-        <img src={items[img5]} alt="5" />
-      </div>
-      <div className={styles.cards}>
-        <img src={items[img6]} alt="6" />
-      </div>
+
       <div className={styles.btnContainer}>
         <button onClick={increases}> +++ </button>
       </div>
