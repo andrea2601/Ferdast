@@ -18,13 +18,13 @@ const defaultState = {
   cart: ["Palermo", "Milano", "Londra", "Brasov", "Barcellona"],
   city: [],
   italia: [],
-  spagna: [],
+  svezia: [],
   francia: [],
-  romania: [],
+  usa: [],
   italiaImg: "",
-  spagnaImg: "",
+  sveziaImg: "",
   franciaImg: "",
-  romaniaImg: "",
+  usaImg: "",
 };
 
 const VacationContext = createContext(defaultState);

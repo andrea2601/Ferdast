@@ -6,26 +6,21 @@ export const CardList = () => {
 
 
   const {
-    state: {italiaImg, spagnaImg, franciaImg, romaniaImg },
+    state: { italiaImg, sveziaImg, franciaImg, usaImg },
 
   } = useVacationContext();
 
   const itDescript = "Esplora le meraviglie d'italia";
 
-  const espDescript = "Esplora las meravillas de España";
-  const fraDescript = "Explorez les merveilles de la France";
-  const englDescript = "Explore the wonders of Romania";
+  const sveDescript = "Esplora le meraviglie di Svezia";
+  const fraDescript = "Esplora le meraviglie di Francia";
+  const usalDescript = "Esplora le meraviglie degli USA";
   return (
     <div className={styles.cardContiner}>
       <MediumCard name={"Italia"} description={itDescript} img={italiaImg} />
-
-      <MediumCard name={"Spagna"} description={espDescript} img={spagnaImg} />
+      <MediumCard name={"Svezia"} description={sveDescript} img={sveziaImg} />
       <MediumCard name={"Francia"} description={fraDescript} img={franciaImg} />
-      <MediumCard
-        name={"Romania"}
-        description={englDescript}
-        img={romaniaImg}
-      />
+      <MediumCard name={"Stati Uniti d'America"} description={usalDescript} img={usaImg} />
 
     </div>
   );

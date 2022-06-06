@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export const GalleryCityPage = ({ id }) => {
   const {
-    state: { vacation, italia, spagna, francia, romania },
+    state: { vacation, italia, svezia, francia, usa },
   } = useVacationContext();
   const [imgs, setImgs] = useState([]);
 
@@ -13,14 +13,14 @@ export const GalleryCityPage = ({ id }) => {
     const country = city?.country.name;
     let list = [];
 
-    if (country?.toLowerCase() == "spagna") {
-      spagna?.forEach((element) => list = [...list, element.cover_image_url]);
+    if (country?.toLowerCase() == "svezia") {
+      svezia?.forEach((element) => list = [...list, element.cover_image_url]);
     } else if (country?.toLowerCase() == "italia") {
       italia?.forEach((element) => list = [...list, element.cover_image_url]);
     } else if (country?.toLowerCase() == "francia") {
       francia?.forEach((element) => list = [...list, element.cover_image_url]);
-    } else if (country?.toLowerCase() == "romania") {
-      romania?.forEach((element) => list = [...list, element.cover_image_url]);
+    } else if (country?.toLowerCase() == "stati uniti d'america") {
+      usa?.forEach((element) => list = [...list, element.cover_image_url]);
     }
     setImgs(list);
 
@@ -29,7 +29,7 @@ export const GalleryCityPage = ({ id }) => {
     console.log("id........", id);
     console.log("country........", city?.country.name);
     console.log("countryreal........", country);
-  }, [italia, spagna, francia, romania, id]);
+  }, [italia, svezia, francia, usa, id]);
 
   return (
     <div className={styles.wrapperSquare}>

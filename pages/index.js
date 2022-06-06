@@ -9,7 +9,7 @@ import { useVacationContext } from "../Context/Provider";
 export default function Home() {
   const {
     fetchAll,
-    state: { vacation, italia, spagna, francia, romania },
+    state: { vacation, italia, svezia, francia, usa },
   } = useVacationContext();
 
   useEffect(() => {
@@ -20,9 +20,9 @@ export default function Home() {
     console.log("vacation", vacation);
     console.log("ita:", italia);
 
-    console.log("spa:", spagna);
+    console.log("sve:", svezia);
     console.log("fra:", francia);
-    console.log("rom:", romania);
+    console.log("usa:", usa);
   }, [vacation]);
 
   return (
