@@ -50,7 +50,7 @@ export const Hero = (prop) => {
     <div className={styles.Hero}>
       <div className={styles.img}>
         <div className={styles.Overlay}></div>
-        <Image src={img} alt="heroImg" layout="fill" />
+        <Image src={img} alt="heroImg" layout="fill" priority="true"/>
       </div>
       <h1 className={styles.title}>{title}</h1>
       <h2 className={styles.subtitle}>{subtitle}</h2>
