@@ -4,9 +4,6 @@
 .AboutContainer {
   margin: 25px 0;
   color: $primary-color;
-  h2 {
-    text-align: center;
-  }
   .aboutInfo {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -23,25 +20,24 @@
       border-radius: 20px;
 
       -webkit-box-shadow: 5px 5px 15px 5px #000000;
-      box-shadow: 5px 5px 15px 5px #000000;
+      box-shadow: 1.5px 1.5px 6px 5px rgba(216, 216, 216, 0.8);
+
       h2 {
         font-size: 18px;
-        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb,
-          0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
-          0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
-          0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
-          0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15),
-          2px 2px 2px rgba(206, 89, 55, 0);
+        text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
       }
+
       span {
         border-radius: 120px;
       }
+
       .logo {
         display: flex;
         flex-flow: row nowrap;
         width: 50%;
         justify-content: space-around;
         align-items: center;
+
         svg {
           width: 30px;
           height: auto;
@@ -50,6 +46,7 @@
     }
   }
 }
+
 @media (min-width: "450px") {
   .AboutContainer {
     .aboutInfo {
@@ -61,11 +58,13 @@
     }
   }
 }
+
 @media (min-width: "650px") {
   .AboutContainer {
     .aboutInfo {
       grid-template-columns: repeat(2, 1fr);
       gap: 15px;
+
       .Profile {
         .logo {
           svg {
@@ -76,6 +75,7 @@
     }
   }
 }
+
 @media (min-width: "800px") {
   .AboutContainer {
     .aboutInfo {
@@ -83,6 +83,7 @@
         h2 {
           font-size: 24px;
         }
+
         .logo {
           svg {
             width: 40px;
@@ -92,6 +93,7 @@
     }
   }
 }
+
 @media (min-width: "1300px") {
   .AboutContainer {
     .aboutInfo {

@@ -1,15 +1,19 @@
 import styles from "./styles.module.scss";
-// import Image from "next/dist/client/image";
-import prova4 from "../../Images/prova4.jpeg";
+import cardImgMock from "../../Images/cardImgmock.png";
 import Link from "next/link";
 import { useState } from "react";
+import { useVacationContext } from "../../../Context/Provider";
 
 export const LargeCard = ({ city }) => {
+  const {
+    state: { loading },
+  } = useVacationContext();
+
   const [lat, setLat] = useState(city.latitude);
   const [long, setlong] = useState(city.longitude);
 
-  const name = city.name || "Sicilia";
-  const image = city.cover_image_url || { prova4 };
+  const name = city.name || "Città";
+  const image = loading ? cardImgMock.src : city.cover_image_url;
   const descript =
     city.content ||
     "In Sicilia l’abbiocco in spiaggia ha il gusto di cannoli e arancin* e!";

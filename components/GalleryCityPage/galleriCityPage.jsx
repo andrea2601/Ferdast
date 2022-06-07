@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import { useVacationContext } from "../../Context/Provider";
 import { useEffect, useState } from "react";
-
+import cardImgMock from "../Images/cardImgmock.png"
 export const GalleryCityPage = ({ id }) => {
   const {
     state: { vacation, italia, svezia, francia, usa },
@@ -32,22 +32,22 @@ export const GalleryCityPage = ({ id }) => {
   return (
     <div className={styles.wrapperSquare}>
       <div className={styles.leftSquare}>
-        <img src={imgs[0]} />
+        <img src={imgs[0] || cardImgMock.src} />
       </div>
 
       <div className={styles.rightSquare}>
         <div className={styles.topWrapperSquare}>
           <div className={styles.smLeftSquare}>
-            <img src={imgs[1]} />
+            <img src={imgs[1] || cardImgMock.src} />
           </div>
 
           <div className={styles.smRigtSquare}>
-            <img src={imgs[2] || imgs[0]} />
+            <img src={imgs[2] || imgs[0] || cardImgMock.src} />
           </div>
         </div>
 
         <div className={styles.buttomRigSquare}>
-          <img src={imgs[3] || imgs[1]} />
+          <img src={imgs[3] || imgs[1] || cardImgMock.src} />
         </div>
       </div>
     </div>

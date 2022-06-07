@@ -2,11 +2,12 @@ import styles from "./styles.module.scss";
 import { useEffect } from "react";
 import { useVacationContext } from "../../Context/Provider";
 import { LargeCard } from "../Cards/LargeCard/largeCard";
+import { LargeCardSkeleton } from "../Cards/LargeCardSkeleton/largeCardSkeleton";
 
 export const CardListLarge = ({ country }) => {
   const {
     fetchAll,
-    state: { vacation },
+    state: { vacation, loading },
   } = useVacationContext();
 
   const par = "/cities";
@@ -16,7 +17,7 @@ export const CardListLarge = ({ country }) => {
 
   return (
     <div className={styles.cardLargeContiner}>
-      {vacation &&
+      {loading ? <><LargeCardSkeleton/><LargeCardSkeleton/><LargeCardSkeleton/></> :
         vacation
           .filter(
             (item) => item.country.name.toLowerCase() === country?.toLowerCase()

@@ -57,30 +57,34 @@
       flex-direction: column;
       width: 250px;
       .Form {
-        .InputMail {
-          padding: 10.5px;
-          border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-          border: none;
+        .MailBox{
+          display: flex;
+          align-items: flex-end;
+          .InputMail {
+            padding: 10px 10.5px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: none;
+          }
+          .InputMail::placeholder {
+            font-family: "Montserrat", sans-serif;
+          }
+          .Send {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            background: $btn_color;
+            padding: 10px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: none;
+            color: $primary_color;
+            cursor: pointer;
+          }
+          .Send:hover {
+            background: $btn_color_hvr;
+          }
         }
-        .InputMail::placeholder {
-          font-family: "Montserrat", sans-serif;
-        }
-        .Send {
-          font-family: "Montserrat", sans-serif;
-          font-weight: 600;
-          background: $btn_color;
-          padding: 10px;
-          border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
-          border: none;
-          color: $primary_color;
-          cursor: pointer;
-        }
-        .Send:hover {
-          background: $btn_color_hvr;
-        }
-        .mailPrivacy {
+          .mailPrivacy {
           font-size: 9px;
         }
       }

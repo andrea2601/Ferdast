@@ -5,6 +5,7 @@ import {
   FETCH_ALL_CITY_ERROR,
   FETCH_ALL_CITY_REQUEST,
   FETCH_ALL_CITY_SUCCESS,
+  ADD_TO_CART,
 } from "./constants";
 
 export default (state = {}, action) => {
@@ -100,6 +101,13 @@ export default (state = {}, action) => {
         ...state,
         loading: false,
         error: action.payload,
+      };
+    case ADD_TO_CART:
+      return {
+        // AGGIUNGERE PERCORSO PAYLOAD
+        ...state,
+        cart: [...cart, action.payload],
+        price: price + action.payload,
       };
 
     default:

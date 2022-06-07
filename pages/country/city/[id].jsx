@@ -5,6 +5,7 @@ import { Details } from "../../../components/Details/details";
 import { Cart } from "../../../components/Cart/cart";
 import { Price } from "../../../components/Price/price";
 import { GalleryCityPage } from "../../../components/GalleryCityPage/galleriCityPage";
+import { GalleryCityPageSkeleton } from "../../../components/GalleryCityPageSkeleton/galleriCityPageSkeleton";
 
 import { useVacationContext } from "../../../Context/Provider";
 import Map from "../../../components/Map/Map";
@@ -20,7 +21,7 @@ const DynamicCity = () => {
 
   const {
     fetchAll,
-    state: { vacation },
+    state: { vacation, loading },
   } = useVacationContext();
 
   const par = "/cities";
@@ -41,7 +42,7 @@ const DynamicCity = () => {
     <div className={styles.DynamicCountry}>
       <h1>{id}</h1>
       <section className={styles.GalleryCityPageContainer}>
-        <GalleryCityPage id={id} />
+        {loading ? <GalleryCityPageSkeleton /> : <GalleryCityPage id={id} />}
       </section>
       <section>
         {/* {city !== undefined && city.length !== 0 && actOn == false ? (
