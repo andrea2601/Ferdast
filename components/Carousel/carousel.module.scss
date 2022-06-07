@@ -1,0 +1,64 @@
+
+.carouselContainer{
+   margin: 2rem 0;
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+    .btnContainer{ 
+        display: flex;
+        align-items: center;
+        button{
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+    }
+    .cardsWrapper{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        overflow-y:  hidden;
+        border-radius: 15px;
+        
+        
+        .cards{
+            
+            border-radius: 15px;
+            box-shadow: 10px 5px 5px rgb(198, 198, 198);
+            width: 350px;
+            min-width: 150px;
+            height: 350px;
+            margin-bottom: 1rem;
+            &.transitionIn:active{
+                transition-property: width;
+                transition-duration: 0.4s;
+                transition-delay: 0.25s;
+
+                // transform:translateX(-100%);
+            }
+            .transitionIn:active{
+                width: 0px;
+            }
+            .transitionOut{
+                width: 10px;
+                transition: all 0.3 ease-in-out;
+                transform:translateX(100%);
+            }
+            
+            img{
+               
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                object-fit: cover;
+                width: 100%;
+                height: 60%;
+            }
+            h2{
+                padding-left: 1rem;
+            }
+        }
+
+    }
+}
+
+

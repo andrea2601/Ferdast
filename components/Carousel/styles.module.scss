@@ -1,0 +1,28 @@
+
+.CarouselTwo {
+  h2 {
+    font-size: 45px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  .card {
+    // position: relative;
+    margin-bottom: 45px;
+    img {
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      // position: absolute;
+      // height: 100%;
+      // width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    h2 {
+      // position: absolute;
+      color: white;
+      margin-top: -60px;
+      margin-left: 15px;
+
+    }
+  }
+}
+
