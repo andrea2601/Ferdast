@@ -16,20 +16,17 @@ export const Price = ({ id, giveActivity, activityOn }) => {
   };
   const bestPrice = (value) => {
     if (value !== undefined) {
-      const best = value[0].retail_price.formatted_value.split("€").join("");
+      const best = value[0]?.retail_price?.formatted_value.split("€").join("");
       for (let i = 0; i < value.length; i++) {
-        console.log(
-          parseInt(value[i].retail_price.formatted_value.split("€").join("")) <
-            parseInt(best)
-        );
         if (
-          parseInt(value[i].retail_price.formatted_value.split("€").join("")) <
-          parseInt(best)
+          parseInt(
+            value[i]?.retail_price?.formatted_value.split("€").join("")
+          ) < parseInt(best)
         ) {
           best = value[i].retail_price.formatted_value;
-          console.log("condizione vera", best);
+          break;
         }
-        return best;
+        return parseInt(best?.split("€").join(""));
       }
     } else {
       return "loading";
@@ -53,7 +50,7 @@ export const Price = ({ id, giveActivity, activityOn }) => {
             {/*PRICE*/}
             {parseInt(bestPrice(price !== "..." ? price : undefined)) == 0
               ? "Free activity available!"
-              : `From ${parseInt(bestPrice(price))} €`}{" "}
+              : `From ${bestPrice(price)} €`}{" "}
           </span>
         </p>
         <button className={styles.btn} onClick={activityOn}>
