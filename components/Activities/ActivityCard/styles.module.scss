@@ -81,6 +81,7 @@
       }
       .reduce {
         cursor: pointer;
+        transform: rotate(180deg);
       }
     }
   }
@@ -146,5 +147,10 @@
         height: 95%;
       }
     }
+  }
+}
+@media (min-width: 1800px) {
+  .ActivityCardContainer {
+    width: 450px;
   }
 }
