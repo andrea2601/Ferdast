@@ -1,10 +1,40 @@
 import Carousel from "better-react-carousel";
 import styles from "./styles.module.scss";
+import { useVacationContext } from "../../Context/Provider";
+import { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 export default function CarouselTwo() {
+  const {
+    state: { vacation, italia, russia, francia, usa },
+  } = useVacationContext();
+  const [imgs, setImgs] = useState([]);
+
+  useEffect(() => {
+    let imgArr = [];
+
+    russia?.forEach(
+      (element) => (imgArr = [...imgArr, element.cover_image_url])
+    );
+    italia?.forEach(
+      (element) => (imgArr = [...imgArr, element.cover_image_url])
+    );
+    francia.forEach(
+      (element) => (imgArr = [...imgArr, element.cover_image_url])
+    );
+    usa.forEach((element) => (imgArr = [...imgArr, element.cover_image_url]));
+
+    setImgs(imgArr);
+    console.log("arrayImmagini........", usa);
+  }, [italia, russia, francia, usa]);
+
   return (
     <div className={styles.CarouselTwo}>
-      <h2>Best Seller</h2>
+      <div className={styles.title}>
+        <h2>Best Seller</h2>
+        <p>The best destination of the moment</p>
+      </div>
+
       <div className={styles.CarouselWrapper}>
         <Carousel
           responsiveLayout={[
@@ -38,38 +68,95 @@ export default function CarouselTwo() {
         >
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" src="https://picsum.photos/800/600?random=1" />
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <img width="100%" height="400px" src={imgs[0]} />
+              <div className={styles.descriptContainer}>
+                <h2>{russia[0]?.name}</h2>
+                <div className={styles.starContainer}>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+              </div>
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" src="https://picsum.photos/800/600?random=2" />
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <img width="100%" height="400px" src={imgs[3]} />
+              <div className={styles.descriptContainer}>
+                <h2>{italia[0]?.name}</h2>
+                <div className={styles.starContainer}>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+              </div>
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" src="https://picsum.photos/800/600?random=3" />
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <img width="100%" height="400px" src={imgs[4]} />
+
+              <div className={styles.descriptContainer}>
+                <h2>{italia[1]?.name}</h2>
+                <div className={styles.starContainer}>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+              </div>
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" src="https://picsum.photos/800/600?random=4" />
-              <h2>Lorem ispsum dolor sit amet</h2>
+              <img width="100%" height="400px" src={imgs[5]} />
+              <div className={styles.descriptContainer}>
+                <h2>{italia[2]?.name}</h2>
+                <div className={styles.starContainer}>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+              </div>
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" src="https://picsum.photos/800/600?random=5" />
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <img width="100%" height="400px" src={imgs[8]} />
+
+              <div className={styles.descriptContainer}>
+                <h2>{italia[3]?.name}</h2>
+                <div className={styles.starContainer}>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+              </div>
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" src="https://picsum.photos/800/600?random=6" />
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <img width="100%" height="400px" src={imgs[54]} />
+
+              <div className={styles.descriptContainer}>
+                <h2>{usa[40]?.name}</h2>
+                <div className={styles.starContainer}>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                </div>
+              </div>
             </div>
           </Carousel.Item>
           {/* ... */}
