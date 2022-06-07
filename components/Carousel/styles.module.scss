@@ -1,38 +1,4 @@
-<<<<<<< HEAD
 
-.CarouselTwo{
-    padding: 2rem;
-    width: 100%;
-    border-radius: 15px;
-    margin: 0 auto;
-  
-    h2{
-        margin: 2rem;
-        bottom: 5px;
-    }
-    .carouselContaner{
-        .card{
-            position: relative;
-            height: 200px;
-            width: 350px;
-            border-radius: 15px;
-            margin-bottom: 1rem;
-        
-            img{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                border-radius: 15px;
-                box-shadow: 10px 5px 5px grey;
-                
-            }
-            h2{
-                position: absolute;
-                color: white;
-            }
-        }
-
-=======
 .CarouselTwo {
   h2 {
     font-size: 45px;
@@ -55,75 +21,8 @@
       color: white;
       margin-top: -60px;
       margin-left: 15px;
->>>>>>> 9c45221ba62a96829b1d93017f889dddd4c2817a
+
     }
   }
 }
 
-<<<<<<< HEAD
-=======
-// .CarouselTwo{
-//     // margin-top: 2rem;
-//     // width: 100%;
-//     // height: 300px;
-
-//     h2{
-//         margin: 2rem;
-//     }
-//     .card{
-//         // position: relative;
-//         // height: 275px;
-//         border-radius: 15px;
-//         // width: 300px;
-//         margin: 0;
-//         padding: 0;
-
-//         // box-shadow: 10px 5px 5px grey;
-
-//     }
-// }
-
-// .carouselContainer{
-//     margin: 2rem 0;
-//    display: flex;
-//    justify-content: center;
-//    gap: 10px;
-//     .btnContainer{
-//         display: flex;
-//         align-items: center;
-//         button{
-//             border-radius: 50%;
-//             height: 50px;
-//             width: 50px;
-//         }
-//     }
-//     .cardsWrapper{
-//         display: flex;
-//         justify-content: center;
-//         gap: 20px;
-//         overflow: hidden;
-//         .cards{
-//             border: 2px solid black;
-//             width: 250px;
-//             min-width: 150px;
-//             height: 350px;
-//             counter-increment: gallery-cell;
-//             .cards::before{
-//                 display: block;
-//                 text-align: center;
-//                 content: counter(gallery-cell);
-//                 line-height: 200px;
-//                 font-size: 80px;
-//                 color: white;
-//             }
-
-//             img{
-//                 object-fit: cover;
-//                 width: 100%;
-//                 height: 50%;
-//             }
-//         }
-
-//     }
-// }
->>>>>>> 9c45221ba62a96829b1d93017f889dddd4c2817a
