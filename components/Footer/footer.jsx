@@ -49,7 +49,7 @@ export const Footer = () => {
         <section className={styles.Mail}>
           <div className={styles.Form}>
             <h4>Newsletter</h4>
-            <div>
+            <div className={styles.MailBox}>
               <input
                 className={styles.InputMail}
                 type="email"

@@ -9,7 +9,7 @@ export const Hero = (prop) => {
   const title = prop.title || "Vivi viaggi unici al mondo...";
   const subtitle = prop.subtitle || "...e incontra nuovi amici";
   const {
-    state: { italiaImg, spagnaImg, franciaImg, romaniaImg },
+    state: { italiaImg, russiaImg, franciaImg, usaImg },
   } = useVacationContext();
 
   const [img, setImg] = useState(heroImgMock);
@@ -20,16 +20,16 @@ export const Hero = (prop) => {
           setImg(italiaImg ? italiaImg : heroImgMock);
           break
         }
-        case "spagna": {
-          setImg(spagnaImg ? spagnaImg : heroImgMock);
+        case "russia": {
+          setImg(russiaImg ? russiaImg : heroImgMock);
           break
         }
         case "francia": {
           setImg(franciaImg ? franciaImg : heroImgMock);
           break
         }
-        case "romania": {
-          setImg(romaniaImg ? romaniaImg : heroImgMock);
+        case "stati uniti d'america": {
+          setImg(usaImg ? usaImg : heroImgMock);
           break
         }
         default: {
@@ -42,7 +42,7 @@ export const Hero = (prop) => {
 
   useEffect(() => {
     setImgFun();
-  }, [subtitle, italiaImg, franciaImg, spagnaImg, romaniaImg])
+  }, [subtitle, italiaImg, franciaImg, russiaImg, usaImg])
 
 
 
@@ -50,7 +50,7 @@ export const Hero = (prop) => {
     <div className={styles.Hero}>
       <div className={styles.img}>
         <div className={styles.Overlay}></div>
-        <Image src={img} alt="heroImg" layout="fill" />
+        <Image src={img} alt="heroImg" layout="fill" priority="true"/>
       </div>
       <h1 className={styles.title}>{title}</h1>
       <h2 className={styles.subtitle}>{subtitle}</h2>

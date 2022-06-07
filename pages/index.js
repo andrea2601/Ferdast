@@ -11,12 +11,23 @@ import { Carousel } from "../components/Carousel/carousel";
 export default function Home() {
   const {
     fetchAll,
-    state: { vacation, italia, spagna, francia, romania },
+    state: { vacation, italia, russia, francia, usa },
   } = useVacationContext();
 
   useEffect(() => {
     fetchAll("/cities");
   }, []);
+
+
+  useEffect(() => {
+    console.log("vacation", vacation);
+    console.log("ita:", italia);
+
+    console.log("sve:", russia);
+    console.log("fra:", francia);
+    console.log("usa:", usa);
+  }, [vacation]);
+
 
   return (
     <div className={styles.container}>
@@ -28,7 +39,7 @@ export default function Home() {
           rel="stylesheet"
         />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Hero />

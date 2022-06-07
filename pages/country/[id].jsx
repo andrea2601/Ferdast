@@ -3,19 +3,20 @@ import styles from "./[id].module.scss";
 
 import { CardListLarge } from "../../components/CardListLarge/cardListLarge";
 import { Hero } from "../../components/Hero/hero";
+import { HeroSkeleton } from "../../components/HeroSkeleton/heroSkeleton";
 
 import { useVacationContext } from "../../Context/Provider";
 import { useEffect } from "react";
 
 const DynamicCountry = () => {
-  // const {
-  //   fetchAll,
-  //   state: { vacation, italia, spagna, francia, romania },
-  // } = useVacationContext();
+  const {
+    fetchAll,
+    state: { loading },
+  } = useVacationContext();
 
-  // useEffect(() => {
-  //   fetchAll("/cities");
-  // }, []);
+  useEffect(() => {
+    fetchAll("/cities");
+  }, []);
 
   const router = useRouter();
   const { id } = router.query;
@@ -24,7 +25,7 @@ const DynamicCountry = () => {
 
   return (
     <div className={styles.DynamicCountry}>
-      <Hero title={title} subtitle={id} />
+      {loading ? <HeroSkeleton/> : <Hero title={title} subtitle={id} />}
       <div className={styles.DynamicCountry}>
         <CardListLarge country={id} />
       </div>

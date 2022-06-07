@@ -33,7 +33,7 @@ const Cart = () => {
               <h3>Prenota per 4 e ottieni 175$ di sconto</h3>
               <p>
                 Chi fa per 4 paga meno! Prenota per 4 amici e ottieni 175€
-                di sconto su una spesa minima di 1000€. Usa il codice UTRAVELX4 direttamente nel Checkout.
+                di sconto su una spesa minima di 1000€. Usa il codice PENSIONATO65 direttamente nel Checkout.
               </p>
             </div>
           </div>
