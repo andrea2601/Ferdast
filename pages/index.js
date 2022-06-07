@@ -6,6 +6,7 @@ import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
 import CarouselTwo from "../components/Carousel/CarouselTwo";
+import { Carousel } from "../components/Carousel/carousel";
 
 export default function Home() {
   const {
@@ -31,11 +32,12 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <CarouselTwo />
+      <section className="carouselContainer">
+        <CarouselTwo />
+      </section>
 
       <CardList />
-        {/* <Carousel /> */}
-        
+      {/* <Carousel /> */}
     </div>
   );
 }

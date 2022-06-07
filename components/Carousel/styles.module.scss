@@ -1,73 +1,36 @@
+
 .CarouselTwo{
-    margin-top: 2rem;
+    padding: 2rem;
     width: 100%;
-    height: 300px;
+    border-radius: 15px;
+    margin: 0 auto;
+  
     h2{
         margin: 2rem;
+        bottom: 5px;
     }
-    .card{
-        position: relative;
-        height: 300px;
-        border-radius: 15px;
-        width: 390px;
-        // box-shadow: 10px 5px 5px grey;
-        
-        
-        img{
-            position: absolute;
-            // height: 100%;
-            // width: 100%;
+    .carouselContaner{
+        .card{
+            position: relative;
+            height: 200px;
+            width: 350px;
             border-radius: 15px;
-            box-shadow: 10px 5px 5px grey;
-            
+            margin-bottom: 1rem;
+        
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border-radius: 15px;
+                box-shadow: 10px 5px 5px grey;
+                
+            }
+            h2{
+                position: absolute;
+                color: white;
+            }
         }
-        h2{
-            position: absolute;
-            color: white;
-        }
+
     }
 }
 
-// .carouselContainer{
-//     margin: 2rem 0;
-//    display: flex;
-//    justify-content: center;
-//    gap: 10px;
-//     .btnContainer{ 
-//         display: flex;
-//         align-items: center;
-//         button{
-//             border-radius: 50%;
-//             height: 50px;
-//             width: 50px;
-//         }
-//     }
-//     .cardsWrapper{
-//         display: flex;
-//         justify-content: center;
-//         gap: 20px;
-//         overflow: hidden;
-//         .cards{
-//             border: 2px solid black;
-//             width: 250px;
-//             min-width: 150px;
-//             height: 350px;
-//             counter-increment: gallery-cell;
-//             .cards::before{
-//                 display: block;
-//                 text-align: center;
-//                 content: counter(gallery-cell);
-//                 line-height: 200px;
-//                 font-size: 80px;
-//                 color: white;
-//             }
-            
-//             img{
-//                 object-fit: cover;
-//                 width: 100%;
-//                 height: 50%;
-//             }
-//         }
-
-//     }
-// }
