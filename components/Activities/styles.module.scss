@@ -4,3 +4,42 @@
   gap: 50px;
   margin-bottom: 50px;
 }
+
+@media (min-width: 450px) {
+  .ActivitiesWrap {
+    width: 80%;
+    margin: 0 auto 50px auto;
+  }
+}
+@media (min-width: 600px) {
+  .ActivitiesWrap {
+    width: 60%;
+  }
+}
+@media (min-width: 800px) {
+  .ActivitiesWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 85%;
+  }
+}
+@media (min-width: 1200px) {
+  .ActivitiesWrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .ActivitiesWrap {
+    width: 70%;
+  }
+}
+@media (min-width: 1400px) {
+  .ActivitiesWrap {
+    width: 60%;
+  }
+}
+@media (min-width: 1800px) {
+  .ActivitiesWrap {
+    width: 58%;
+  }
+}

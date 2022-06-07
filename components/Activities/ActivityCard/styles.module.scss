@@ -7,12 +7,52 @@
   align-items: center;
   width: 90%;
   border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000;
-  box-shadow: 5px 5px 15px 5px #000000;
+  border: 1px $primary-color dashed;
   margin: 0 auto;
-  padding: 10px 20px;
-  img {
-    filter: brightness(0.5);
+  padding: 30px;
+  color: $primary-color;
+  &.fix {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 3;
+    width: 80%;
+  }
+  h2 {
+    margin: 2px 0;
+    font-size: 18px;
+  }
+  h3 {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+  .descriptionExpand {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    p {
+      margin: 2px 0;
+      font-size: 13px;
+    }
+    span {
+      height: 25px;
+      .expand {
+        position: relative;
+        animation: infinite;
+        animation-name: expand;
+        animation-duration: 2s;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .reduce {
+        animation-name: reduce;
+        animation-duration: 0.3s;
+        transform: rotate(180deg);
+        cursor: pointer;
+      }
+    }
   }
   .kind {
     display: flex;
@@ -20,26 +60,48 @@
     align-items: center;
     gap: 5px;
   }
-  .overImage {
-    width: 51%;
-    position: absolute;
-    z-index: 3;
-    color: #ffc922;
-    .descriptionContain {
-      display: flex;
-      flex-flow: row nowrap;
+  .Categories {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 5px 0;
+    width: 80%;
+    p {
+      background-color: #ffdc1b;
+      color: $primary-color;
+      border-radius: 10px;
+      padding: 5px 8px;
+      margin: 5px 0;
+      font-weight: 600;
+      font-size: 12px;
     }
-    .Categories {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      p {
-        background-color: #ffc922;
-        color: $primary-color;
-        border-radius: 10px;
-        padding: 5px 8px;
-        font-weight: 600;
-      }
-    }
+  }
+  .btn {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@keyframes expand {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+@keyframes reduce {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 800px) {
+  .ActivityCardContainer {
+    width: 300px;
+    justify-content: space-between;
   }
 }

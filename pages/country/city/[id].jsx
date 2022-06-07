@@ -15,7 +15,6 @@ const DynamicCity = () => {
   const [city, setCity] = useState();
   const [long, setLong] = useState();
   const [lat, setLat] = useState();
-  const [activity, setActivity] = useState();
   const router = useRouter();
   const { id } = router.query;
 
@@ -49,16 +48,20 @@ const DynamicCity = () => {
         <GalleryCityPage id={id} />
       </section>
       <section>
-        {city !== undefined && city.length !== 0 ? (
-          <Price id={city} giveActivity={activity} />
+        {/* {city !== undefined && city.length !== 0 && actOn == false ? (
+          <Price
+            id={city}
+            giveActivity={activity}
+            activityOn={toggleActivity}
+          />
         ) : (
           ""
-        )}
+        )} */}
         <Details />
       </section>
       <section>
         {city !== undefined && city.length !== 0 ? (
-          <Activities render={city} getActivity={setActivity} />
+          <Activities render={city} />
         ) : (
           ""
         )}

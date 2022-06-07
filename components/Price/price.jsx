@@ -3,9 +3,10 @@ import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import { useEffect } from "react";
 import styles from "./styles.module.scss";
 
-export const Price = ({ id, giveActivity }) => {
+export const Price = ({ id, giveActivity, activityOn }) => {
   const [expand, setExpand] = useState(false);
-
+  const price = giveActivity || "...";
+  console.log(giveActivity);
   const toggleExpand = () => {
     if (expand) {
       return setExpand(false);
@@ -13,19 +14,28 @@ export const Price = ({ id, giveActivity }) => {
       return setExpand(true);
     }
   };
-  const bestPrice = () => {
-    const best = 1000000;
-    if (giveActivity !== undefined && giveActivity.lenght !== 0) {
-      best = giveActivity.filter(
-        (el) => parseInt(el.retail_price.formatted_value.split("€")) < best
-      );
-      console.log(best);
-      return best;
+  const bestPrice = (value) => {
+    if (value !== undefined) {
+      const best = value[0].retail_price.formatted_value.split("€").join("");
+      for (let i = 0; i < value.length; i++) {
+        console.log(
+          parseInt(value[i].retail_price.formatted_value.split("€").join("")) <
+            parseInt(best)
+        );
+        if (
+          parseInt(value[i].retail_price.formatted_value.split("€").join("")) <
+          parseInt(best)
+        ) {
+          best = value[i].retail_price.formatted_value;
+          console.log("condizione vera", best);
+        }
+        return best;
+      }
     } else {
-      console.log("false");
+      return "loading";
     }
   };
-  console.log(giveActivity);
+
   return (
     <>
       <div
@@ -39,12 +49,16 @@ export const Price = ({ id, giveActivity }) => {
           <h2>{id.length !== 0 ? id[0].name : "Loading"}</h2>
         </div>
         <p>
-          From{" "}
           <span>
-            {/*PRICE*/} {bestPrice}
+            {/*PRICE*/}
+            {parseInt(bestPrice(price !== "..." ? price : undefined)) == 0
+              ? "Free activity available!"
+              : `From ${parseInt(bestPrice(price))} €`}{" "}
           </span>
         </p>
-        <button className={styles.btn}>Find out activities</button>
+        <button className={styles.btn} onClick={activityOn}>
+          Find out activities
+        </button>
       </div>
     </>
   );
