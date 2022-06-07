@@ -1,39 +1,56 @@
-.CarouselTwo{
-    margin-top: 2rem;
-    width: 100%;
-    height: 300px;
-    h2{
-        margin: 2rem;
+.CarouselTwo {
+  h2 {
+    font-size: 45px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  .card {
+    // position: relative;
+    margin-bottom: 45px;
+    img {
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      // position: absolute;
+      // height: 100%;
+      // width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
     }
-    .card{
-        position: relative;
-        height: 300px;
-        border-radius: 15px;
-        width: 390px;
-        // box-shadow: 10px 5px 5px grey;
-        
-        
-        img{
-            position: absolute;
-            // height: 100%;
-            // width: 100%;
-            border-radius: 15px;
-            box-shadow: 10px 5px 5px grey;
-            
-        }
-        h2{
-            position: absolute;
-            color: white;
-        }
+    h2 {
+      // position: absolute;
+      color: white;
+      margin-top: -60px;
+      margin-left: 15px;
     }
+  }
 }
+
+// .CarouselTwo{
+//     // margin-top: 2rem;
+//     // width: 100%;
+//     // height: 300px;
+
+//     h2{
+//         margin: 2rem;
+//     }
+//     .card{
+//         // position: relative;
+//         // height: 275px;
+//         border-radius: 15px;
+//         // width: 300px;
+//         margin: 0;
+//         padding: 0;
+
+//         // box-shadow: 10px 5px 5px grey;
+
+//     }
+// }
 
 // .carouselContainer{
 //     margin: 2rem 0;
 //    display: flex;
 //    justify-content: center;
 //    gap: 10px;
-//     .btnContainer{ 
+//     .btnContainer{
 //         display: flex;
 //         align-items: center;
 //         button{
@@ -61,7 +78,7 @@
 //                 font-size: 80px;
 //                 color: white;
 //             }
-            
+
 //             img{
 //                 object-fit: cover;
 //                 width: 100%;
