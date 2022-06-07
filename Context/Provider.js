@@ -7,7 +7,7 @@ import {
   FETCH_ALL_CITY_ERROR,
   FETCH_ALL_CITY_REQUEST,
   FETCH_ALL_CITY_SUCCESS,
-  ADD_TO_CART
+  ADD_TO_CART,
 } from "./constants";
 import axios from "axios";
 
@@ -15,8 +15,8 @@ const defaultState = {
   loading: false,
   error: null,
   vacation: [],
-  totalPrice: 512,
-  cart: ["Palermo", "Milano", "Londra", "Brasov", "Barcellona"],
+  totalPrice: 0,
+  cart: [],
   city: [],
   italia: [],
   svezia: [],

@@ -1,3 +1,4 @@
+import { Input } from "./Input/input";
 import styles from "./styles.module.scss";
 
 export default function contact() {
@@ -6,7 +7,7 @@ export default function contact() {
       <div className={styles.formContainer}>
         <form className={styles.formWrapper}>
           <div className={styles.nameWrapper}>
-            <input
+            {/* <input
               className={styles.input}
               type="text"
               id="fname"
@@ -22,10 +23,11 @@ export default function contact() {
               name="lastname"
               placeholder="Your last name.."
               required
-            />
+            /> */}
+            <Input />
           </div>
 
-          <div className={styles.nameWrapper}>
+          {/* <div className={styles.nameWrapper}>
             <input
               className={styles.input}
               type="email"
@@ -50,9 +52,9 @@ export default function contact() {
               name="subject"
               placeholder="Write something.."
             ></textarea>
-          </div>
+          </div> */}
 
-          <button className={styles.arrowBtn}>Send</button>
+          {/* <button className={styles.arrowBtn}>Send</button> */}
         </form>
       </div>
     </div>

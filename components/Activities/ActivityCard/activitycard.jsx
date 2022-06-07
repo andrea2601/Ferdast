@@ -2,10 +2,17 @@ import styles from "./styles.module.scss";
 import { GrGroup } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
 import { useState } from "react";
+import { useVacationContext } from "../../../Context/Provider";
 import { AiOutlineDown } from "react-icons/ai";
 
 export const ActivityCard = ({ info }) => {
   const [expand, setExpand] = useState(false);
+
+  const {
+    addToCart,
+    state: { cart },
+  } = useVacationContext();
+
   return {
     ...(info.about !== "TBD" ? (
       <>
@@ -45,16 +52,26 @@ export const ActivityCard = ({ info }) => {
             </h3>
             <div className={styles.kind}>
               {/* {info.group_size.lenght !== 0 &&
-          info.group_size !== undefined &&
-          info.group_size[0].name.toLowerCase().includes("gruppo") ? (
-            <GrGroup />
-          ) : (
-            <BsPerson />
-          )}
-          <p>{info.group_size[0].name}</p> */}
+              info.group_size !== undefined &&
+              info.group_size[0].name.toLowerCase().includes("gruppo") ? (
+                <GrGroup />
+              ) : (
+                <BsPerson />
+              )}
+              <p>{info.group_size[0].name}</p> */}
             </div>
 
-            <button className={styles.btn}>Aggiungi al carrello</button>
+            <button
+              className={styles.btn}
+              onClick={() =>
+                addToCart({
+                  activity: info.title,
+                  price: info.retail_price.value,
+                })
+              }
+            >
+              Aggiungi al carrello
+            </button>
           </div>
         </div>
       </>

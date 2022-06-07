@@ -106,8 +106,8 @@ export default (state = {}, action) => {
       return {
         // AGGIUNGERE PERCORSO PAYLOAD
         ...state,
-        cart: [...cart, action.payload],
-        price: price + action.payload,
+        cart: [...state.cart, action.payload.activity],
+        totalPrice: state.totalPrice + action.payload.price,
       };
 
     default:

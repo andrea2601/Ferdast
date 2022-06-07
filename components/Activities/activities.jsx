@@ -14,12 +14,14 @@ export const Activities = ({ render }) => {
     state: { city },
   } = useVacationContext();
 
-  const par = `/?city_in=${render[0].id}`;
   useEffect(() => {
+    const par = `/?city_in=${render[0].id}`;
     fetchCity(par);
-    setActivity(city.data);
-    console.log(city.data);
   }, []);
+
+  useEffect(() => {
+    setActivity(city.data);
+  }, [city]);
 
   return (
     <div className={styles.ActivitiesWrap}>
@@ -32,6 +34,7 @@ export const Activities = ({ render }) => {
       ) : (
         ""
       )}
+
       {activity !== undefined && actOn == true
         ? activity.map((element, i) => (
             <ActivityCard info={element} key={i} waiting={100 * i} />
