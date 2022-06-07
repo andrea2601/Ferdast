@@ -23,7 +23,7 @@ export default (state = {}, action) => {
                 loading: false,
                 vacation: action.payload,
                 italia: action.payload.filter(item => item.country.name.toLowerCase() === "italia"),
-                svezia: action.payload.filter(item => item.country.name.toLowerCase() === "svezia"),
+                russia: action.payload.filter(item => item.country.name.toLowerCase() === "russia"),
                 francia: action.payload.filter(item => item.country.name.toLowerCase() === "francia"),
                 usa: action.payload.filter(item => item.country.name.toLowerCase() === "stati uniti d'america"),
                 italiaImg:
@@ -36,11 +36,11 @@ export default (state = {}, action) => {
                         payload.
                         filter(item => item.country.name.toLowerCase() === "francia")
                     [Math.floor(Math.random() * action.payload.filter(item => item.country.name.toLowerCase() === "francia").length)].cover_image_url,
-                sveziaImg:
+                russiaImg:
                     action.
                         payload.
-                        filter(item => item.country.name.toLowerCase() === "svezia")
-                    [Math.floor(Math.random() * action.payload.filter(item => item.country.name.toLowerCase() === "svezia").length)].cover_image_url,
+                        filter(item => item.country.name.toLowerCase() === "russia")
+                    [Math.floor(Math.random() * action.payload.filter(item => item.country.name.toLowerCase() === "russia").length)].cover_image_url,
                 usaImg:
                     action.
                         payload.

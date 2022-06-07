@@ -33,7 +33,7 @@ export const Cart = () => {
             <div className={styles.adsBox}>
               <h3>Prenota per 4 e ottieni 175$ di sconto</h3>
               <p>
-                Chi fa per 4 paga meno! Prenota per 4 amici e ottieni 175€
+                Chi fa peaxssxassaxsr 4 paga meno! Prenota per 4 amici e ottieni 175€
                 di sconto su una spesa minima di 1000€. Usa il codice PENSIONATO65 direttamente nel Checkout.
               </p>
             </div>
