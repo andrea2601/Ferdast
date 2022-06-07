@@ -4,6 +4,7 @@ import { useVacationContext } from "../../Context/Provider";
 import { ActivityCard } from "./ActivityCard/activitycard";
 import { Price } from "../Price/price";
 import { useState } from "react";
+import { MinCart } from "../MinCart/mincart";
 
 export const Activities = ({ render }) => {
   const [actOn, setActOn] = useState(false);
@@ -32,7 +33,7 @@ export const Activities = ({ render }) => {
           activityOn={() => setActOn(!actOn)}
         />
       ) : (
-        ""
+        <MinCart />
       )}
 
       {activity !== undefined && actOn == true

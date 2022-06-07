@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import { GrGroup } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
 import { useState } from "react";
+import { ButtonAdd } from "../../MinCart/buttonAdd/buttonadd";
 import { useVacationContext } from "../../../Context/Provider";
 import { AiOutlineDown } from "react-icons/ai";
 
@@ -61,7 +62,7 @@ export const ActivityCard = ({ info }) => {
               <p>{info.group_size[0].name}</p> */}
             </div>
 
-            <button
+            {/* <button
               className={styles.btn}
               onClick={() =>
                 addToCart({
@@ -71,7 +72,8 @@ export const ActivityCard = ({ info }) => {
               }
             >
               Aggiungi al carrello
-            </button>
+            </button> */}
+            <ButtonAdd />
           </div>
         </div>
       </>

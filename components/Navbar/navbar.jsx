@@ -53,7 +53,7 @@ export const Navbar = () => {
               <Link href="/cart">
                 <div className={styles.SingleNav}>
                   <FiShoppingCart />
-                  <p>Cart</p>
+                  <p>Carrello</p>
                 </div>
               </Link>
             </li>
@@ -61,7 +61,7 @@ export const Navbar = () => {
               <Link href="/about">
                 <div className={styles.SingleNav}>
                   <GrInfo />
-                  <p>About</p>
+                  <p>Su di noi</p>
                 </div>
               </Link>
             </li>
@@ -69,14 +69,14 @@ export const Navbar = () => {
               <Link href="/contact">
                 <div className={styles.SingleNav}>
                   <RiContactsLine />
-                  <p>Contacts</p>
+                  <p>Contattaci</p>
                 </div>
               </Link>
             </li>
             <li>
               <div className={styles.SingleNav}>
                 <GrLanguage />
-                <p>Language</p>
+                <p>Lingua</p>
               </div>
             </li>
           </ul>
