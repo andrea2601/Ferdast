@@ -24,14 +24,14 @@ export default (state = {}, action) => {
         italia: action.payload.filter(
           (item) => item.country.name.toLowerCase() === "italia"
         ),
-        spagna: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "spagna"
+        svezia: action.payload.filter(
+          (item) => item.country.name.toLowerCase() === "svezia"
         ),
         francia: action.payload.filter(
           (item) => item.country.name.toLowerCase() === "francia"
         ),
-        romania: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "romania"
+        usa: action.payload.filter(
+          (item) => item.country.name.toLowerCase() === "stati uniti d'america"
         ),
         italiaImg: action.payload.filter(
           (item) => item.country.name.toLowerCase() === "italia"
@@ -53,23 +53,24 @@ export default (state = {}, action) => {
               ).length
           )
         ].cover_image_url,
-        spagnaImg: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "spagna"
+        sveziaImg: action.payload.filter(
+          (item) => item.country.name.toLowerCase() === "svezia"
         )[
           Math.floor(
             Math.random() *
               action.payload.filter(
-                (item) => item.country.name.toLowerCase() === "spagna"
+                (item) => item.country.name.toLowerCase() === "svezia"
               ).length
           )
         ].cover_image_url,
-        romaniaImg: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "romania"
+        usaImg: action.payload.filter(
+          (item) => item.country.name.toLowerCase() === "stati uniti d'america"
         )[
           Math.floor(
             Math.random() *
               action.payload.filter(
-                (item) => item.country.name.toLowerCase() === "romania"
+                (item) =>
+                  item.country.name.toLowerCase() === "stati uniti d'america"
               ).length
           )
         ].cover_image_url,

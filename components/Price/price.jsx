@@ -5,15 +5,10 @@ import styles from "./styles.module.scss";
 
 export const Price = ({ id, giveActivity, activityOn }) => {
   const [expand, setExpand] = useState(false);
-  const price = giveActivity || "...";
+  const [dataPrice, setDataPrice] = useState(0);
+  const price = giveActivity || dataPrice;
   console.log(giveActivity);
-  const toggleExpand = () => {
-    if (expand) {
-      return setExpand(false);
-    } else {
-      return setExpand(true);
-    }
-  };
+
   const bestPrice = (value) => {
     if (value !== undefined) {
       const best = value[0]?.retail_price?.formatted_value.split("€").join("");
@@ -37,7 +32,7 @@ export const Price = ({ id, giveActivity, activityOn }) => {
     <>
       <div
         className={`${styles.Side} ${expand ? styles.Stop : ""}`}
-        onClick={toggleExpand}
+        onClick={() => setExpand(!expand)}
       >
         {expand ? <HiChevronDoubleRight /> : <HiChevronDoubleLeft />}
       </div>

@@ -23,7 +23,7 @@ export const Activities = ({ render }) => {
 
   return (
     <div className={styles.ActivitiesWrap}>
-      {city.data !== undefined && city.length !== 0 && actOn == false ? (
+      {activity !== undefined && activity.length !== 0 && actOn == false ? (
         <Price
           id={render}
           giveActivity={activity}

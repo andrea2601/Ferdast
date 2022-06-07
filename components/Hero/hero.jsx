@@ -9,57 +9,40 @@ export const Hero = (prop) => {
   const title = prop.title || "Vivi viaggi unici al mondo...";
   const subtitle = prop.subtitle || "...e incontra nuovi amici";
   const {
-    state: { italiaImg, spagnaImg, franciaImg, romaniaImg },
+    state: { italiaImg, sveziaImg, franciaImg, usaImg },
   } = useVacationContext();
 
   const [img, setImg] = useState(heroImgMock);
-  const pop = () => {
+  const setImgFun = () => {
     if (subtitle !== "...e incontra nuovi amici") {
-      switch (subtitle) {
-        case "Italia": {
+      switch (subtitle.toLowerCase()) {
+        case "italia": {
           setImg(italiaImg ? italiaImg : heroImgMock);
           break
         }
-        case "Spagna": {
-          setImg(spagnaImg ? spagnaImg : heroImgMock);
+        case "svezia": {
+          setImg(sveziaImg ? sveziaImg : heroImgMock);
           break
         }
-        case "Francia": {
+        case "francia": {
           setImg(franciaImg ? franciaImg : heroImgMock);
           break
         }
-        case "Romania": {
-          setImg(romaniaImg ? romaniaImg : heroImgMock);
+        case "stati uniti d'america": {
+          setImg(usaImg ? usaImg : heroImgMock);
           break
         }
-        // case "Spagna": {
-        //   imgs = spagnaImg;
-        //   break
-        // }
-        // case "Francia": {
-        //   imgs = franciaImg;
-        //   break
-        // }
-        // case "Romania": {
-        //   imgs = romaniaImg;
-        //   break
-        // }
         default: {
           setImg(heroImgMock)
         }
       }
-      // const i = Math.floor(Math.random() * imgs.length);
-      // console.log("imgs....: ", imgs);
-      // console.log("sub....: ", subtitle);
-      // console.log("img[i]....: ", imgs[i]?.cover_image_url);
-      // imgs[i]?.cover_image_url ? setImg(imgs[i].cover_image_url): setImg(heroImgMock);
     } else { setImg(heroImg) }
   }
 
 
   useEffect(() => {
-    pop();
-  }, [subtitle, italiaImg, franciaImg, spagnaImg, romaniaImg])
+    setImgFun();
+  }, [subtitle, italiaImg, franciaImg, sveziaImg, usaImg])
 
 
 

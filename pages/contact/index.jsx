@@ -37,9 +37,9 @@ export default function contact() {
 
             <select className={styles.select}>
               <option>Italia</option>
-              <option>Spagna</option>
+              <option>Svezia</option>
               <option>Francia</option>
-              <option>Romania</option>
+              <option>USA</option>
             </select>
           </div>
 

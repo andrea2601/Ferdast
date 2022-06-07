@@ -61,7 +61,7 @@ export const Details = () => {
             </div>
             <div className={styles.SingleEl}>
               <TbHeadphones />
-              <p>Ferdast's Assistance</p>
+              <p>Ferdast s Assistance</p>
             </div>
           </div>
           <div className={styles.border}></div>

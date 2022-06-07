@@ -40,10 +40,6 @@ const DynamicCity = () => {
   return (
     <div className={styles.DynamicCountry}>
       <h1>{id}</h1>
-
-      <section>
-        <Map lng={long} lat={lat} />
-      </section>
       <section className={styles.GalleryCityPageContainer}>
         <GalleryCityPage id={id} />
       </section>
@@ -58,6 +54,10 @@ const DynamicCity = () => {
           ""
         )} */}
         <Details />
+      </section>
+
+      <section className={styles.mapContainer}>
+        <Map lng={long} lat={lat} />
       </section>
       <section>
         {city !== undefined && city.length !== 0 ? (

@@ -10,7 +10,7 @@ import { useEffect } from "react";
 const DynamicCountry = () => {
   // const {
   //   fetchAll,
-  //   state: { vacation, italia, spagna, francia, romania },
+  //   state: { vacation, italia, svezia, francia, usa },
   // } = useVacationContext();
 
   // useEffect(() => {
