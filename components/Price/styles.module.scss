@@ -8,6 +8,7 @@
   animation: infinite;
   animation-name: price;
   animation-duration: 2s;
+  cursor: pointer;
   &.Stop {
     animation: none;
   }

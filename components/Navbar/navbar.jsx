@@ -73,12 +73,6 @@ export const Navbar = () => {
                 </div>
               </Link>
             </li>
-            <li>
-              <div className={styles.SingleNav}>
-                <GrLanguage />
-                <p>Lingua</p>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -106,9 +100,6 @@ export const Navbar = () => {
             <Link href="/contact">
               <RiContactsLine />
             </Link>
-          </li>
-          <li>
-            <GrLanguage />
           </li>
         </ul>
       </div>
