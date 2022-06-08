@@ -18,15 +18,6 @@ export default function Home() {
     fetchAll("/cities");
   }, []);
 
-  useEffect(() => {
-    console.log("vacation", vacation);
-    console.log("ita:", italia);
-
-    console.log("sve:", russia);
-    console.log("fra:", francia);
-    console.log("usa:", usa);
-  }, [vacation]);
-
   return (
     <div className={styles.container}>
       <Head>

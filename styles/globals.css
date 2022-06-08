@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
 html,
-*{
+* {
   padding: 0;
   border: 0;
   box-sizing: border-box;
@@ -12,8 +12,8 @@ body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-    font-family: "Montserrat", sans-serif;
-  }
+  font-family: "Montserrat", sans-serif;
+}
 
 a {
   color: inherit;
@@ -26,6 +26,7 @@ a {
 }
 /* Track */
 ::-webkit-scrollbar-track {
+  border-top-right-radius: 10px;
   background: #f1f1f1;
 }
 /* Handle */
@@ -36,4 +37,3 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-

@@ -11,11 +11,14 @@ import { GalleryCityPageSkeleton } from "../../../components/GalleryCityPageSkel
 import { useVacationContext } from "../../../Context/Provider";
 import Map from "../../../components/Map/Map";
 import { useEffect, useState } from "react";
+import { Activities } from "../../../components/Activities/activities";
 
 const DynamicCity = () => {
+  const [city, setCity] = useState();
+  const [long, setLong] = useState();
+  const [lat, setLat] = useState();
   const router = useRouter();
   const { id } = router.query;
-  console.log("city: ", id);
 
   const {
     fetchAll,
@@ -27,16 +30,13 @@ const DynamicCity = () => {
     fetchAll(par);
   }, []);
 
-  const [long, setLong] = useState();
-  const [lat, setLat] = useState();
-
   useEffect(() => {
     const citys = vacation?.filter((element) =>
       element?.name?.toLowerCase().includes(id?.toLowerCase())
     );
     setLong(citys[0]?.longitude);
     setLat(citys[0]?.latitude);
-    console.log("long", long, "lat", lat, citys);
+    setCity(citys);
   }, [id, vacation]);
 
   return (
@@ -61,6 +61,13 @@ const DynamicCity = () => {
 
       <section className={styles.mapContainer}>
         <Map lng={long} lat={lat} />
+      </section>
+      <section>
+        {city !== undefined && city.length !== 0 ? (
+          <Activities render={city} />
+        ) : (
+          ""
+        )}
       </section>
     </div>
   );

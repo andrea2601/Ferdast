@@ -16,7 +16,6 @@ export const CardListLarge = ({ country }) => {
   }, []);
 
   return (
-
     <div className={styles.cardLargeContiner}>
       {loading ? <><LargeCardSkeleton/><LargeCardSkeleton/><LargeCardSkeleton/></> :
         vacation
@@ -25,6 +24,5 @@ export const CardListLarge = ({ country }) => {
           )
           .map((city) => <LargeCard key={city.id} city={city} />)}
     </div>
-
   );
 };

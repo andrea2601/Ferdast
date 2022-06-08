@@ -1,21 +1,22 @@
-.DynamicCountry{
-    width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 
-    .GalleryCityPageContainer{
-        display: flex;
-        justify-content: center;
-        margin:2rem 0 ;
-        // height: 400px;
-    }
-    .dettailsContainer{
-        h1{
-            text-align: center;
-            font-size: 45px;
-        }
-    }
-    .mapContainer{
-        margin:2rem 0 ;   
-        display: flex;
-        justify-content: center;
-    }
+.DynamicCountry {
+  width: 100%;
+   .GalleryCityPageContainer{
+      display: flex;
+      justify-content: center;
+      margin:2rem 0 ;
+      // height: 400px;
+  }
+  .dettailsContainer{
+      h1{
+          text-align: center;
+          font-size: 45px;
+      }
+  }
+  .mapContainer{
+      margin:2rem 0 ;   
+      display: flex;
+      justify-content: center;
+  }
 }

@@ -2,14 +2,17 @@ import { useState } from "react";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import styles from "./styles.module.scss";
 
-export const Price = () => {
+export const Price = ({ id, giveActivity, activityOn }) => {
   const [expand, setExpand] = useState(false);
+  const price = giveActivity || dataPrice;
 
-  const toggleExpand = () => {
-    if (expand) {
-      return setExpand(false);
+  const bestPrice = (value) => {
+    if (value !== undefined) {
+      return Math.min(
+        ...value.map((activity) => parseInt(activity.retail_price.value))
+      );
     } else {
-      return setExpand(true);
+      return "loading";
     }
   };
 
@@ -17,18 +20,25 @@ export const Price = () => {
     <>
       <div
         className={`${styles.Side} ${expand ? styles.Stop : ""}`}
-        onClick={toggleExpand}
+        onClick={() => setExpand(!expand)}
       >
         {expand ? <HiChevronDoubleRight /> : <HiChevronDoubleLeft />}
       </div>
       <div className={expand ? styles.PriceContainer : styles.Hide}>
         <div className={styles.H2Contain}>
-          <h2>{/* {id} */} Roma</h2>
+          <h2>{id.length !== 0 ? id[0].name : "Loading"}</h2>
         </div>
         <p>
-          From <span>{/*PRICE*/} 330$</span>
+          <span>
+            {/*PRICE*/}
+            {parseInt(bestPrice(price !== "..." ? price : undefined)) == 0
+              ? "Attività gratis disponibili!"
+              : `A partire da ${bestPrice(price)} €`}{" "}
+          </span>
         </p>
-        <button className={styles.btn}>Find out availability</button>
+        <button className={styles.btn} onClick={activityOn}>
+          Scopri le opportunità
+        </button>
       </div>
     </>
   );

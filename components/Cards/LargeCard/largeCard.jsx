@@ -10,8 +10,8 @@ export const LargeCard = ({ city }) => {
     state: { loading },
   } = useVacationContext();
 
-  const [lat,setLat]=useState(city.latitude);
-  const [long,setlong]=useState(city.longitude);
+  const [lat, setLat] = useState(city.latitude);
+  const [long, setlong] = useState(city.longitude);
 
 
   const name = city.name || "Città";
@@ -39,7 +39,7 @@ export const LargeCard = ({ city }) => {
           <a className={styles.btn}>Più di {name}</a>
         </Link>
       </div>
-      {console.log("city:", city)}
+      {/* {console.log("city:", city)} */}
     </div>
   );
 };

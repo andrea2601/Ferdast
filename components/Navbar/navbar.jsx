@@ -6,6 +6,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { RiContactsLine } from "react-icons/ri";
 import { GrInfo } from "react-icons/gr";
 import { FiShoppingCart } from "react-icons/fi";
+import { GrLanguage } from "react-icons/gr";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -52,7 +53,7 @@ export const Navbar = () => {
               <Link href="/cart">
                 <div className={styles.SingleNav}>
                   <FiShoppingCart />
-                  <p>Cart</p>
+                  <p>Carrello</p>
                 </div>
               </Link>
             </li>
@@ -60,7 +61,7 @@ export const Navbar = () => {
               <Link href="/about">
                 <div className={styles.SingleNav}>
                   <GrInfo />
-                  <p>About</p>
+                  <p>Su di noi</p>
                 </div>
               </Link>
             </li>
@@ -68,9 +69,15 @@ export const Navbar = () => {
               <Link href="/contact">
                 <div className={styles.SingleNav}>
                   <RiContactsLine />
-                  <p>Contacts</p>
+                  <p>Contattaci</p>
                 </div>
               </Link>
+            </li>
+            <li>
+              <div className={styles.SingleNav}>
+                <GrLanguage />
+                <p>Lingua</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -99,6 +106,9 @@ export const Navbar = () => {
             <Link href="/contact">
               <RiContactsLine />
             </Link>
+          </li>
+          <li>
+            <GrLanguage />
           </li>
         </ul>
       </div>
