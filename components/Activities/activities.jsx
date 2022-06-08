@@ -18,6 +18,7 @@ export const Activities = ({ render }) => {
   useEffect(() => {
     const par = `/?city_in=${render[0].id}`;
     fetchCity(par);
+    console.log("render", render);
   }, []);
 
   useEffect(() => {
