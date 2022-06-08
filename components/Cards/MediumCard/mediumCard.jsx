@@ -18,7 +18,7 @@ export const MediumCard = (props) => {
         <p>{props.description}</p>
 
         <Link href={`/country/${props.name}`}>
-          <a className={styles.btn}>scopri viaggi</a>
+          <a className={styles.btn}>Scopri viaggi</a>
         </Link>
       </div>
     </div>

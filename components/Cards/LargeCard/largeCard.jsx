@@ -36,7 +36,7 @@ export const LargeCard = ({ city }) => {
         </div>
 
         <Link href={`/country/city/${name}`}>
-          <a className={styles.btn}>More of {name}</a>
+          <a className={styles.btn}>Più di {name}</a>
         </Link>
       </div>
       {console.log("city:", city)}
