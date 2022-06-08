@@ -3,8 +3,8 @@
 
 .Side {
   position: fixed;
-  bottom: 445px;
-  right: 15px;
+  bottom: 430px;
+  right: 10px;
   animation: infinite;
   animation-name: price;
   animation-duration: 2s;
@@ -24,7 +24,7 @@
 .Hide {
   position: fixed;
   right: -320px;
-  bottom: 540px;
+  bottom: 500px;
   width: 300px;
   height: auto;
   font-family: "Montserrat", sans-serif;
@@ -46,13 +46,10 @@
   transition: right 1.5s ease-in-out;
 }
 .PriceContainer {
-  animation-duration: 0.7s;
-  animation: infinite;
-  animation-name: price;
   font-family: "Montserrat", sans-serif;
   position: fixed;
-  right: 3px;
-  bottom: 540px;
+  right: 1px;
+  bottom: 500px;
   background-color: $primary-color;
   color: white;
   width: 300px;
@@ -71,6 +68,9 @@
       margin: 8px 0;
     }
   }
+  a {
+    text-align: center;
+  }
   .btn {
     font-family: "Montserrat", sans-serif;
   }
@@ -81,10 +81,10 @@
     right: 10px;
   }
   50% {
-    right: 23px;
+    right: 18px;
   }
   100% {
-    right: 20px;
+    right: 15px;
   }
 }
 
@@ -174,7 +174,7 @@
     }
   }
   .Side {
-    bottom: 400px;
+    bottom: 330px;
     svg {
       width: 55px;
     }
@@ -184,10 +184,10 @@
   }
   .Hide {
     right: -360px;
-    bottom: 500px;
+    bottom: 410px;
   }
   .PriceContainer {
-    bottom: 500px;
+    bottom: 410px;
     right: 110px;
   }
 }
@@ -204,7 +204,7 @@
     }
   }
   .Side {
-    bottom: 450px;
+    bottom: 400px;
     svg {
       width: 60px;
     }
@@ -217,12 +217,12 @@
     bottom: 560px;
   }
   .PriceContainer {
-    bottom: 560px;
+    bottom: 490px;
     right: 13px;
   }
 }
 @media (min-width: "1800px") {
   .PriceContainer {
-    right: 55px;
+    right: 90px;
   }
 }
