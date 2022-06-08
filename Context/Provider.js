@@ -19,11 +19,11 @@ const defaultState = {
   cart: [],
   city: [],
   italia: [],
-  svezia: [],
+  russia: [],
   francia: [],
   usa: [],
   italiaImg: "",
-  sveziaImg: "",
+  russiaImg: "",
   franciaImg: "",
   usaImg: "",
 };

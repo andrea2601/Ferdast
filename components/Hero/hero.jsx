@@ -9,7 +9,7 @@ export const Hero = (prop) => {
   const title = prop.title || "Vivi viaggi unici al mondo...";
   const subtitle = prop.subtitle || "...e incontra nuovi amici";
   const {
-    state: { italiaImg, sveziaImg, franciaImg, usaImg },
+    state: { italiaImg, russiaImg, franciaImg, usaImg },
   } = useVacationContext();
 
   const [img, setImg] = useState(heroImgMock);
@@ -20,8 +20,8 @@ export const Hero = (prop) => {
           setImg(italiaImg ? italiaImg : heroImgMock);
           break
         }
-        case "svezia": {
-          setImg(sveziaImg ? sveziaImg : heroImgMock);
+        case "russia": {
+          setImg(russiaImg ? russiaImg : heroImgMock);
           break
         }
         case "francia": {
@@ -42,7 +42,7 @@ export const Hero = (prop) => {
 
   useEffect(() => {
     setImgFun();
-  }, [subtitle, italiaImg, franciaImg, sveziaImg, usaImg])
+  }, [subtitle, italiaImg, franciaImg, russiaImg, usaImg])
 
 
 

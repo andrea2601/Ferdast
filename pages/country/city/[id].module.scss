@@ -2,15 +2,21 @@
 
 .DynamicCountry {
   width: 100%;
-  .GalleryCityPageContainer {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    // height: 400px;
+   .GalleryCityPageContainer{
+      display: flex;
+      justify-content: center;
+      margin:2rem 0 ;
+      // height: 400px;
   }
-  .mapContainer {
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
+  .dettailsContainer{
+      h1{
+          text-align: center;
+          font-size: 45px;
+      }
+  }
+  .mapContainer{
+      margin:2rem 0 ;   
+      display: flex;
+      justify-content: center;
   }
 }

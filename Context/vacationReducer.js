@@ -16,66 +16,38 @@ export default (state = {}, action) => {
         loading: true,
       };
 
-    case FETCH_ALL_VACATION_SUCCESS:
-      // const i = Math.floor(Math.random() * imgs.length);
-      return {
-        ...state,
-        loading: false,
-        vacation: action.payload,
-        italia: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "italia"
-        ),
-        svezia: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "svezia"
-        ),
-        francia: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "francia"
-        ),
-        usa: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "stati uniti d'america"
-        ),
-        italiaImg: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "italia"
-        )[
-          Math.floor(
-            Math.random() *
-              action.payload.filter(
-                (item) => item.country.name.toLowerCase() === "italia"
-              ).length
-          )
-        ].cover_image_url,
-        franciaImg: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "francia"
-        )[
-          Math.floor(
-            Math.random() *
-              action.payload.filter(
-                (item) => item.country.name.toLowerCase() === "francia"
-              ).length
-          )
-        ].cover_image_url,
-        sveziaImg: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "svezia"
-        )[
-          Math.floor(
-            Math.random() *
-              action.payload.filter(
-                (item) => item.country.name.toLowerCase() === "svezia"
-              ).length
-          )
-        ].cover_image_url,
-        usaImg: action.payload.filter(
-          (item) => item.country.name.toLowerCase() === "stati uniti d'america"
-        )[
-          Math.floor(
-            Math.random() *
-              action.payload.filter(
-                (item) =>
-                  item.country.name.toLowerCase() === "stati uniti d'america"
-              ).length
-          )
-        ].cover_image_url,
-      };
+        case FETCH_ALL_VACATION_SUCCESS:
+            // const i = Math.floor(Math.random() * imgs.length);
+            return {
+                ...state,
+                loading: false,
+                vacation: action.payload,
+                italia: action.payload.filter(item => item.country.name.toLowerCase() === "italia"),
+                russia: action.payload.filter(item => item.country.name.toLowerCase() === "russia"),
+                francia: action.payload.filter(item => item.country.name.toLowerCase() === "francia"),
+                usa: action.payload.filter(item => item.country.name.toLowerCase() === "stati uniti d'america"),
+                italiaImg:
+                    action.
+                        payload.
+                        filter(item => item.country.name.toLowerCase() === "italia")
+                    [Math.floor(Math.random() * action.payload.filter(item => item.country.name.toLowerCase() === "italia").length)].cover_image_url,
+                franciaImg:
+                    action.
+                        payload.
+                        filter(item => item.country.name.toLowerCase() === "francia")
+                    [Math.floor(Math.random() * action.payload.filter(item => item.country.name.toLowerCase() === "francia").length)].cover_image_url,
+                russiaImg:
+                    action.
+                        payload.
+                        filter(item => item.country.name.toLowerCase() === "russia")
+                    [Math.floor(Math.random() * action.payload.filter(item => item.country.name.toLowerCase() === "russia").length)].cover_image_url,
+                usaImg:
+                    action.
+                        payload.
+                        filter(item => item.country.name.toLowerCase() === "stati uniti d'america")
+                    [Math.floor(Math.random() * action.payload.filter(item => item.country.name.toLowerCase() === "stati uniti d'america").length)].cover_image_url,
+            };
+
 
     case FETCH_ALL_VACATION_ERROR:
       return {
