@@ -90,6 +90,7 @@
       }
     }
   }
+
   .kind {
     display: flex;
     flex-flow: row nowrap;
@@ -116,6 +117,78 @@
   .btn {
     font-family: "Montserrat", sans-serif;
   }
+  .cartButton {
+    position: relative;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    background-color: $btn-color;
+    cursor: pointer;
+    color: $primary-color;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    font-family: Montserrat;
+    font-weight: 600;
+
+    span {
+      position: absolute;
+      z-index: 3;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2em;
+      color: $primary-color;
+      &.addCart {
+        opacity: 1;
+        width: 85%;
+      }
+      &.added {
+        opacity: 0;
+      }
+    }
+
+    .cartIcon {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: -10%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+    }
+    .cartItem {
+      position: absolute;
+      z-index: 3;
+      top: -20%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2em;
+    }
+
+    &.clicked {
+      .cartIcon {
+        animation: cart 1.5s ease-in-out forwards;
+      }
+      .cartItem {
+        animation: box 1.5s ease-in-out forwards;
+      }
+      span {
+        &.addCart {
+          opacity: 0;
+        }
+        &.added {
+          animation: added 1.5s ease-in-out forwards;
+        }
+      }
+    }
+  }
+
+  .cartButton:hover {
+    background-color: $btn-color-hvr;
+    color: #2e3341;
+  }
 }
 
 @keyframes expand {
@@ -126,7 +199,52 @@
     top: 10px;
   }
 }
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
 
+@keyframes box {
+  0%,
+  40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  100% {
+    top: 40%;
+    left: 112%;
+  }
+}
+@keyframes add {
+  0% {
+    opacity: 1;
+  }
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes added {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (min-width: 600px) {
   .ActivityCardContainer {
     padding: 20px;

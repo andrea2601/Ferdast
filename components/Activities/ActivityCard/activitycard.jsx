@@ -1,18 +1,28 @@
 import styles from "./styles.module.scss";
 import { GrGroup } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
+import { FiShoppingCart } from "react-icons/fi";
 import { useState } from "react";
-import { ButtonAdd } from "../../MinCart/buttonAdd/buttonadd";
+import { FaBox } from "react-icons/fa";
+// import { ButtonAdd } from "../../MinCart/buttonAdd/buttonadd";
 import { useVacationContext } from "../../../Context/Provider";
 import { AiOutlineDown } from "react-icons/ai";
 
 export const ActivityCard = ({ info }) => {
   const [expand, setExpand] = useState(false);
-
+  const [add, setAdd] = useState(false);
   const {
     addToCart,
     state: { cart },
   } = useVacationContext();
+
+  const animationAdd = () => {
+    addToCart({
+      activity: info.title,
+      price: info.retail_price.value,
+    });
+    setAdd(!add);
+  };
 
   return {
     ...(info.about !== "TBD" ? (
@@ -73,7 +83,16 @@ export const ActivityCard = ({ info }) => {
             >
               Aggiungi al carrello
             </button> */}
-            <ButtonAdd />
+
+            <button
+              className={`${styles.cartButton} ${add ? styles.clicked : ""}`}
+              onClick={animationAdd}
+            >
+              <span className={styles.addCart}>Aggiungi al carrello</span>
+              <span className={styles.added}>Aggiunto!</span>
+              <FiShoppingCart className={styles.cartIcon} />
+              <FaBox className={styles.cartItem} />
+            </button>
           </div>
         </div>
       </>

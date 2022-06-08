@@ -13,6 +13,7 @@
   transition: 0.3s ease-in-out;
   overflow: hidden;
   font-family: Montserrat;
+  font-weight: 600;
 
   span {
     position: absolute;
@@ -24,7 +25,7 @@
     color: $primary-color;
     &.addCart {
       opacity: 1;
-      width: 80%;
+      width: 85%;
     }
     &.added {
       opacity: 0;
@@ -64,6 +65,11 @@
       }
     }
   }
+}
+
+.cartButton:hover {
+  background-color: $btn-color-hvr;
+  color: #2e3341;
 }
 
 @keyframes cart {
