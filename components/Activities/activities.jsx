@@ -26,7 +26,7 @@ export const Activities = ({ render }) => {
   }, [city]);
 
   return (
-    <div className={styles.ActivitiesWrap}>
+    <div className={styles.ActivitiesWrap} id="top">
       {activity !== undefined && activity.length !== 0 && actOn == false ? (
         <Price
           id={render}

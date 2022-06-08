@@ -48,14 +48,11 @@ const DynamicCity = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-
       <section className={styles.GalleryCityPageContainer}>
         {loading ? <GalleryCityPageSkeleton /> : <GalleryCityPage id={id} />}
       </section>
       <section className={styles.dettailsContainer}>
         <h1 className={styles.cityName}>{id}</h1>
-        {/* <CardListLarge country={id}/> */}
-        <Price />
         <Details />
       </section>
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import styles from "./styles.module.scss";
 
@@ -38,9 +39,13 @@ export const Price = ({ id, giveActivity, activityOn }) => {
               : `A partire da ${bestPrice(price)} €`}{" "}
           </span>
         </p>
-        <button className={styles.btn} onClick={activityOn}>
-          Scopri le opportunità
-        </button>
+        <Link href="#top">
+          <a>
+            <button className={styles.btn} onClick={activityOn}>
+              Scopri le opportunità
+            </button>
+          </a>
+        </Link>
       </div>
     </>
   );
