@@ -149,7 +149,7 @@ export default function CarouselTwo() {
           </Carousel.Item>
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[8]} />
+              <img width="100%" height="400px" src={imgs[6]} />
 
               <div className={styles.descriptContainer}>
                 <Link href={`/country/city/${italia[3]?.name}`}>
