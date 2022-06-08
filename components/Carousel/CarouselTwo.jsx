@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { useVacationContext } from "../../Context/Provider";
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 export default function CarouselTwo() {
   const {
@@ -25,14 +26,14 @@ export default function CarouselTwo() {
     usa.forEach((element) => (imgArr = [...imgArr, element.cover_image_url]));
 
     setImgs(imgArr);
-    console.log("arrayImmagini........", usa);
+    console.log("--->", russia[0]?.name);
   }, [italia, russia, francia, usa]);
 
   return (
     <div className={styles.CarouselTwo}>
       <div className={styles.title}>
         <h2>Best Seller</h2>
-        <p>The best destination of the moment</p>
+        <p>Le migliori mete del momento</p>
       </div>
 
       <div className={styles.CarouselWrapper}>
@@ -68,24 +69,34 @@ export default function CarouselTwo() {
         >
           <Carousel.Item>
             <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[0]} />
-              <div className={styles.descriptContainer}>
-                <h2>{russia[0]?.name}</h2>
-                <div className={styles.starContainer}>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
+              <img width="100%" height="400px" src={imgs[1]} />
+              <>
+                <div className={styles.descriptContainer}>
+                  <Link href={`/country/city/${russia[1]?.name}`}>
+                    <a>
+                      <h2>{russia[1]?.name}</h2>
+                    </a>
+                  </Link>
+                  <div className={styles.starContainer}>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </div>
                 </div>
-              </div>
+              </>
             </div>
           </Carousel.Item>
           <Carousel.Item>
             <div className={styles.card}>
               <img width="100%" height="400px" src={imgs[3]} />
               <div className={styles.descriptContainer}>
-                <h2>{italia[0]?.name}</h2>
+                <Link href={`/country/city/${italia[0]?.name}`}>
+                  <a>
+                    <h2>{italia[0]?.name}</h2>
+                  </a>
+                </Link>
                 <div className={styles.starContainer}>
                   <FaStar />
                   <FaStar />
@@ -101,7 +112,11 @@ export default function CarouselTwo() {
               <img width="100%" height="400px" src={imgs[4]} />
 
               <div className={styles.descriptContainer}>
-                <h2>{italia[1]?.name}</h2>
+                <Link href={`/country/city/${italia[1]?.name}`}>
+                  <a>
+                    <h2>{italia[1]?.name}</h2>
+                  </a>
+                </Link>
                 <div className={styles.starContainer}>
                   <FaStar />
                   <FaStar />
@@ -116,7 +131,12 @@ export default function CarouselTwo() {
             <div className={styles.card}>
               <img width="100%" height="400px" src={imgs[5]} />
               <div className={styles.descriptContainer}>
-                <h2>{italia[2]?.name}</h2>
+                <Link href={`/country/city/${italia[2]?.name}`}>
+                  <a>
+                    <h2>{italia[2]?.name}</h2>
+                  </a>
+                </Link>
+
                 <div className={styles.starContainer}>
                   <FaStar />
                   <FaStar />
@@ -132,7 +152,11 @@ export default function CarouselTwo() {
               <img width="100%" height="400px" src={imgs[8]} />
 
               <div className={styles.descriptContainer}>
-                <h2>{italia[3]?.name}</h2>
+                <Link href={`/country/city/${italia[3]?.name}`}>
+                  <a>
+                    <h2>{italia[3]?.name}</h2>
+                  </a>
+                </Link>
                 <div className={styles.starContainer}>
                   <FaStar />
                   <FaStar />
@@ -148,7 +172,11 @@ export default function CarouselTwo() {
               <img width="100%" height="400px" src={imgs[54]} />
 
               <div className={styles.descriptContainer}>
-                <h2>{usa[40]?.name}</h2>
+                <Link href={`/country/city/${usa[40]?.name}`}>
+                  <a>
+                    <h2>{usa[40]?.name}</h2>
+                  </a>
+                </Link>
                 <div className={styles.starContainer}>
                   <FaStar />
                   <FaStar />
