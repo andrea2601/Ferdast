@@ -45,7 +45,8 @@ export const Cart = () => {
 
           <h3>Riepilogo prenotazione</h3>
           <h3>Destinazioni:</h3>
-          {cart && cart.map(city => <h2 className={styles.city} key={city.id}>{city}</h2>)}
+          {/* {console.log("cart......",cart)} */}
+            {/* cart && cart.map((city,i) => <h2 className={styles.city} key={i}>{"ksjkjd"}</h2>) */}
           <div className={styles.info}>
             <h2 className={styles.travelersH2}>Viaggiatori</h2>
             <h2 className={styles.number}>{number}</h2>

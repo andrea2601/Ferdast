@@ -6,6 +6,7 @@ import {
   FETCH_ALL_CITY_REQUEST,
   FETCH_ALL_CITY_SUCCESS,
   ADD_TO_CART,
+  DEL_TO_CART,
 } from "./constants";
 
 export default (state = {}, action) => {
@@ -76,10 +77,15 @@ export default (state = {}, action) => {
       };
     case ADD_TO_CART:
       return {
-        // AGGIUNGERE PERCORSO PAYLOAD
         ...state,
-        cart: [...state.cart, action.payload.activity],
+        cart: [...state.cart, action.payload],
         totalPrice: state.totalPrice + action.payload.price,
+      };
+    case DEL_TO_CART:
+      return {
+        ...state,
+        cart: [...state.cart.filter((el,i) => i != action.payload.i || el.id != action.payload.id)],
+        totalPrice: [...state.cart.filter((el,i) => i != action.payload.i || el.id != action.payload.id)].reduce((a, b) => a + b.price, 0)
       };
 
     default:

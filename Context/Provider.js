@@ -8,6 +8,7 @@ import {
   FETCH_ALL_CITY_REQUEST,
   FETCH_ALL_CITY_SUCCESS,
   ADD_TO_CART,
+  DEL_TO_CART,
 } from "./constants";
 import axios from "axios";
 
@@ -62,8 +63,11 @@ export default ({ children }) => {
   const addToCart = async (city) => {
     dispatch({ type: ADD_TO_CART, payload: city });
   };
+  const delToCart = async (id, i) => {
+    dispatch({ type: DEL_TO_CART, payload: { id, i } });
+  };
 
-  const value = { state, fetchAll, fetchCity, addToCart };
+  const value = { state, fetchAll, fetchCity, addToCart, delToCart };
 
   return (
     <VacationContext.Provider value={value}>

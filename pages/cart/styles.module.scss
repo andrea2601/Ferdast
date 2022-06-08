@@ -111,6 +111,11 @@
                     padding-right: 20px;
                     width: fit-content;
                     justify-self: flex-start;
+                    color: black;
+                }
+                .city:hover{
+                    color: $btn_color;
+                    cursor: pointer;
                 }
             }
 

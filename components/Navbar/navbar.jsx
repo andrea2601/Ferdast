@@ -10,8 +10,12 @@ import { GrLanguage } from "react-icons/gr";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-
+import { useVacationContext } from "../../Context/Provider";
 export const Navbar = () => {
+  const {
+    state: { cart },
+  } = useVacationContext();
+
   const [expand, setExpand] = useState(false);
   const router = useRouter();
 
@@ -53,6 +57,7 @@ export const Navbar = () => {
               <Link href="/cart">
                 <div className={styles.SingleNav}>
                   <FiShoppingCart />
+                  <div className={styles.notify}>{cart.length}</div>
                   <p>Carrello</p>
                 </div>
               </Link>
@@ -88,7 +93,10 @@ export const Navbar = () => {
 
           <li>
             <Link href="/cart">
-              <FiShoppingCart />
+              <div>
+                <FiShoppingCart />
+                <div className={styles.notify}>{cart.length}</div>
+              </div>
             </Link>
           </li>
           <li>
