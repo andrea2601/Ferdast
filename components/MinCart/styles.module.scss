@@ -122,10 +122,17 @@
   }
   .notify {
     right: 20px;
-    bottom: 370px;
     p {
       padding: 1px 4px;
       font-size: 14px;
+    }
+  }
+  @keyframes notify {
+    0% {
+      bottom: 393px;
+    }
+    100% {
+      bottom: 390px;
     }
   }
 
@@ -170,6 +177,46 @@
           font-size: 15px;
         }
       }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .MinCartwrapper {
+    right: 45px;
+    bottom: 340px;
+    svg {
+      padding: 8px;
+      width: 50px;
+    }
+  }
+  .notify {
+    right: 38px;
+    p {
+      padding: 1px 5px;
+      font-size: 15px;
+    }
+  }
+  @keyframes notify {
+    0% {
+      bottom: 389px;
+    }
+    100% {
+      bottom: 385px;
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .MinCartwrapper {
+    right: 70px;
+    svg {
+      width: 55px;
+    }
+  }
+  .notify {
+    right: 60px;
+    p {
+      padding: 1px 7px;
+      font-size: 18px;
     }
   }
 }
