@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "./[id].module.scss";
 
@@ -25,6 +26,10 @@ const DynamicCountry = () => {
 
   return (
     <div className={styles.DynamicCountry}>
+     <Head>
+        <title>Ferdast.com</title>
+      </Head>
+
       {loading ? <HeroSkeleton/> : <Hero title={title} subtitle={id} />}
       <div className={styles.DynamicCountry}>
         <CardListLarge country={id} />

@@ -15,16 +15,16 @@ export const GalleryCityPage = ({ id }) => {
 
     if (country?.toLowerCase() == "russia") {
       russia?.forEach((element) => element.name === id ? list = [...list, element.cover_image_url] : null);
-      russia?.forEach((element) => list = [...list, element.cover_image_url]);
+      russia?.forEach((element) => element.cover_image_url != list[0] ? list = [...list, element.cover_image_url] : null);
     } else if (country?.toLowerCase() == "italia") {
       italia?.forEach((element) => element.name === id ? list = [...list, element.cover_image_url] : null);
-      italia?.forEach((element) => list = [...list, element.cover_image_url != list[0] && element.cover_image_url]);
+      italia?.forEach((element) => element.cover_image_url != list[0] ? list = [...list, element.cover_image_url] : null);
     } else if (country?.toLowerCase() == "francia") {
       francia?.forEach((element) => element.name === id ? list = [...list, element.cover_image_url] : null);
-      francia?.forEach((element) => list = [...list, element.cover_image_url]);
+      francia?.forEach((element) => element.cover_image_url != list[0] ? list = [...list, element.cover_image_url] : null);
     } else if (country?.toLowerCase() == "stati uniti d'america") {
       usa?.forEach((element) => element.name === id ? list = [...list, element.cover_image_url] : null);
-      usa?.forEach((element) => list = [...list, element.cover_image_url]);
+      usa?.forEach((element) => element.cover_image_url != list[0] ? list = [...list, element.cover_image_url] : null);
     }
     setImgs(list);
 
@@ -44,16 +44,16 @@ export const GalleryCityPage = ({ id }) => {
       <div className={styles.rightSquare}>
         <div className={styles.topWrapperSquare}>
           <div className={styles.smLeftSquare}>
-            <img src={imgs[2] || cardImgMock.src} />
+            <img src={imgs[1] || cardImgMock.src} />
           </div>
 
           <div className={styles.smRigtSquare}>
-            <img src={imgs[3] || imgs[0] || cardImgMock.src} />
+            <img src={imgs[2] || cardImgMock.src} />
           </div>
         </div>
 
         <div className={styles.buttomRigSquare}>
-          <img src={imgs[4] || imgs[1] || cardImgMock.src} />
+          <img src={imgs[3] || imgs[0] || cardImgMock.src} />
         </div>
       </div>
     </div>

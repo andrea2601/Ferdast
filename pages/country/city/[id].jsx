@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "./[id].module.scss";
 import { Details } from "../../../components/Details/details";
@@ -40,6 +41,10 @@ const DynamicCity = () => {
 
   return (
     <div className={styles.DynamicCountry}>
+     <Head>
+        <title>Ferdast.com</title>
+      </Head>
+
       <section className={styles.GalleryCityPageContainer}>
         {loading ? <GalleryCityPageSkeleton /> : <GalleryCityPage id={id} />}
       </section>
