@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import { useVacationContext } from "../../Context/Provider";
 import { useEffect, useState } from "react";
-import cardImgMock from "../Images/cardImgmock.png"
+import cardImgMock from "../Images/cardImgmock.png";
 export const GalleryCityPage = ({ id }) => {
   const {
     state: { vacation, italia, russia, francia, usa },
@@ -9,11 +9,14 @@ export const GalleryCityPage = ({ id }) => {
   const [imgs, setImgs] = useState([]);
 
   useEffect(() => {
-    const [city] = vacation.filter((item) => item.name.toLowerCase() === id?.toLowerCase());
+    const [city] = vacation.filter(
+      (item) => item.name.toLowerCase() === id?.toLowerCase()
+    );
     const country = city?.country.name;
     let list = [];
 
     if (country?.toLowerCase() == "russia") {
+
       russia?.forEach((element) => element.name === id ? list = [...list, element.cover_image_url] : null);
       russia?.forEach((element) => element.cover_image_url != list[0] ? list = [...list, element.cover_image_url] : null);
     } else if (country?.toLowerCase() == "italia") {
@@ -25,14 +28,9 @@ export const GalleryCityPage = ({ id }) => {
     } else if (country?.toLowerCase() == "stati uniti d'america") {
       usa?.forEach((element) => element.name === id ? list = [...list, element.cover_image_url] : null);
       usa?.forEach((element) => element.cover_image_url != list[0] ? list = [...list, element.cover_image_url] : null);
+
     }
     setImgs(list);
-
-    console.log("imgs........", imgs);
-    console.log("list........", list);
-    console.log("id........", id);
-    console.log("country........", city?.country.name);
-    console.log("countryreal........", country);
   }, [italia, russia, francia, usa, id]);
 
   return (

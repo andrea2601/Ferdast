@@ -52,7 +52,7 @@ const DynamicCity = () => {
       <section className={styles.GalleryCityPageContainer}>
         {loading ? <GalleryCityPageSkeleton /> : <GalleryCityPage id={id} />}
       </section>
-      <section>
+      <section className={styles.dettailsContainer}>
         <h1 className={styles.cityName}>{id}</h1>
         {/* <CardListLarge country={id}/> */}
         <Price />
@@ -62,7 +62,6 @@ const DynamicCity = () => {
       <section className={styles.mapContainer}>
         <Map lng={long} lat={lat} />
       </section>
-
     </div>
   );
 };
