@@ -11,6 +11,9 @@ import { AiOutlineDown } from "react-icons/ai";
 export const ActivityCard = ({ info }) => {
   const [expand, setExpand] = useState(false);
   const [add, setAdd] = useState(false);
+
+  setTimeout(() => setAdd(false), 5000);
+
   const {
     addToCart,
     state: { cart },

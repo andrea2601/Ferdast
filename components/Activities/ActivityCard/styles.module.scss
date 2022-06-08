@@ -28,11 +28,29 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    z-index: 3;
+    z-index: 5;
     width: 80%;
     height: 620px;
     overflow: scroll;
     justify-content: space-around;
+
+    // /* width */
+    // ::-webkit-scrollbar {
+    //   width: 20px;
+    // }
+    // /* Track */
+    // ::-webkit-scrollbar-track {
+    //   border-top-right-radius: 10px;
+    //   background: #f1f1f1;
+    // }
+    // /* Handle */
+    // ::-webkit-scrollbar-thumb {
+    //   background: #888;
+    // }
+    // /* Handle on hover */
+    // ::-webkit-scrollbar-thumb:hover {
+    //   background: #555;
+    // }
     .Categories {
       width: 80%;
       margin: 0 auto;
