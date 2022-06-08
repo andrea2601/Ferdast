@@ -12,8 +12,7 @@ export const ActivityCard = ({ info }) => {
   const [expand, setExpand] = useState(false);
   const [add, setAdd] = useState(false);
 
-  setTimeout(() => setAdd(false), 5000);
-
+  console.log("prova", add);
   const {
     addToCart,
     state: { cart },
@@ -24,7 +23,7 @@ export const ActivityCard = ({ info }) => {
       activity: info.title,
       price: info.retail_price.value,
     });
-    setAdd(!add);
+    setAdd(true);
   };
 
   return (
@@ -88,6 +87,7 @@ export const ActivityCard = ({ info }) => {
           <button
             className={`${styles.cartButton} ${add ? styles.clicked : ""}`}
             onClick={animationAdd}
+            disabled={add}
           >
             <span className={styles.addCart}>Aggiungi al carrello</span>
             <span className={styles.added}>Aggiunto!</span>
