@@ -26,14 +26,14 @@ const Input = ({ text, id }) => {
         <input
           className={clicked ? styles.input : styles.hideInput}
           type={
-            text.toLowerCase() == "nome" && text.toLowerCase() == "cognome"
+            text?.toLowerCase() == "nome" && text?.toLowerCase() == "cognome"
               ? "text"
-              : text.toLowerCase() == "email"
+              : text?.toLowerCase() == "email"
               ? "email"
               : ""
           }
           id={id}
-          name={text.toLowerCase()}
+          name={text?.toLowerCase()}
           value={empty}
           onChange={(e) => setEmpty(e.target.value)}
           required
