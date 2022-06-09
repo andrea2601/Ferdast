@@ -14,7 +14,7 @@ const Input = ({ text, id }) => {
       >
         {text}
       </label>
-      {text.includes("messaggio") ? (
+      {text?.includes("messaggio") ? (
         <textarea
           className={clicked ? styles.textarea : styles.hideInput}
           id={id}

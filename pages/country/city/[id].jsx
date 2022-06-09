@@ -30,7 +30,7 @@ const DynamicCity = () => {
 
   useEffect(() => {
     const citys = vacation?.filter((element) =>
-      element?.name?.toLowerCase().includes(id?.toLowerCase())
+      element?.name.toLowerCase()?.includes(id.toLowerCase())
     );
     setLong(citys[0]?.longitude);
     setLat(citys[0]?.latitude);
