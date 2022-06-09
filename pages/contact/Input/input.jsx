@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 
-const Input = ({ text, id, setValue, value }) => {
+const Input = ({ text, id }) => {
   const [clicked, setClicked] = useState(false);
   const [empty, setEmpty] = useState("");
 
