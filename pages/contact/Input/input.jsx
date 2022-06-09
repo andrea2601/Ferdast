@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 
-export default Input = ({ text, id, setValue, value }) => {
+const Input = ({ text, id, setValue, value }) => {
   const [clicked, setClicked] = useState(false);
   const [empty, setEmpty] = useState("");
 
@@ -42,3 +42,4 @@ export default Input = ({ text, id, setValue, value }) => {
     </div>
   );
 };
+export default Input;

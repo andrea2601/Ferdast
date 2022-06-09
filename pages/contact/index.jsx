@@ -2,6 +2,7 @@ import Input from "./Input/input";
 import styles from "./styles.module.scss";
 import Head from "next/head";
 import { useState } from "react";
+
 export default function Contact() {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
