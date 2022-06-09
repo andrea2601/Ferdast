@@ -1,4 +1,4 @@
-import { Input } from "./Input/input";
+import Input from "./Input/input";
 import styles from "./styles.module.scss";
 import Head from "next/head";
 import { useState } from "react";
