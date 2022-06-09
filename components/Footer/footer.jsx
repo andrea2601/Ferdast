@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 import {
   AiFillFacebook,
@@ -48,21 +49,21 @@ export const Footer = () => {
         <section className={styles.Mail}>
           <div className={styles.Form}>
             <h4>Newsletter</h4>
-            <div>
+            <div className={styles.MailBox}>
               <input
                 className={styles.InputMail}
                 type="email"
                 placeholder="email@domain.com"
               />
-              <input className={styles.Send} type="submit" value="Send" />
+              <input className={styles.Send} type="submit" value="Invia" />
             </div>
             <p className={styles.mailPrivacy}>
-              By clicking on Send you express your consent to receive the
-              ferdast newsletter. Read the privacy policy of Ferdast.
+            Cliccando su Invia esprimi il consenso di ricevere le newsletter di Ferdast. 
+            Leggi la politica sulla privacy di Ferdast.
             </p>
           </div>
           <div className={styles.Social}>
-            <h4 onClick={toggleVisibilitySocial}>Follow us!</h4>
+            <h4 onClick={toggleVisibilitySocial}>Seguici!</h4>
             <div
               className={`${styles.LogoSocial} ${
                 clickedSocial ? styles.Show : styles.Hide
@@ -95,10 +96,10 @@ export const Footer = () => {
 
         {/* CONTACT SECTION */}
         <section className={styles.Contact}>
-          <h4 onClick={toggleVisibilityContact}>Contacts</h4>
+          <h4 onClick={toggleVisibilityContact}>Contatti</h4>
           <div className={clickedContact ? styles.Show : styles.Hide}>
             <p>WhatsApp</p>
-            <p>Book a call</p>
+            <p>Prenota una chiamata</p>
           </div>
         </section>
 
@@ -106,7 +107,9 @@ export const Footer = () => {
         <section className={styles.About}>
           <h4 onClick={toggleVisibilityAbout}>Ferdast s world</h4>
           <div className={clickedAbout ? styles.Show : styles.Hide}>
-            <p>About us</p>
+            <Link href={"/about"}>
+              <p>About us</p>
+            </Link>
             <p>Community</p>
             <p>Partner</p>
           </div>
@@ -116,12 +119,13 @@ export const Footer = () => {
         <section className={styles.Info}>
           <h4 onClick={toggleVisibilityPrivacy}>Privacy</h4>
           <div className={clickedPrivacy ? styles.Show : styles.Hide}>
-            <p>Terms e conditions</p>
+            <p>Termini e condizioni</p>
             <p>Cookie policy</p>
-            <p>Insurance</p>
+            <p>Assicurazione</p>
           </div>
         </section>
       </div>
     </footer>
   );
 };
+

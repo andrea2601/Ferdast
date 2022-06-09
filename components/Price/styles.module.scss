@@ -3,11 +3,12 @@
 
 .Side {
   position: fixed;
-  bottom: 450px;
-  right: 15px;
+  bottom: 430px;
+  right: 10px;
   animation: infinite;
   animation-name: price;
-  animation-duration: 1.3s;
+  animation-duration: 2s;
+  cursor: pointer;
   &.Stop {
     animation: none;
   }
@@ -23,7 +24,7 @@
 .Hide {
   position: fixed;
   right: -320px;
-  bottom: 540px;
+  bottom: 500px;
   width: 300px;
   height: auto;
   font-family: "Montserrat", sans-serif;
@@ -45,13 +46,10 @@
   transition: right 1.5s ease-in-out;
 }
 .PriceContainer {
-  animation-duration: 0.7s;
-  animation: infinite;
-  animation-name: price;
   font-family: "Montserrat", sans-serif;
   position: fixed;
-  right: 3px;
-  bottom: 540px;
+  right: 1px;
+  bottom: 500px;
   background-color: $primary-color;
   color: white;
   width: 300px;
@@ -62,12 +60,16 @@
   display: flex;
   flex-direction: column;
   transition: right 1.5s ease-in-out;
+  z-index: 9999;
 
   .H2Contain {
     border-bottom: 1px white solid;
     h2 {
       margin: 8px 0;
     }
+  }
+  a {
+    text-align: center;
   }
   .btn {
     font-family: "Montserrat", sans-serif;
@@ -79,9 +81,148 @@
     right: 10px;
   }
   50% {
-    right: 23px;
+    right: 18px;
   }
   100% {
-    right: 20px;
+    right: 15px;
+  }
+}
+
+@media (min-width: "600px") {
+  .Side {
+    bottom: 315px;
+  }
+  .Hide {
+    bottom: 400px;
+  }
+  .PriceContainer {
+    bottom: 400px;
+  }
+}
+@media (min-width: "1000px") {
+  @keyframes price {
+    0% {
+      right: 25px;
+    }
+    50% {
+      right: 35px;
+    }
+    100% {
+      right: 30px;
+    }
+  }
+}
+@media (min-width: "1200px") {
+  @keyframes price {
+    0% {
+      right: 70px;
+    }
+    50% {
+      right: 78px;
+    }
+    100% {
+      right: 75px;
+    }
+  }
+  .Side {
+    bottom: 350px;
+    &.Stop {
+      position: fixed;
+      right: 70px;
+    }
+  }
+  .Hide {
+    width: 350px;
+    right: -360px;
+    bottom: 450px;
+    .H2Contain {
+      font-size: larger;
+    }
+    .btn {
+      font-size: larger;
+    }
+    p {
+      font-size: larger;
+    }
+  }
+  .PriceContainer {
+    width: 350px;
+    bottom: 450px;
+    right: 58px;
+    .H2Contain {
+      font-size: larger;
+    }
+    .btn {
+      font-size: larger;
+    }
+    p {
+      font-size: larger;
+    }
+  }
+}
+
+@media (min-width: "1400px") {
+  @keyframes price {
+    0% {
+      right: 120px;
+    }
+    50% {
+      right: 128px;
+    }
+    100% {
+      right: 125px;
+    }
+  }
+  .Side {
+    bottom: 330px;
+    svg {
+      width: 55px;
+    }
+    &.Stop {
+      right: 120px;
+    }
+  }
+  .Hide {
+    right: -360px;
+    bottom: 410px;
+  }
+  .PriceContainer {
+    bottom: 410px;
+    right: 110px;
+  }
+}
+@media (min-width: "1600px") {
+  @keyframes price {
+    0% {
+      right: 160px;
+    }
+    50% {
+      right: 170px;
+    }
+    100% {
+      right: 165px;
+    }
+  }
+  .Side {
+    bottom: 400px;
+    svg {
+      width: 60px;
+    }
+    &.Stop {
+      right: 160px;
+    }
+  }
+  .Hide {
+    right: -360px;
+    bottom: 560px;
+  }
+  .PriceContainer {
+    bottom: 490px;
+    right: 13px;
+  }
+}
+@media (min-width: "1800px") {
+  .PriceContainer {
+    right: 90px;
   }
 }

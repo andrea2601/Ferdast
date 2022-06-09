@@ -7,6 +7,8 @@ import {
   FETCH_ALL_CITY_ERROR,
   FETCH_ALL_CITY_REQUEST,
   FETCH_ALL_CITY_SUCCESS,
+  ADD_TO_CART,
+  DEL_TO_CART,
 } from "./constants";
 import axios from "axios";
 
@@ -14,13 +16,17 @@ const defaultState = {
   loading: false,
   error: null,
   vacation: [],
-  totalPrice: 2,
-  cart: ["Palermo", "milano"],
+  totalPrice: 0,
+  cart: [],
   city: [],
   italia: [],
-  spagna: [],
+  russia: [],
   francia: [],
-  romania: []
+  usa: [],
+  italiaImg: "",
+  russiaImg: "",
+  franciaImg: "",
+  usaImg: "",
 };
 
 const VacationContext = createContext(defaultState);
@@ -46,7 +52,7 @@ export default ({ children }) => {
     dispatch({ type: FETCH_ALL_CITY_REQUEST });
     try {
       const { data: city } = await axios.get(
-        `https://sandbox.musement.com/api/v3$/activities${par}`
+        `https://sandbox.musement.com/api/v3/activities${par}`
       );
       dispatch({ type: FETCH_ALL_CITY_SUCCESS, payload: city });
     } catch (e) {
@@ -54,7 +60,14 @@ export default ({ children }) => {
     }
   };
 
-  const value = { state, fetchAll, fetchCity };
+  const addToCart = async (city) => {
+    dispatch({ type: ADD_TO_CART, payload: city });
+  };
+  const delToCart = async (id, i) => {
+    dispatch({ type: DEL_TO_CART, payload: { id, i } });
+  };
+
+  const value = { state, fetchAll, fetchCity, addToCart, delToCart };
 
   return (
     <VacationContext.Provider value={value}>

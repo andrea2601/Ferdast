@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 @import "../../styles/variables.scss";
 
@@ -53,7 +52,7 @@
     z-index: 2;
     cursor: pointer;
   }
-  .btn:hover{
+  .btn:hover {
     background: $btn_color_hvr;
   }
 
@@ -68,8 +67,7 @@
       height: 100%;
       width: 100%;
       border-radius: 0 0 150px 0;
-      background-color: black;
-      opacity: 0.35;
+      background: radial-gradient(circle, rgb(0 0 0 / 36%) 19%, rgb(36 36 36 / 0%) 72%);
       z-index: 1;
     }
 

@@ -1,0 +1,110 @@
+@import "../../styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+
+.AboutContainer {
+  margin: 25px 0;
+  color: $primary-color;
+
+  .title {
+    text-align: center;
+  }
+
+  .aboutInfo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px 50px;
+
+    .Profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border-radius: 20px;
+
+      -webkit-box-shadow: 5px 5px 15px 5px #000000;
+      box-shadow: 1.5px 1.5px 6px 5px rgba(216, 216, 216, 0.8);
+
+      h2 {
+        font-size: 18px;
+        text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
+      }
+
+      span {
+        border-radius: 120px;
+      }
+
+      .logo {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+
+        svg {
+          width: 30px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: "450px") {
+  .AboutContainer {
+    .aboutInfo {
+      .Profile {
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: "650px") {
+  .AboutContainer {
+    .aboutInfo {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+
+      .Profile {
+        .logo {
+          svg {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: "800px") {
+  .AboutContainer {
+    .aboutInfo {
+      .Profile {
+        h2 {
+          font-size: 24px;
+        }
+
+        .logo {
+          svg {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: "1300px") {
+  .AboutContainer {
+    .aboutInfo {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 50px;
+      gap: 15px;
+    }
+  }
+}

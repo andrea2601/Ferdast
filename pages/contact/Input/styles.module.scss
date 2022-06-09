@@ -1,0 +1,114 @@
+@import "../../../styles/variables.scss";
+.inputGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .labelOff {
+    border: 1px solid $primary-color;
+    height: 45px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .labelOn {
+    font-weight: 600;
+    transform: translate(0, -30%);
+    margin-left: 10px;
+    width: 80%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .labelOn:hover {
+    color: rgb(153, 153, 153);
+  }
+
+  .input {
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    width: 250px;
+    height: 45px;
+    padding: 12px 15px;
+    font-size: 15.5px;
+    transform: translate(0, -10%);
+    font-family: "Montserrat", sans-serif;
+  }
+  .input:focus {
+    border: 1px solid black;
+  }
+  .hideInput {
+    display: none;
+  }
+
+  .textarea {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    background-color: rgb(238, 238, 238);
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15.5px;
+  }
+}
+
+@media (min-width: 600px) {
+  .inputGroup {
+    .labelOff {
+      width: 350px;
+      height: 50px;
+    }
+    .input {
+      width: 350px;
+      height: 50px;
+    }
+    .textarea {
+      min-width: 350px;
+      max-width: 350px;
+      min-height: 250px;
+    }
+  }
+}
+@media (min-width: 800px) {
+  .inputGroup {
+    width: 45%;
+    .labelOff {
+      width: 100%;
+    }
+    .input {
+      width: 100%;
+    }
+    .textarea {
+      transform: translate(-20%, 0);
+      min-width: 500px;
+      max-width: 500px;
+      min-height: 200px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .inputGroup {
+    .textarea {
+      transform: translate(0, 0);
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .inputGroup {
+    width: 45%;
+    .labelOff {
+      height: 60px;
+    }
+    .labelOn {
+      transform: translate(0, -70%);
+    }
+    .input {
+      width: 100%;
+      height: 60px;
+    }
+  }
+}

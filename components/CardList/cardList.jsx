@@ -1,18 +1,38 @@
 import styles from "./styles.module.scss";
 import { MediumCard } from "../Cards/MediumCard/mediumCard";
+import { MediumCardSkeleton } from "../Cards/MediumCardSkeleton/mediumCardSkeleton";
+import { useVacationContext } from "../../Context/Provider";
+
 
 export const CardList = () => {
+
+
+  const {
+    state: { loading, italiaImg, russiaImg, franciaImg, usaImg },
+
+  } = useVacationContext();
+
   const itDescript = "Esplora le meraviglie d'italia";
-  const img = "italia";
-  const espDescript = "Esplora las meravillas de España";
-  const fraDescript = "Explorez les merveilles de la France";
-  const englDescript = "Explore the wonders of Romania";
+
+  const sveDescript = "Esplora le meraviglie di Russia";
+  const fraDescript = "Esplora le meraviglie di Francia";
+  const usalDescript = "Esplora le meraviglie degli USA";
   return (
     <div className={styles.cardContiner}>
-      <MediumCard name={"Italia"} description={itDescript} img={img} />
-      <MediumCard name={"Spagna"} description={espDescript} />
-      <MediumCard name={"Francia"} description={fraDescript} />
-      <MediumCard name={"Romania"} description={englDescript} />
+      {loading ?
+        <><MediumCardSkeleton />
+          <MediumCardSkeleton />
+          <MediumCardSkeleton />
+          <MediumCardSkeleton />
+        </>
+        :
+        <>
+          <MediumCard name={"Italia"} description={itDescript} img={italiaImg} />
+          <MediumCard name={"Russia"} description={sveDescript} img={russiaImg} />
+          <MediumCard name={"Francia"} description={fraDescript} img={franciaImg} />
+          <MediumCard name={"Stati Uniti d'America"} description={usalDescript} img={usaImg} />
+        </>
+      }
     </div>
   );
 };

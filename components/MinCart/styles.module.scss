@@ -1,0 +1,234 @@
+@import "../../styles/variables.scss";
+.MinCartwrapper {
+  position: fixed;
+  right: 10px;
+  bottom: 450px;
+  cursor: pointer;
+  svg {
+    background-color: $primary-color;
+    color: white;
+    padding: 7px;
+    width: 40px;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
+.recapCart {
+  background-color: $primary-color;
+  color: white;
+  position: fixed;
+  bottom: 530px;
+  right: -500px;
+  padding: 10px;
+  width: 330px;
+  height: auto;
+  border-radius: 10px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    margin: 5px 0;
+  }
+  h5 {
+    margin: 5px 0;
+  }
+  h4 {
+    margin: 10px 0;
+  }
+  .allActivity {
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+
+    h4 {
+      font-size: larger;
+    }
+    .singleAct {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .singleAct:hover {
+      color: $btn-color;
+    }
+  }
+
+  .btn {
+    margin: 5px 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  transition: right 0.5s ease-in-out;
+  &.showRecap {
+    background-color: $primary-color;
+    color: white;
+    position: fixed;
+    bottom: 530px;
+    right: 15px;
+    padding: 10px;
+    width: 330px;
+    height: auto;
+    border-radius: 10px;
+    transition: right 0.5s ease-in-out;
+    .allActivity {
+      padding: 0 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      .singleAct {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.notify {
+  background-color: $btn-color;
+  position: fixed;
+  bottom: 484px;
+  right: 7px;
+  border-radius: 5px;
+  border: 1px $primary-color solid;
+
+  animation-iteration-count: infinite;
+  animation-name: notify;
+  animation-duration: 2s;
+  p {
+    margin: 0;
+    padding: 1px 3px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+@keyframes notify {
+  0% {
+    bottom: 489px;
+  }
+  100% {
+    bottom: 484px;
+  }
+}
+
+@media (min-width: 600px) {
+  .MinCartwrapper {
+    right: 25px;
+    bottom: 350px;
+    svg {
+      padding: 7px;
+      width: 45px;
+    }
+  }
+  .notify {
+    right: 20px;
+    p {
+      padding: 1px 4px;
+      font-size: 14px;
+    }
+  }
+  @keyframes notify {
+    0% {
+      bottom: 393px;
+    }
+    100% {
+      bottom: 390px;
+    }
+  }
+
+  .recapCart {
+    bottom: 450px;
+    right: -500px;
+    padding: 10px;
+    width: 400px;
+    .allActivity {
+      padding: 0 15px;
+      font-size: 13px;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &.showRecap {
+      bottom: 450px;
+      right: 30px;
+      padding: 10px 5px;
+      width: 400px;
+      .allActivity {
+        padding: 0 15px;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .recapCart {
+    width: 450px;
+    font-size: larger;
+    .allActivity {
+      padding: 0 15px;
+      .singleAct {
+        font-size: 15px;
+      }
+    }
+    &.showRecap {
+      width: 450px;
+      .allActivity {
+        .singleAct {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .MinCartwrapper {
+    right: 45px;
+    bottom: 340px;
+    svg {
+      padding: 8px;
+      width: 50px;
+    }
+  }
+  .notify {
+    right: 38px;
+    p {
+      padding: 1px 5px;
+      font-size: 15px;
+    }
+  }
+  @keyframes notify {
+    0% {
+      bottom: 389px;
+    }
+    100% {
+      bottom: 385px;
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .MinCartwrapper {
+    right: 70px;
+    svg {
+      width: 55px;
+    }
+  }
+  .notify {
+    right: 60px;
+    p {
+      padding: 1px 7px;
+      font-size: 18px;
+    }
+  }
+}
