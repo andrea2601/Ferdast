@@ -107,28 +107,36 @@
                 align-content: space-around;
                 align-items: baseline;
                 justify-content: center;
+                width: 100%;
+                .singleDest {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    align-content: space-around;
+                    align-items: baseline;
+                    width: 100%;
+                    .city {
+                        // width: calc(100%/3);
+                        // overflow-x:;
+                        display: block;
+                        padding: 10px 0 10px 10px;
+                        width: fit-content;
+                        justify-self: flex-start;
+                        color: black;
+                        width: 70%;
+                        text-align: start;
+                        text-decoration: dotted;
+                    }
 
-                .city {
-                    // width: calc(100%/3);
-                    // overflow-x:;
-                    display: block;
-                    padding: 10px 0 10px 10px;
-                    width: fit-content;
-                    justify-self: flex-start;
-                    color: black;
-                    width: 70%;
-                    text-align: start;
-                    text-decoration: dotted; 
-                }
+                    .city:hover {
+                        color: $btn_color;
+                        cursor: pointer;
+                    }
 
-                .city:hover {
-                    color: $btn_color;
-                    cursor: pointer;
-                }
-
-                .price {
-                    width: 30%;
-                    text-align: end;
+                    .price {
+                        width: 30%;
+                        text-align: end;
+                    }
                 }
             }
 
@@ -228,15 +236,19 @@
 
             .right {
                 .destination {
-                    .city {
-                        width: 100%;
-                        padding: 10px 0 0 0;
-                        margin-bottom: 10px;
-                        text-align: center;
-                    }
-                    .price{
-                        margin-top: 10px;
-                        text-align: center;
+                    .singleDest{
+                        justify-content: center;
+                        .city {
+                            width: 100%;
+                            padding: 10px 0 0 0;
+                            margin-bottom: 10px;
+                            text-align: center;
+                        }
+                        
+                        .price {
+                            margin-top: 10px;
+                            text-align: center;
+                        }
                     }
                 }
 

@@ -20,7 +20,7 @@ export const ActivityCard = ({ info }) => {
 
   useEffect(() => {
     setAdd(cart.some(item => item.id == info.uuid));
-  }, []);
+  }, [cart]);
 
   const animationAdd = () => {
     console.log(info);

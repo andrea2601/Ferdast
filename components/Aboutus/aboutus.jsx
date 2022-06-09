@@ -10,7 +10,7 @@ import Image from "next/image";
 export const AboutUs = () => {
   return (
     <div className={styles.AboutContainer}>
-      <h2>Website created and designed by</h2>
+      <h2 className={styles.title}>Website created and designed by</h2>
       <div className={styles.aboutInfo}>
         <div className={styles.Profile}>
           <Image
