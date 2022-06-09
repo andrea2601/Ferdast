@@ -67,124 +67,128 @@ export default function CarouselTwo() {
           loop
         >
           <Carousel.Item>
-            <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[1]} />
-              <>
-                <div className={styles.descriptContainer}>
-                  <Link href={`/country/city/${russia[1]?.name}`}>
-                    <a>
+            <Link href={`/country/city/${russia[1]?.name}`}>
+              <a>
+                <div className={styles.card}>
+                  <img width="100%" height="400px" src={imgs[1]} />
+                  <>
+                    <div className={styles.descriptContainer}>
                       <h2>{russia[1]?.name}</h2>
-                    </a>
-                  </Link>
-                  <div className={styles.starContainer}>
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
+                      <div className={styles.starContainer}>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </div>
+                    </div>
+                  </>
+                </div>
+              </a>
+            </Link>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <Link href={`/country/city/${italia[0]?.name}`}>
+              <a>
+                <div className={styles.card}>
+                  <img width="100%" height="400px" src={imgs[3]} />
+                  <div className={styles.descriptContainer}>
+                    <h2>{italia[0]?.name}</h2>
+                    <div className={styles.starContainer}>
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
                   </div>
                 </div>
-              </>
-            </div>
+              </a>
+            </Link>
           </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[3]} />
-              <div className={styles.descriptContainer}>
-                <Link href={`/country/city/${italia[0]?.name}`}>
-                  <a>
-                    <h2>{italia[0]?.name}</h2>
-                  </a>
-                </Link>
-                <div className={styles.starContainer}>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                </div>
-              </div>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[4]} />
 
-              <div className={styles.descriptContainer}>
-                <Link href={`/country/city/${italia[1]?.name}`}>
-                  <a>
+          <Carousel.Item>
+            <Link href={`/country/city/${italia[1]?.name}`}>
+              <a>
+                <div className={styles.card}>
+                  <img width="100%" height="400px" src={imgs[4]} />
+
+                  <div className={styles.descriptContainer}>
                     <h2>{italia[1]?.name}</h2>
-                  </a>
-                </Link>
-                <div className={styles.starContainer}>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
+                    <div className={styles.starContainer}>
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </Link>
           </Carousel.Item>
+
           <Carousel.Item>
-            <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[5]} />
-              <div className={styles.descriptContainer}>
-                <Link href={`/country/city/${italia[2]?.name}`}>
-                  <a>
+            <Link href={`/country/city/${italia[2]?.name}`}>
+              <a>
+                <div className={styles.card}>
+                  <img width="100%" height="400px" src={imgs[5]} />
+                  <div className={styles.descriptContainer}>
                     <h2>{italia[2]?.name}</h2>
-                  </a>
-                </Link>
-
-                <div className={styles.starContainer}>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
+                    <div className={styles.starContainer}>
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </Link>
           </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[6]} />
 
-              <div className={styles.descriptContainer}>
-                <Link href={`/country/city/${italia[3]?.name}`}>
-                  <a>
+          <Carousel.Item>
+            <Link href={`/country/city/${italia[3]?.name}`}>
+              <a>
+                <div className={styles.card}>
+                  <img width="100%" height="400px" src={imgs[6]} />
+
+                  <div className={styles.descriptContainer}>
                     <h2>{italia[3]?.name}</h2>
-                  </a>
-                </Link>
-                <div className={styles.starContainer}>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
+                    <div className={styles.starContainer}>
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </Link>
           </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.card}>
-              <img width="100%" height="400px" src={imgs[54]} />
 
-              <div className={styles.descriptContainer}>
-                <Link href={`/country/city/${usa[40]?.name}`}>
-                  <a>
+          <Carousel.Item>
+            <Link href={`/country/city/${usa[40]?.name}`}>
+              <a>
+                <div className={styles.card}>
+                  <img width="100%" height="400px" src={imgs[54]} />
+
+                  <div className={styles.descriptContainer}>
                     <h2>{usa[40]?.name}</h2>
-                  </a>
-                </Link>
-                <div className={styles.starContainer}>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
+                    <div className={styles.starContainer}>
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            </Link>
           </Carousel.Item>
           {/* ... */}
         </Carousel>

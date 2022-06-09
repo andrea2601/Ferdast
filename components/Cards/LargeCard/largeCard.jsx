@@ -5,14 +5,12 @@ import { useState } from "react";
 import { useVacationContext } from "../../../Context/Provider";
 
 export const LargeCard = ({ city }) => {
-
   const {
     state: { loading },
   } = useVacationContext();
 
   const [lat, setLat] = useState(city.latitude);
   const [long, setlong] = useState(city.longitude);
-
 
   const name = city.name || "Città";
   const image = loading ? cardImgMock.src : city.cover_image_url;
@@ -29,11 +27,9 @@ export const LargeCard = ({ city }) => {
       </div>
 
       <div className={styles.descriptionContainer}>
-        <div>
-          <h2 className={styles.h2Title}>{name}</h2>
+        <h2 className={styles.h2Title}>{name}</h2>
 
-          <p className={styles.paragraph}>{formatMinText(descript)}</p>
-        </div>
+        <p className={styles.paragraph}>{formatMinText(descript)}</p>
 
         <Link href={`/country/city/${name}`}>
           <a className={styles.btn}>Più di {name}</a>
