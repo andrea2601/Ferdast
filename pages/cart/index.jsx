@@ -56,8 +56,8 @@ const Cart = () => {
           <h3>Destinazioni: {"(clicca per rimuovere)"}</h3>
           <div className={styles.destination}>
             {cart && cart.map((city, i) => <>
-              <h3 className={styles.city} key={city.id} onClick={() => delToCart(city.id, i)}>{city.activity}</h3>
-              {/* <MdOutlineClose onClick={() => delToCart(city.id)} /> */}
+              <h5 className={styles.city} key={city.id} onClick={() => delToCart(city.id, i)}>{city.activity}</h5>
+              <h5 className={styles.price}>{city.price + "€"}</h5>
             </>
             )
             }
