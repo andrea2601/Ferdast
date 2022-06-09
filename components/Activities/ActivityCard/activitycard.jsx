@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import { GrGroup } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBox } from "react-icons/fa";
 // import { ButtonAdd } from "../../MinCart/buttonAdd/buttonadd";
 import { useVacationContext } from "../../../Context/Provider";
@@ -18,6 +18,10 @@ export const ActivityCard = ({ info }) => {
     state: { cart },
   } = useVacationContext();
 
+  useEffect(() => {
+    setAdd(cart.some(item => item.id == info.uuid));
+  }, []);
+
   const animationAdd = () => {
     console.log(info);
     addToCart({
@@ -32,9 +36,8 @@ export const ActivityCard = ({ info }) => {
     <>
       <div className={expand ? styles.overlay : styles.hide}></div>
       <div
-        className={`${styles.ActivityCardContainer} ${
-          expand ? styles.fix : ""
-        }`}
+        className={`${styles.ActivityCardContainer} ${expand ? styles.fix : ""
+          }`}
       >
         <div className={styles.fixInfo}>
           <h2>{info.title}</h2>
@@ -59,7 +62,7 @@ export const ActivityCard = ({ info }) => {
 
           <h3>
             {parseInt(info.retail_price.formatted_value.split("€").join("")) ===
-            0
+              0
               ? "For free!"
               : info.retail_price.formatted_value}
           </h3>

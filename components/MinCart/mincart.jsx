@@ -35,8 +35,8 @@ export const MinCart = () => {
           {cart.length !== 0 ? (
             cart.map((el, i) => (
 
-              <li key={i} className={styles.singleAct}>
-                {el.activity} <MdOutlineClose onClick={() => delToCart(el.id, i)} />
+              <li key={i} className={styles.singleAct} onClick={() => delToCart(el.id, i)}>
+                {el.activity} 
 
               </li>
             ))
