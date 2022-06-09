@@ -19,9 +19,11 @@ export const ActivityCard = ({ info }) => {
   } = useVacationContext();
 
   const animationAdd = () => {
+    console.log(info);
     addToCart({
       activity: info.title,
       price: info.retail_price.value,
+      id: info.uuid
     });
     setAdd(true);
   };

@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +17,7 @@
   .menuMobile {
     .hidden {
       overflow: hidden;
-      position: absolute;
+      position: fixed;
       left: 0;
       height: 0;
       width: 100%;
@@ -26,27 +27,47 @@
       background-color: white;
       z-index: 9999;
       transition: height 0.5s ease-in-out;
+
       li {
         border-top: 1px $primary-color solid;
         list-style: none;
         width: 100%;
+
         .SingleNav {
-          width: 40%;
+          width: 80%;
           margin: 0 auto;
           display: flex;
           flex-flow: row nowrap;
           justify-content: center;
           gap: 50px;
+          position: relative;
+
+          .notify {
+            top: 19.5px;
+            left: -36.9px;
+            width: 0px;
+            overflow: visible;
+            text-align: end;
+            font-weight: 600;
+            font-size: 12px;
+            position: relative;
+            display: block;
+            margin: 0 -25px;
+
+          }
+
           svg {
             width: 20px;
             height: auto;
           }
+
           p {
             margin: 30px 0;
           }
         }
       }
     }
+
     .listMobile {
       overflow: hidden;
       position: absolute;
@@ -57,24 +78,44 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 320px;
+      min-height: 320.8px;
+
       z-index: 9999;
       transition: height 0.5s ease-in-out;
+
       li {
         border-top: 1px $primary-color solid;
         list-style: none;
         width: 100%;
+
         .SingleNav {
-          width: 40%;
+          width: 80%;
           margin: 0 auto;
           display: flex;
           flex-flow: row nowrap;
           justify-content: center;
           gap: 50px;
+          position: relative;
+
+          .notify {
+            top: 19.5px;
+            left: -36.9px;
+            width: 0px;
+            overflow: visible;
+            text-align: end;
+            font-weight: 600;
+            font-size: 12px;
+            position: relative;
+            display: block;
+            margin: 0 -25px;
+
+          }
+
           svg {
             width: 20px;
             height: auto;
           }
+
           p {
             margin: 30px 0;
           }
@@ -88,7 +129,21 @@
     list-style: none;
     display: flex;
     gap: 30px;
+
     li {
+      position: relative;
+
+      .notify {
+        position: absolute;
+        display: block;
+        top: -9px;
+        left: 6px;
+        width: 15px;
+        text-align: end;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
       svg {
         cursor: pointer;
         width: 21px;
@@ -112,11 +167,13 @@
       max-height: 0;
       overflow: hidden;
     }
+
     .list {
       flex-direction: column;
       align-items: center;
       padding: 20px;
     }
+
     p {
       display: inline-flex;
       align-items: center;
@@ -124,6 +181,7 @@
     }
   }
 }
+
 @media (min-width: 600px) {
   .navbar {
     .toggler {
@@ -131,12 +189,15 @@
     }
   }
 }
+
 @media (min-width: 700px) {
   .navbar {
     padding: 15px 25px;
+
     .logo {
       width: 150px;
     }
+
     .menu {
       .list {
         li {
@@ -149,9 +210,11 @@
     }
   }
 }
+
 @media (min-width: 1000px) {
   .navbar {
     padding: 15px 40px;
+
     .menu {
       .list {
         li {
@@ -163,16 +226,25 @@
     }
   }
 }
+
 @media (min-width: 1500px) {
   .navbar {
     padding: 15px 70px;
+
     .logo {
       width: 180px;
     }
+
     .menu {
       .list {
         gap: 50px;
+
         li {
+          .notify{
+            
+              left: 9px; 
+            
+          }
           svg {
             width: 28px;
           }
@@ -181,9 +253,11 @@
     }
   }
 }
+
 @media (min-width: 1800px) {
   .navbar {
     padding: 15px 200px;
+
     .logo {
       width: 200px;
     }
