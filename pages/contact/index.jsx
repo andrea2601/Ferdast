@@ -3,9 +3,9 @@ import styles from "./styles.module.scss";
 import Head from "next/head";
 import { useState } from "react";
 export default function contact() {
-  const [name, setName] = useState();
-  const [surname, setSurname] = useState();
-  const [mail, setMail] = useState();
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [mail, setMail] = useState("");
 
   const sendForm = (event) => {
     event.preventDefault;
