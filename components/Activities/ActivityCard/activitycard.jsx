@@ -12,8 +12,7 @@ export const ActivityCard = ({ info }) => {
   const [expand, setExpand] = useState(false);
   const [add, setAdd] = useState(false);
 
-  setTimeout(() => setAdd(false), 5000);
-
+  console.log("prova", add);
   const {
     addToCart,
     state: { cart },
@@ -26,48 +25,46 @@ export const ActivityCard = ({ info }) => {
       price: info.retail_price.value,
       id: info.uuid
     });
-    setAdd(!add);
+    setAdd(true);
   };
 
-  return {
-    ...(info.about !== "TBD" ? (
-      <>
-        <div className={expand ? styles.overlay : styles.hide}></div>
-        <div
-          className={`${styles.ActivityCardContainer} ${
-            expand ? styles.fix : ""
-          }`}
-        >
-          <div className={styles.fixInfo}>
-            <h2>{info.title}</h2>
+  return (
+    <>
+      <div className={expand ? styles.overlay : styles.hide}></div>
+      <div
+        className={`${styles.ActivityCardContainer} ${
+          expand ? styles.fix : ""
+        }`}
+      >
+        <div className={styles.fixInfo}>
+          <h2>{info.title}</h2>
 
-            <div className={styles.Categories}>
-              {info.categories.map((el, i) => (
-                <p key={i}>{el.name.toLowerCase()}</p>
-              ))}
-            </div>
-            <div className={styles.descriptionExpand}>
-              <p>
-                {expand !== true
-                  ? `${info.about.split("").splice(0, 200).join("")} ...`
-                  : info.about}
-              </p>
-              <span onClick={() => setExpand(!expand)}>
-                <AiOutlineDown
-                  className={expand ? styles.reduce : styles.expand}
-                />
-              </span>
-            </div>
+          <div className={styles.Categories}>
+            {info.categories.map((el, i) => (
+              <p key={i}>{el.name.toLowerCase()}</p>
+            ))}
+          </div>
+          <div className={styles.descriptionExpand}>
+            <p>
+              {expand !== true
+                ? `${info.about.split("").splice(0, 200).join("")} ...`
+                : info.about}
+            </p>
+            <span onClick={() => setExpand(!expand)}>
+              <AiOutlineDown
+                className={expand ? styles.reduce : styles.expand}
+              />
+            </span>
+          </div>
 
-            <h3>
-              {parseInt(
-                info.retail_price.formatted_value.split("€").join("")
-              ) === 0
-                ? "For free!"
-                : info.retail_price.formatted_value}
-            </h3>
-            <div className={styles.kind}>
-              {/* {info.group_size.lenght !== 0 &&
+          <h3>
+            {parseInt(info.retail_price.formatted_value.split("€").join("")) ===
+            0
+              ? "For free!"
+              : info.retail_price.formatted_value}
+          </h3>
+          <div className={styles.kind}>
+            {/* {info.group_size.lenght !== 0 &&
               info.group_size !== undefined &&
               info.group_size[0].name.toLowerCase().includes("gruppo") ? (
                 <GrGroup />
@@ -75,9 +72,9 @@ export const ActivityCard = ({ info }) => {
                 <BsPerson />
               )}
               <p>{info.group_size[0].name}</p> */}
-            </div>
+          </div>
 
-            {/* <button
+          {/* <button
               className={styles.btn}
               onClick={() =>
                 addToCart({
@@ -89,20 +86,18 @@ export const ActivityCard = ({ info }) => {
               Aggiungi al carrello
             </button> */}
 
-            <button
-              className={`${styles.cartButton} ${add ? styles.clicked : ""}`}
-              onClick={animationAdd}
-            >
-              <span className={styles.addCart}>Aggiungi al carrello</span>
-              <span className={styles.added}>Aggiunto!</span>
-              <FiShoppingCart className={styles.cartIcon} />
-              <FaBox className={styles.cartItem} />
-            </button>
-          </div>
+          <button
+            className={`${styles.cartButton} ${add ? styles.clicked : ""}`}
+            onClick={animationAdd}
+            disabled={add}
+          >
+            <span className={styles.addCart}>Aggiungi al carrello</span>
+            <span className={styles.added}>Aggiunto!</span>
+            <FiShoppingCart className={styles.cartIcon} />
+            <FaBox className={styles.cartItem} />
+          </button>
         </div>
-      </>
-    ) : (
-      <></>
-    )),
-  };
+      </div>
+    </>
+  );
 };

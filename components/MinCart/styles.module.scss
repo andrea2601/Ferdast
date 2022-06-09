@@ -3,6 +3,7 @@
   position: fixed;
   right: 10px;
   bottom: 450px;
+  cursor: pointer;
   svg {
     background-color: $primary-color;
     color: white;
@@ -31,6 +32,9 @@
   h3 {
     margin: 5px 0;
   }
+  h5 {
+    margin: 5px 0;
+  }
   h4 {
     margin: 10px 0;
   }
@@ -41,12 +45,20 @@
     justify-content: space-between;
     width: 100%;
     gap: 10px;
+
+    h4 {
+      font-size: larger;
+    }
     .singleAct {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
       font-size: 13px;
+      cursor: pointer;
+    }
+    .singleAct:hover {
+      color: $btn-color;
     }
   }
 
