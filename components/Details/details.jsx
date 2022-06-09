@@ -41,7 +41,7 @@ export const Details = () => {
             </div>
             <div className={styles.SingleEl}>
               <RiRefund2Fill />
-              <p>Rimborso del 100% dell'intero importo</p>
+              <p>Rimborso del 100% della spesa</p>
             </div>
             <div className={styles.SingleEl}>
               <MdOutlineFreeBreakfast />

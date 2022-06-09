@@ -30,7 +30,7 @@ export const MinCart = () => {
         className={`${styles.recapCart} ${expandCart ? styles.showRecap : ""}`}
       >
         <h3>Riepilogo</h3>
-        <h5>(clicca l'attività per eliminare)</h5>
+        <h5>(clicca l{"'"}attività per eliminare)</h5>
         <ul className={styles.allActivity}>
           {cart.length !== 0 ? (
             cart.map((el, i) => (
