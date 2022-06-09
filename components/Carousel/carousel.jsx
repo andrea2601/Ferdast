@@ -25,7 +25,6 @@ export const Carousel = (props) => {
   const [sentinell, setSentinell] = useState(false);
 
   const increases = () => {
-    console.log("ciao");
     setSentinel(true);
     if (img1 === items.length - 1) {
       setImg1(0);

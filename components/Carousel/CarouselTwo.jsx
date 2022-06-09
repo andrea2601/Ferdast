@@ -26,7 +26,6 @@ export default function CarouselTwo() {
     usa.forEach((element) => (imgArr = [...imgArr, element.cover_image_url]));
 
     setImgs(imgArr);
-    console.log("--->", russia[0]?.name);
   }, [italia, russia, francia, usa]);
 
   return (

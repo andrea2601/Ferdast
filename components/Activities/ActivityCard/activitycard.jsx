@@ -12,7 +12,6 @@ export const ActivityCard = ({ info }) => {
   const [expand, setExpand] = useState(false);
   const [add, setAdd] = useState(false);
 
-  console.log("prova", add);
   const {
     addToCart,
     state: { cart },
@@ -23,7 +22,6 @@ export const ActivityCard = ({ info }) => {
   }, [cart]);
 
   const animationAdd = () => {
-    console.log(info);
     addToCart({
       activity: info.title,
       price: info.retail_price.value,

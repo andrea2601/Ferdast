@@ -2,8 +2,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "./[id].module.scss";
 import { Details } from "../../../components/Details/details";
-// import {CardListLarge} from '../../components/CardListLarge/cardListLarge';
-import { Cart } from "../../../components/Cart/cart";
 import { Price } from "../../../components/Price/price";
 import { GalleryCityPage } from "../../../components/GalleryCityPage/galleriCityPage";
 import { GalleryCityPageSkeleton } from "../../../components/GalleryCityPageSkeleton/galleriCityPageSkeleton";

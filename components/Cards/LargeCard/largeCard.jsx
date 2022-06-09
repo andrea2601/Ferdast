@@ -39,7 +39,6 @@ export const LargeCard = ({ city }) => {
           <a className={styles.btn}>Più di {name}</a>
         </Link>
       </div>
-      {/* {console.log("city:", city)} */}
     </div>
   );
 };
