@@ -75,18 +75,6 @@ export const ActivityCard = ({ info }) => {
               <p>{info.group_size[0].name}</p> */}
           </div>
 
-          {/* <button
-              className={styles.btn}
-              onClick={() =>
-                addToCart({
-                  activity: info.title,
-                  price: info.retail_price.value,
-                })
-              }
-            >
-              Aggiungi al carrello
-            </button> */}
-
           <button
             className={`${styles.cartButton} ${add ? styles.clicked : ""}`}
             onClick={animationAdd}
