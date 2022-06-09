@@ -49,7 +49,9 @@ export const Details = () => {
             </div>
             <div className={styles.SingleEl}>
               <TbHeadphones />
+
               <p>Assistenza Ferdast</p>
+
             </div>
           </div>
           <div className={styles.border}></div>
