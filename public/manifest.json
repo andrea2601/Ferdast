@@ -1,7 +1,7 @@
 {
     "theme_color": "#037FAD",
     "background_color": "#037FAD",
-    "display": "standalone",
+    "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
     "name": "Ferdast",
