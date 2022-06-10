@@ -51,7 +51,6 @@ export const Details = () => {
               <TbHeadphones />
 
               <p>Assistenza Ferdast</p>
-
             </div>
           </div>
           <div className={styles.border}></div>
