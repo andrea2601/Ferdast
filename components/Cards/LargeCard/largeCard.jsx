@@ -18,7 +18,7 @@ export const LargeCard = ({ city }) => {
     city.content ||
     "In Sicilia l’abbiocco in spiaggia ha il gusto di cannoli e arancin* e!";
   const formatMinText = (descript) =>
-    descript.split("").slice(0, 800).join("") + "...";
+    descript.split("").slice(0, 550).join("") + "...";
 
   return (
     <div className={styles.cardLargeContainer}>

@@ -34,10 +34,12 @@ export const MinCart = () => {
         <ul className={styles.allActivity}>
           {cart.length !== 0 ? (
             cart.map((el, i) => (
-
-              <li key={i} className={styles.singleAct} onClick={() => delToCart(el.id, i)}>
-                {el.activity} 
-
+              <li
+                key={i}
+                className={styles.singleAct}
+                onClick={() => delToCart(el.id, i)}
+              >
+                {el.activity}
               </li>
             ))
           ) : (
