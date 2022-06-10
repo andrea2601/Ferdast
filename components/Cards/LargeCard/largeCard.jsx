@@ -32,7 +32,7 @@ export const LargeCard = ({ city }) => {
         <p className={styles.paragraph}>{formatMinText(descript)}</p>
 
         <Link href={`/country/city/${name}`}>
-          <a className={styles.btn}>Più di {name}</a>
+          <a className={styles.btn}>Più su {name}</a>
         </Link>
       </div>
     </div>

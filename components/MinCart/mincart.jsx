@@ -14,10 +14,6 @@ export const MinCart = () => {
     state: { cart },
   } = useVacationContext();
 
-  const deleteAct = (index) => {
-    cart = cart.filter((el, i) => i != index);
-  };
-
   return (
     <>
       <div

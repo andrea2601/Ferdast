@@ -32,7 +32,6 @@ export default function CarouselTwo() {
     <div className={styles.CarouselTwo}>
       <div className={styles.title}>
         <h2>Le migliori mete del momento</h2>
-        {/* <p></p> */}
       </div>
 
       <div className={styles.CarouselWrapper}>
