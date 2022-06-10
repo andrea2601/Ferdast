@@ -18,43 +18,42 @@ export const Hero = (prop) => {
       switch (subtitle.toLowerCase()) {
         case "italia": {
           setImg(italiaImg ? italiaImg : heroImgMock);
-          break
+          break;
         }
         case "russia": {
           setImg(russiaImg ? russiaImg : heroImgMock);
-          break
+          break;
         }
         case "francia": {
           setImg(franciaImg ? franciaImg : heroImgMock);
-          break
+          break;
         }
         case "stati uniti d'america": {
           setImg(usaImg ? usaImg : heroImgMock);
-          break
+          break;
         }
         default: {
-          setImg(heroImgMock)
+          setImg(heroImgMock);
         }
       }
-    } else { setImg(heroImg) }
-  }
-
+    } else {
+      setImg(heroImg);
+    }
+  };
 
   useEffect(() => {
     setImgFun();
-  }, [subtitle, italiaImg, franciaImg, russiaImg, usaImg])
-
-
+  }, [subtitle, italiaImg, franciaImg, russiaImg, usaImg]);
 
   return (
     <div className={styles.Hero}>
       <div className={styles.img}>
         <div className={styles.Overlay}></div>
-        <Image src={img} alt="heroImg" layout="fill" priority="true"/>
+        <Image src={img} alt="heroImg" layout="fill" priority="true" />
       </div>
+
       <h1 className={styles.title}>{title}</h1>
       <h2 className={styles.subtitle}>{subtitle}</h2>
     </div>
   );
 };
-

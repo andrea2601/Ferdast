@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Hero } from "../components/Hero/hero";
 
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
@@ -43,7 +43,7 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <section className="carouselContainer">
+      <section className={styles.carouselContainer}>
         <CarouselTwo />
       </section>
 
