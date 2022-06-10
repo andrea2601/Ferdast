@@ -8,9 +8,19 @@ import {
 import { MdOutlineFreeBreakfast } from "react-icons/md";
 import { BiBuildings } from "react-icons/bi";
 import { RiRefund2Fill } from "react-icons/ri";
-import { GiPartyPopper, GiAncientColumns } from "react-icons/gi";
-import { TbCarOff, TbPlaneOff, TbHeadphones, TbBeach } from "react-icons/tb";
-import { BsFillBinocularsFill } from "react-icons/bs";
+import {
+  GiBeachBall,
+  GiStonePath,
+  GiSewingNeedle,
+  GiBrickWall,
+} from "react-icons/gi";
+import {
+  TbCarOff,
+  TbPlaneOff,
+  TbHeadphones,
+  TbBeach,
+  TbPlayCard,
+} from "react-icons/tb";
 import { useState } from "react";
 
 export const Details = () => {
@@ -94,21 +104,33 @@ export const Details = () => {
             </div>
             <div className={styles.BoxWait}>
               <div className={styles.SingleIcon}>
-                <GiPartyPopper />
+                <TbPlayCard />
               </div>
-              <p>Feste</p>
+              <p>Giochi di carte</p>
             </div>
             <div className={styles.BoxWait}>
               <div className={styles.SingleIcon}>
-                <BsFillBinocularsFill />
+                <GiBeachBall />
               </div>
-              <p>Avventure</p>
+              <p>Bocce</p>
             </div>
             <div className={styles.BoxWait}>
               <div className={styles.SingleIcon}>
-                <GiAncientColumns />
+                <GiStonePath />
               </div>
-              <p>Cultura</p>
+              <p>Lunghe passeggiate</p>
+            </div>
+            <div className={styles.BoxWait}>
+              <div className={styles.SingleIcon}>
+                <GiSewingNeedle />
+              </div>
+              <p>Uncinetto</p>
+            </div>
+            <div className={styles.BoxWait}>
+              <div className={styles.SingleIcon}>
+                <GiBrickWall />
+              </div>
+              <p>Cantieri da commentare</p>
             </div>
           </div>
           <div className={styles.border}></div>

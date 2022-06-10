@@ -29,7 +29,7 @@
   z-index: 6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   h3 {
     margin: 5px 0;
@@ -78,7 +78,9 @@
     right: 10px;
     padding: 10px;
     width: 330px;
+    max-height: 350px;
     height: auto;
+    overflow-y: auto;
     border-radius: 10px;
     transition: right 0.5s ease-in-out;
     .allActivity {
@@ -205,7 +207,8 @@
     &.showRecap {
       width: 450px;
       bottom: 200px;
-      overflow: hidden;
+      max-height: 400px;
+      overflow: auto;
       .allActivity {
         .singleAct {
           font-size: 15px;

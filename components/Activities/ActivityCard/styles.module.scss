@@ -30,7 +30,8 @@
     background-color: white;
     z-index: 5;
     width: 90%;
-    height: 580px;
+    height: auto;
+    max-height: 550px;
     overflow-y: scroll;
     justify-content: space-around;
     .Categories {
@@ -40,8 +41,9 @@
     .fixInfo {
       margin: 0px auto;
       padding: 10px 0;
+      gap: 10px;
       width: 90%;
-      height: 150%;
+      height: auto;
       h3 {
         margin: 3px 0;
       }
@@ -249,15 +251,6 @@
     opacity: 1;
   }
 }
-@media (min-width: 480px) {
-  .ActivityCardContainer {
-    &.fix {
-      .fixInfo {
-        height: 120%;
-      }
-    }
-  }
-}
 @media (min-width: 600px) {
   .ActivityCardContainer {
     padding: 20px;
@@ -272,7 +265,7 @@
         font-size: 17px;
       }
       .fixInfo {
-        height: 160%;
+        gap: 12px;
       }
     }
   }
@@ -283,9 +276,6 @@
     justify-content: space-between;
     &.fix {
       overflow-y: auto;
-      .fixInfo {
-        height: 130%;
-      }
     }
   }
 }
