@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Hero } from "../components/Hero/hero";
 
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
@@ -9,6 +9,21 @@ import CarouselTwo from "../components/Carousel/CarouselTwo";
 import { Carousel } from "../components/Carousel/carousel";
 
 export default function Home() {
+  useEffect(() => {
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then(function (registration) {
+          console.log(
+            "ServiceWorker registration successful with scope:",
+            registration.scope
+          );
+        })
+        .catch(function (error) {
+          console.log("ServiceWorker registration failed:", error);
+        });
+    }
+  }, []);
   const {
     fetchAll,
     state: { vacation, italia, russia, francia, usa },
@@ -28,7 +43,7 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <section className="carouselContainer">
+      <section className={styles.carouselContainer}>
         <CarouselTwo />
       </section>
 
