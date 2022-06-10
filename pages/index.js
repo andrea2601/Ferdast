@@ -9,6 +9,21 @@ import CarouselTwo from "../components/Carousel/CarouselTwo";
 import { Carousel } from "../components/Carousel/carousel";
 
 export default function Home() {
+  useEffect(() => {
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then(function (registration) {
+          console.log(
+            "ServiceWorker registration successful with scope:",
+            registration.scope
+          );
+        })
+        .catch(function (error) {
+          console.log("ServiceWorker registration failed:", error);
+        });
+    }
+  }, []);
   const {
     fetchAll,
     state: { vacation, italia, russia, francia, usa },
