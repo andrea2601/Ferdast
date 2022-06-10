@@ -85,7 +85,9 @@ const Cart = () => {
             <h2 className={styles.travelersH2}>Viaggiatori</h2>
             <h2 className={styles.number}>{number}</h2>
             <h1 className={styles.total}>Totale</h1>
-            <h1 className={styles.totalValue}>{totalPrice * number}€</h1>
+            <h1 className={styles.totalValue}>
+              {Math.round(totalPrice * number)}€
+            </h1>
             <button className={styles.btn}>Continua</button>
           </div>
         </div>
