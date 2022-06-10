@@ -3,7 +3,7 @@
 
 .Side {
   position: fixed;
-  bottom: 430px;
+  bottom: 100px;
   right: 10px;
   animation: infinite;
   animation-name: price;
@@ -15,6 +15,7 @@
   svg {
     color: white;
     background-color: $primary-color;
+    border: 2px rgb(255, 255, 255) solid;
     border-radius: 10px;
     padding: 5px;
     width: 45px;
@@ -24,9 +25,10 @@
 .Hide {
   position: fixed;
   right: -320px;
-  bottom: 500px;
+  bottom: 180px;
   width: 300px;
   height: auto;
+  border: 2px rgb(255, 255, 255) solid;
   font-family: "Montserrat", sans-serif;
   color: white;
   background-color: $primary-color;
@@ -40,6 +42,10 @@
       margin: 8px 0;
     }
   }
+
+  a {
+    text-align: center;
+  }
   .btn {
     font-family: "Montserrat", sans-serif;
   }
@@ -48,8 +54,9 @@
 .PriceContainer {
   font-family: "Montserrat", sans-serif;
   position: fixed;
-  right: 1px;
-  bottom: 500px;
+  right: 5px;
+  bottom: 180px;
+  border: 2px rgb(255, 255, 255) solid;
   background-color: $primary-color;
   color: white;
   width: 300px;
@@ -88,18 +95,31 @@
   }
 }
 
-@media (min-width: "600px") {
+@media (min-width: 600px) {
   .Side {
-    bottom: 315px;
+    bottom: 200px;
+    right: 30px;
   }
   .Hide {
-    bottom: 400px;
+    bottom: 280px;
   }
   .PriceContainer {
-    bottom: 400px;
+    bottom: 280px;
+    right: 23px;
+  }
+  @keyframes price {
+    0% {
+      right: 20px;
+    }
+    50% {
+      right: 30px;
+    }
+    100% {
+      right: 25px;
+    }
   }
 }
-@media (min-width: "1000px") {
+@media (min-width: 1000px) {
   @keyframes price {
     0% {
       right: 25px;
@@ -112,7 +132,7 @@
     }
   }
 }
-@media (min-width: "1200px") {
+@media (min-width: 1200px) {
   @keyframes price {
     0% {
       right: 70px;
@@ -214,7 +234,7 @@
   }
   .Hide {
     right: -360px;
-    bottom: 560px;
+    bottom: 490px;
   }
   .PriceContainer {
     bottom: 490px;
