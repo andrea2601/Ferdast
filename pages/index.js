@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Hero } from "../components/Hero/hero";
-
 import styles from "../styles/Home.module.scss";
 import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
@@ -35,6 +34,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+
       <Head>
         <title>Ferdast</title>
         <meta
@@ -47,7 +47,6 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.png" />
       </Head>
-
       <Hero />
       <section className={styles.carouselContainer}>
         <CarouselTwo />
