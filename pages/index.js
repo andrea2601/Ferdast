@@ -5,7 +5,7 @@ import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
 import CarouselTwo from "../components/Carousel/CarouselTwo";
-// import previewSocialImage from "../public/bg-github-1.png";
+import previewSocialImage from "../public/bg-github-1.png";
 
 export default function Home() {
   useEffect(() => {
@@ -48,10 +48,17 @@ export default function Home() {
           content="Christopher Tarascio, Dennis Badagliacca, Andrea Maria Lo Giudice, Chiara Zuccaro"
         />
         <meta property="article:published_time" content="2022-06-10" />
-        <meta property="og:image" content="../public/bg-github-1.png" />
+        <meta
+          property="og:image"
+          content="
+          https://cb3-argo-two-git-dev-casiimir.vercel.app/_next/static/media/logo.2f00b94a.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         <link rel="icon" href="/favicon.png" />
       </Head>
+
       <Hero />
       <section className={styles.carouselContainer}>
         <CarouselTwo />
