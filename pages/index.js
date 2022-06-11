@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
 import CarouselTwo from "../components/Carousel/CarouselTwo";
 import { Carousel } from "../components/Carousel/carousel";
+import previewSocialImage from "../public/bg-github-1.png";
 
 export default function Home() {
   useEffect(() => {
@@ -43,6 +44,12 @@ export default function Home() {
           in ognuna è possibile visitare le singole città e scoprire le varie attività che quella offre; 
           aggiungendo al carrello, si possono vedere in tempo reale le attività e la quantità totale tramite un piccolo pop up sulla destra, tramite il quale si può raggiungere la pagina del carrello , dove è possibile vedere il prezzo totale che l'utente pagherà"
         />
+        <meta
+          name="author"
+          content="Christopher Tarascio, Dennis Badagliacca, Andrea Maria Lo Giudice, Chiara Zuccaro"
+        />
+        <meta property="article:published_time" content="2022-06-10" />
+        <meta property="og:image" content={previewSocialImage} />
 
         <link rel="icon" href="/favicon.png" />
       </Head>
