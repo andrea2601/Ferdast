@@ -26,7 +26,7 @@ export const Activities = ({ render }) => {
 
   return (
     <div className={styles.ActivitiesWrap} id="top">
-      {activity !== undefined && activity.length !== 0 && actOn == false ? (
+      {actOn == false ? (
         <Price
           id={render}
           giveActivity={activity}

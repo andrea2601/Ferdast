@@ -32,7 +32,7 @@ export const ActivityCard = ({ info }) => {
 
   return (
     <>
-      <div className={expand ? styles.overlay : styles.hide}></div>
+      <div className={expand ? styles.overlay : styles.hide} onClick={() => setExpand(!expand)}></div>
       <div
         className={`${styles.ActivityCardContainer} ${
           expand ? styles.fix : ""
