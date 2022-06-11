@@ -15,6 +15,9 @@
   }
 }
 
+.recapCart::-webkit-scrollbar {
+  width: 0px;
+}
 .recapCart {
   background-color: $primary-color;
   color: white;
