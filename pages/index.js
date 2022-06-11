@@ -5,8 +5,7 @@ import { CardList } from "../components/CardList/cardList";
 import { useEffect } from "react";
 import { useVacationContext } from "../Context/Provider";
 import CarouselTwo from "../components/Carousel/CarouselTwo";
-import { Carousel } from "../components/Carousel/carousel";
-import previewSocialImage from "../public/bg-github-1.png";
+// import previewSocialImage from "../public/bg-github-1.png";
 
 export default function Home() {
   useEffect(() => {
@@ -49,7 +48,7 @@ export default function Home() {
           content="Christopher Tarascio, Dennis Badagliacca, Andrea Maria Lo Giudice, Chiara Zuccaro"
         />
         <meta property="article:published_time" content="2022-06-10" />
-        <meta property="og:image" content={previewSocialImage} />
+        <meta property="og:image" content="../public/bg-github-1.png" />
 
         <link rel="icon" href="/favicon.png" />
       </Head>
