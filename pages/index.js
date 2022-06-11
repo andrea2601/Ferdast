@@ -34,7 +34,6 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-
       <Head>
         <title>Ferdast</title>
         <meta
@@ -53,7 +52,6 @@ export default function Home() {
       </section>
 
       <CardList />
-      {/* <Carousel /> */}
     </div>
   );
 }
