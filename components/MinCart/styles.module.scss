@@ -2,23 +2,28 @@
 .MinCartwrapper {
   position: fixed;
   right: 10px;
-  bottom: 450px;
+  bottom: 150px;
   cursor: pointer;
   svg {
     background-color: $primary-color;
+    border: 2px white solid;
     color: white;
     padding: 7px;
-    width: 40px;
+    width: 45px;
     height: auto;
     border-radius: 5px;
   }
 }
 
+.recapCart::-webkit-scrollbar {
+  width: 0px;
+}
 .recapCart {
   background-color: $primary-color;
   color: white;
   position: fixed;
-  bottom: 530px;
+  border: 2px white solid;
+  bottom: 230px;
   right: -500px;
   padding: 10px;
   width: 330px;
@@ -27,7 +32,7 @@
   z-index: 6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   h3 {
     margin: 5px 0;
@@ -69,13 +74,16 @@
   transition: right 0.5s ease-in-out;
   &.showRecap {
     background-color: $primary-color;
+    border: 2px white solid;
     color: white;
     position: fixed;
-    bottom: 530px;
-    right: 15px;
+    bottom: 230px;
+    right: 10px;
     padding: 10px;
     width: 330px;
+    max-height: 350px;
     height: auto;
+    overflow-y: auto;
     border-radius: 10px;
     transition: right 0.5s ease-in-out;
     .allActivity {
@@ -98,7 +106,6 @@
 .notify {
   background-color: $btn-color;
   position: fixed;
-  bottom: 484px;
   right: 7px;
   border-radius: 5px;
   border: 1px $primary-color solid;
@@ -116,24 +123,24 @@
 
 @keyframes notify {
   0% {
-    bottom: 489px;
+    bottom: 195px;
   }
   100% {
-    bottom: 484px;
+    bottom: 190px;
   }
 }
 
 @media (min-width: 600px) {
   .MinCartwrapper {
-    right: 25px;
-    bottom: 350px;
+    right: 30px;
+    bottom: 40px;
     svg {
       padding: 7px;
       width: 45px;
     }
   }
   .notify {
-    right: 20px;
+    right: 24px;
     p {
       padding: 1px 4px;
       font-size: 14px;
@@ -141,15 +148,15 @@
   }
   @keyframes notify {
     0% {
-      bottom: 393px;
+      bottom: 85px;
     }
     100% {
-      bottom: 390px;
+      bottom: 80px;
     }
   }
 
   .recapCart {
-    bottom: 450px;
+    bottom: 120px;
     right: -500px;
     padding: 10px;
     width: 400px;
@@ -160,10 +167,12 @@
       width: 100%;
     }
     &.showRecap {
-      bottom: 450px;
+      bottom: 120px;
       right: 30px;
       padding: 10px 5px;
       width: 400px;
+      max-height: 260px;
+      overflow-y: scroll;
       .allActivity {
         padding: 0 15px;
         width: 100%;
@@ -173,8 +182,24 @@
   }
 }
 @media (min-width: 1000px) {
+  .MinCartwrapper {
+    bottom: 110px;
+    svg {
+      padding: 7px;
+      width: 45px;
+    }
+  }
+  @keyframes notify {
+    0% {
+      bottom: 145px;
+    }
+    100% {
+      bottom: 148px;
+    }
+  }
   .recapCart {
     width: 450px;
+    bottom: 200px;
     font-size: larger;
     .allActivity {
       padding: 0 15px;
@@ -184,6 +209,9 @@
     }
     &.showRecap {
       width: 450px;
+      bottom: 200px;
+      max-height: 400px;
+      overflow: auto;
       .allActivity {
         .singleAct {
           font-size: 15px;
@@ -214,6 +242,13 @@
     }
     100% {
       bottom: 385px;
+    }
+  }
+  .recapCart {
+    bottom: 430px;
+    &.showRecap {
+      bottom: 430px;
+      right: 40px;
     }
   }
 }

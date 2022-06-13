@@ -31,8 +31,7 @@ export default function CarouselTwo() {
   return (
     <div className={styles.CarouselTwo}>
       <div className={styles.title}>
-        <h2>Best Seller</h2>
-        <p>Le migliori mete del momento</p>
+        <h2>Le migliori mete del momento</h2>
       </div>
 
       <div className={styles.CarouselWrapper}>

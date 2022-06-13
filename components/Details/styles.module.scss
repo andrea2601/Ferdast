@@ -10,7 +10,7 @@
   .OnlyFor {
     background-color: rgb(210, 248, 255);
     border-radius: 20px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 0 18px;
     display: flex;
@@ -27,7 +27,7 @@
     }
   }
   .Included {
-    width: 95%;
+    width: 88%;
     margin: 0 auto;
     padding: 0 0px;
     color: $primary-color;
@@ -40,8 +40,9 @@
 
     .WaitingElements {
       display: flex;
-      flex-direction: row;
+      flex-flow: row wrap;
       justify-content: space-around;
+      gap: 6px;
       .BoxWait {
         display: flex;
         flex-direction: column;
@@ -56,6 +57,10 @@
             width: 50px;
             height: auto;
           }
+        }
+        p {
+          text-align: center;
+          width: 90%;
         }
       }
     }
@@ -102,12 +107,12 @@
   }
 }
 
-@media (min-width: "400px") {
+@media (min-width: 400px) {
   .DetailsContainer {
     padding: 0 20px;
   }
 }
-@media (min-width: "600px") {
+@media (min-width: 600px) {
   .DetailsContainer {
     padding: 0 40px;
     .OnlyFor {
@@ -135,6 +140,9 @@
     padding: 0;
     width: 80%;
     margin: 0 auto 40px auto;
+    .OnlyFor {
+      width: 75%;
+    }
   }
 }
 @media (min-width: "1200px") {

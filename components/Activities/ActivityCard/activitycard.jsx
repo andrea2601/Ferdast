@@ -18,29 +18,34 @@ export const ActivityCard = ({ info }) => {
   } = useVacationContext();
 
   useEffect(() => {
-    setAdd(cart.some(item => item.id == info.uuid));
+    setAdd(cart.some((item) => item.id == info.uuid));
   }, [cart]);
 
   const animationAdd = () => {
     addToCart({
       activity: info.title,
       price: info.retail_price.value,
-      id: info.uuid
+      id: info.uuid,
     });
     setAdd(true);
   };
 
   return (
     <>
-      <div className={expand ? styles.overlay : styles.hide}></div>
+      <div className={expand ? styles.overlay : styles.hide} onClick={() => setExpand(!expand)}></div>
       <div
-        className={`${styles.ActivityCardContainer} ${expand ? styles.fix : ""
-          }`}
+        className={`${styles.ActivityCardContainer} ${
+          expand ? styles.fix : ""
+        }`}
       >
         <div className={styles.fixInfo}>
           <h2>{info.title}</h2>
 
-          <div className={styles.Categories}>
+          <div
+            className={
+              info.categories.length !== 0 ? styles.Categories : styles.hide
+            }
+          >
             {info.categories.map((el, i) => (
               <p key={i}>{el.name.toLowerCase()}</p>
             ))}
@@ -60,20 +65,10 @@ export const ActivityCard = ({ info }) => {
 
           <h3>
             {parseInt(info.retail_price.formatted_value.split("€").join("")) ===
-              0
+            0
               ? "For free!"
               : info.retail_price.formatted_value}
           </h3>
-          <div className={styles.kind}>
-            {/* {info.group_size.lenght !== 0 &&
-              info.group_size !== undefined &&
-              info.group_size[0].name.toLowerCase().includes("gruppo") ? (
-                <GrGroup />
-              ) : (
-                <BsPerson />
-              )}
-              <p>{info.group_size[0].name}</p> */}
-          </div>
 
           <button
             className={`${styles.cartButton} ${add ? styles.clicked : ""}`}
