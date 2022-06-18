@@ -53,8 +53,8 @@ export default function Home() {
           content="
           https://cb3-argo-two-git-dev-casiimir.vercel.app/_next/static/media/logo.2f00b94a.png"
         />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1043" />
+        <meta property="og:image:height" content="286" />
 
         <link rel="icon" href="/favicon.png" />
       </Head>
