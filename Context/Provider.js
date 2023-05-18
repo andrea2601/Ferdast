@@ -40,7 +40,11 @@ export default ({ children }) => {
     dispatch({ type: FETCH_ALL_VACATION_REQUEST });
     try {
       const { data: vacation } = await axios.get(
-        `https://sandbox.musement.com/api/v3${par}`
+        `https://sandbox.musement.com/api/v3${par}`,{
+          headers: {
+            'x-Musement-Application': 'famous'
+          }
+        }
       );
       dispatch({ type: FETCH_ALL_VACATION_SUCCESS, payload: vacation });
     } catch (e) {
@@ -52,7 +56,11 @@ export default ({ children }) => {
     dispatch({ type: FETCH_ALL_CITY_REQUEST });
     try {
       const { data: city } = await axios.get(
-        `https://sandbox.musement.com/api/v3/activities${par}`
+        `https://sandbox.musement.com/api/v3/activities${par}`,{
+          headers: {
+            'x-Musement-Application': 'famous'
+          }
+        }
       );
       dispatch({ type: FETCH_ALL_CITY_SUCCESS, payload: city });
     } catch (e) {
